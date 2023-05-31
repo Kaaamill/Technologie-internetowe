@@ -140,23 +140,7 @@ input[type="submit"] {
     background-color: #FE7F00;
 }
 
-#nowosci {
-    width: auto;
-    height: 300px;
-    margin-top: 2%;
-    margin-right: 5%;
-    margin-left: 5%;
-    background-color: #FE7F00;
-}
 
-#ostatnie {
-    width: auto;
-    height: 300px;
-    margin-top: 2%;
-    margin-right: 5%;
-    margin-left: 5%;
-    background-color: #FE7F00;
-}
 
 footer {
     background-color: #808080;
@@ -167,10 +151,12 @@ footer {
 .pierwsza
 {
     float:left;
-    margin-left:5%;
+    margin-left:2.5%;
     font: 16px calibri;
     text-align: center;
     font-weight: bold;
+    padding: 10px;
+
 }
 .pierwsza img{
     width: 150px;
