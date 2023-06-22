@@ -118,6 +118,12 @@ label {
     padding: 5px 20px;
     margin-top: 20px;
 }
+#lower2 {
+    background: #ecf2f5;
+    width: 400px;
+    margin-top: 20px;
+
+}
 
 .check {
     display: inline;
@@ -159,17 +165,26 @@ footer {
     padding: 10px;
     text-align: center;
 }
-.pierwsza {
+.pierwsza {/*  index strona glown */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-.pierwsza img {
+.druga { /*  KSIAZKI */
+    text-align: center;
+    width: calc(33.33% - 20px);
+    margin: 10px;
+}
+.container {     /*  KSIAZKI */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.pierwsza img {/*  index strona glown */
     width: 100px;
 }
 
-.pierwsza a {
+.pierwsza a { /*  index strona glown */
     display: block;
     margin-top: 10px;
 }
@@ -189,20 +204,29 @@ a:hover {
     text-decoration: none;
     color: dimgrey;
 }
-.scroll-container {
+.scroll-container {/*  index strona glown */
     margin: 0 auto;
 }
-.scroll-container-arrows {
+.scroll-container-arrows {/*  index strona glown */
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.scroll-container-arrows .arrow-left,
+.scroll-container-arrows .arrow-left,/*  index strona glown */
 .scroll-container-arrows .arrow-right {
     cursor: pointer;
 }
-.books-container {
+.books-container {/*  index strona glown */
+    display: flex;
+    overflow-x: auto;
+    justify-content: flex-start;
+    position: relative;
+    white-space: nowrap;
+    margin-bottom: 20px; /* Dodano margines na dole dla lepszego wyświetlania tekstu */
+}
+.books-container_2
+{
     display: flex;
     overflow-x: auto;
     justify-content: flex-start;
@@ -211,7 +235,18 @@ a:hover {
     margin-bottom: 20px; /* Dodano margines na dole dla lepszego wyświetlania tekstu */
 }
 
-.books-container .pierwsza {
+.books-container_2 .druga {
+    display: inline-block;
+    margin: 0 20px; /* Zwiększono margines poziomy */
+    text-align: center;
+    word-wrap: break-word;
+    flex: 0 0 auto;
+    width: 200px;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+.books-container .pierwsza {/*  index strona glown */
     display: inline-block;
     margin: 0 20px; /* Zwiększono margines poziomy */
     text-align: center;
@@ -223,7 +258,7 @@ a:hover {
     overflow: hidden;
 }
 
-.books-container .pierwsza .book-description {
+.books-container .pierwsza .book-description {/*  index strona glown */
     position: absolute;
     left: 0;
     right: 0;
@@ -238,7 +273,7 @@ a:hover {
     font-weight: bold;
 }
 
-.books-container .pierwsza p {
+.books-container .pierwsza p {/*  index strona glown */
     margin-top: 10px;
     font-size: 14px;
     line-height: 1.2;
@@ -248,13 +283,13 @@ a:hover {
     white-space: normal; /* Dodano normal, aby tekst nie był zawijany */
 }
 
-.books-container .pierwsza img {
+.books-container .pierwsza img {/*  index strona glown */
     width: 160px; /* Zwiększono szerokość obrazka */
     height: 240px; /* Zwiększono wysokość obrazka */
 }
 
 /* Dodane style dla przycisków przewijania */
-.arrow-left,
+.arrow-left,/*  index strona glown */
 .arrow-right {
     display: flex;
     align-items: center;
@@ -271,26 +306,26 @@ a:hover {
     z-index: 1;
 }
 
-.arrow-left {
+.arrow-left {/*  index strona glown */
     left: 0;
 }
 
-.arrow-right {
+.arrow-right {/*  index strona glown */
     right: 0;
 }
 
-.arrow-left i,
+.arrow-left i,/*  index strona glown */
 .arrow-right i {
     font-size: 20px;
     color: #545454;
 }
 
-.arrow-left:hover,
+.arrow-left:hover,/*  index strona glown */
 .arrow-right:hover {
     background-color: #f0f0f0;
 }
 
-.scroll-container-arrows {
+.scroll-container-arrows {/*  index strona glown */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -298,7 +333,37 @@ a:hover {
     margin-bottom: 20px; /* Dodano margines na dole dla lepszego wyświetlania tekstu */
 }
 
-.scroll-container {
+.scroll-container {/*  index strona glown */
     position: relative;
     width: 100%;
+}
+.menu ul li.special {
+    background-color: #7a7a7a;
+    color: white;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+.image-container img {
+    width: 100px;
+}
+
+.rent-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FF6B01;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    opacity: 0;
+}
+.rent-button:hover {
+    background-color: #758ac9;
+    color: white;
+    opacity: 100%;
 }
