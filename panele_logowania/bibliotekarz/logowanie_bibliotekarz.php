@@ -24,8 +24,12 @@
         <h2>Bibliotekarz</h2>
         <div id="logowanie">
         <form action="logowaniebibliotekarz.php" method="post">
-        Login: <br /> <input type="text" name="login" /> <br /><br />
-        Hasło: <br /> <input type="password" name="haslo" /> <br /><br />
+        <div id="username">
+            <h3>Login: <br /></h3> <input type="text" name="login" /> <br /><br />
+        </div>
+        <div id="password">
+            <h3>Hasło: <br /> </h3><input type="password" name="haslo" /> <br /><br />
+        </div>
         <input type="submit" value="Zaloguj" />
     </form>
 
