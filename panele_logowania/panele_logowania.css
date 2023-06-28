@@ -1,4 +1,4 @@
-﻿body {
+body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
     min-height: min-content;
@@ -51,7 +51,7 @@
 
 #logowanie {
     width: 500px;
-    margin: 0 auto;
+    margin: 0 auto
     padding: 0;
     background: #696969;
     font: 16px calibri;
@@ -107,6 +107,7 @@ form {
     border-radius: 25px;
     padding-top: 2%;
 }
+
 input[type="submit"] {
     height: 40px;
     width: 150px;
@@ -122,6 +123,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #131313;
+
 }
 
 #panel, input[type="submit"] {
@@ -173,6 +175,7 @@ input[type="button"]:hover {
 #button-rejestracja input[type="submit"]:hover {
     background-color: #131313;
 }
+
 
 
 /*STOPKA*/

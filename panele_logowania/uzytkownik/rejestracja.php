@@ -252,6 +252,5 @@
         &copy; 2023 VaDinci
 
     </footer>
-
 </body>
 </html>
