@@ -25,10 +25,10 @@
         <div id="logowanie">
         <form action="logowanie.php" method="post">
         <div id="username">
-                    <h3>Login: <br /></h3> <input type="text" name="login" /> <br /><br />
+                    Login: <br /> <input type="text" name="login" /> <br /><br />
                 </div>
                 <div id="password">
-                    <h3>Hasło: <br /> </h3><input type="password" name="haslo2" /> <br /><br />
+                    Hasło: <br /> <input type="password" name="haslo2" /> <br /><br />
                 </div>
                 <div id="button-rejestracja">
                     <input type="submit" value="Zaloguj" />
