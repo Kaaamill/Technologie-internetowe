@@ -8,6 +8,7 @@
 }
 
 .logo {
+    margin-top: 1%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -64,10 +65,6 @@
     color: white;
 }
 
-#username h3 {
-    color:white;
-}
-
 #logowanie a {
     color: black;
     margin-left: 5%;
@@ -80,19 +77,29 @@ form {
 
 #username, #password {
     display: block;
-    width: 360px;
-    margin: 0 auto;
-    padding: 10px 5px;
-    font-size: 15px;
+    width: 400px;
+    margin-left: 25%;
+    font-size: 20px;
     color: white;
+    border-radius: 5px;
 }
-
+#username input, #password input {
+    border-radius: 5px;
+    height: 20px;
+    width: 250px;
+}
     #username:focus, #password:focus {
         outline: 1px solid #e5f2f8;
         border-radius: 5px;
     }
 
-
+#button {
+    height: 80px;
+    width: auto;
+    background-color: #545454;
+    border-radius: 25px;
+    padding-top: 2%;
+}
 input[type="submit"] {
     height: 40px;
     width: 150px;
@@ -111,15 +118,36 @@ input[type="submit"] {
     border-radius: 5px;
 }
 
+#button-rejestracja {
+    position: relative;
+    height: 80px;
+    width: auto;
+    left: 0;
+    background-color: #545454;
+    border-radius: 25px;
+    padding-top: 2%;
+}
 input[type="button"] {
-    height: 30px;
-    width: 100px;
+    height: 40px;
+    width: 150px;
     padding: 5px 13px;
     color: white;
-    font-size: 15px;
-    text-shadow: 0 0 1px black;
+    font-size: 17px;
     background: #28292a;
     position: relative;
+    left: -25%;
+    margin-top: 10px;
+}
+
+#button-rejestracja input[type="submit"] {
+    height: 40px;
+    width: 150px;
+    padding: 5px 13px;
+    color: white;
+    font-size: 17px;
+    background: #28292a;
+    position: relative;
+    left: 50%;
     margin-top: 10px;
 }
 

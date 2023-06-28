@@ -24,15 +24,21 @@
         <h2>Klient</h2>
         <div id="logowanie">
         <form action="logowanie.php" method="post">
-        Login: <br /> <input type="text" name="login" /> <br /><br />
-        Hasło: <br /> <input type="password" name="haslo2" /> <br /><br />
-        <input type="submit" value="Zaloguj" /> <br /><br />
-        <a href="rejestracja.php"><input type="button" value="Załóż konto"></a>
-    </form>
+        <div id="username">
+                    <h3>Login: <br /></h3> <input type="text" name="login" /> <br /><br />
+                </div>
+                <div id="password">
+                    <h3>Hasło: <br /> </h3><input type="password" name="haslo2" /> <br /><br />
+                </div>
+                <div id="button-rejestracja">
+                    <input type="submit" value="Zaloguj" />
+                    <a href="rejestracja.php"><input type="button" value="Załóż konto"></a>
+                </div>
+        </form>
 
-    <?php
-    if(isset($_SESSION['blad']))    echo $_SESSION['blad'];
-?>
+        <?php
+        if(isset($_SESSION['blad']))    echo $_SESSION['blad'];
+        ?>
         </div>
     </div>
     
