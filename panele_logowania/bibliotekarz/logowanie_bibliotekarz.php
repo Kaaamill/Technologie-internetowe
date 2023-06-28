@@ -23,20 +23,21 @@
         <h1>Panel Logowania</h1>
         <h2>Bibliotekarz</h2>
         <div id="logowanie">
-        <form action="logowaniebibliotekarz.php" method="post">
-        <div id="username">
-            <h3>Login: <br /></h3> <input type="text" name="login" /> <br /><br />
-        </div>
-        <div id="password">
-            <h3>Hasło: <br /> </h3><input type="password" name="haslo" /> <br /><br />
-        </div>
-        <input type="submit" value="Zaloguj" />
-    </form>
+            <form action="logowaniebibliotekarz.php" method="post">
+                <div id="username">
+                    Login: <br /> <input type="text" name="login" /> <br /><br />
+                </div>
+                <div id="password">
+                    Hasło: <br /> <input type="password" name="haslo" /> <br /><br />
+                </div>
+                <div id="button">
+                    <input type="submit" value="Zaloguj" />
+                </div>
 
-    <?php
-    if(isset($_SESSION['blad']))    echo $_SESSION['blad'];
-    ?>
-    </div>
+            <?php
+            if(isset($_SESSION['blad']))    echo $_SESSION['blad'];
+            ?>
+        </div>
     </form>
     </div>
     </div>

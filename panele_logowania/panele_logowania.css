@@ -1,4 +1,4 @@
-﻿body {
+body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
     min-height: min-content;
@@ -8,6 +8,7 @@
 }
 
 .logo {
+    margin-top: 1%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -20,13 +21,18 @@
     font: calibri;
     position: relative;
     border-radius: 25px;
-    margin: 2%;
+    margin: 5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
 }
+
+.panel:hover {
+    background-color: #131313;
+}
+
 #box_logowanie a {
     text-decoration: none;
 }
@@ -37,7 +43,7 @@
     height: 400px;
     background-color: #545454;
     padding-top: 1px;
-    opacity: 60%;
+    opacity: 70%;
     border-radius: 25px;
     margin-bottom: 15%;
     margin-top: 5%;
@@ -45,12 +51,15 @@
 
 #logowanie {
     width: 500px;
-    margin: 0 auto;
-    padding: 15px 0 0;
+    margin: 0 auto
+    padding: 0;
     background: #696969;
     font: 16px calibri;
     position: relative;
     border-radius: 25px;
+    -webkit-box-shadow: 0 0 2px silver;
+    -moz-box-shadow: 0 0 2px silver;
+    box-shadow: 0 0 2px silver;
 }
 
 #box_logowanie h1 {
@@ -62,10 +71,6 @@
 #box_logowanie h2 {
     text-align: center;
     color: white;
-}
-
-#username h3 {
-    color:white;
 }
 
 #logowanie a {
@@ -80,18 +85,28 @@ form {
 
 #username, #password {
     display: block;
-    width: 360px;
+    width: 400px;
+    margin: 0 auto;
+    font-size: 22px;
+    color: white;
     margin: 0 auto;
     padding: 10px 5px;
-    font-size: 15px;
-    color: white;
 }
 
-    #username:focus, #password:focus {
-        outline: 1px solid #e5f2f8;
-        border-radius: 5px;
-    }
+#username input, #password input {
+    border-radius: 10px;
+    height: 30px;
+    width: 350px;
+    padding-left: 4%;
+}
 
+#button {
+    height: 80px;
+    width: auto;
+    background-color: #545454;
+    border-radius: 25px;
+    padding-top: 2%;
+}
 
 input[type="submit"] {
     height: 40px;
@@ -103,24 +118,62 @@ input[type="submit"] {
     position: relative;
     left: 180px;
     margin-top: 10px;
+    border-radius: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #131313;
+
 }
 
 #panel, input[type="submit"] {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
+#button-rejestracja {
+    position: relative;
+    height: 80px;
+    width: auto;
+    left: 0;
+    background-color: #545454;
+    border-radius: 25px;
+    padding-top: 2%;
+}
 input[type="button"] {
-    height: 30px;
-    width: 100px;
+    height: 40px;
+    width: 150px;
     padding: 5px 13px;
     color: white;
-    font-size: 15px;
-    text-shadow: 0 0 1px black;
+    font-size: 17px;
     background: #28292a;
     position: relative;
+    left: -25%;
     margin-top: 10px;
+    border-radius: 10px;
+}
+
+input[type="button"]:hover {
+    background-color: #131313;
+}
+
+#button-rejestracja input[type="submit"] {
+    height: 40px;
+    width: 150px;
+    padding: 5px 13px;
+    color: white;
+    font-size: 17px;
+    background: #28292a;
+    position: relative;
+    left: 60%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+
+#button-rejestracja input[type="submit"]:hover {
+    background-color: #131313;
 }
 
 
