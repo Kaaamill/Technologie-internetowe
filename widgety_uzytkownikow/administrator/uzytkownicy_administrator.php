@@ -31,25 +31,60 @@
             </ul>
         </nav>
         <div id="main_uzytkownicy">
-            <h1>UŻYTKOWNICY</h1>
-            <h4>ZARZĄDZANIE UŻYTKOWNIKAMI</h4>
+            <h1>ZARZĄDZANIE UŻYTKOWNIKAMI</h1>
+            <h4>LISTA UŻYTKOWNIKÓW</h4>
+            <a class = "dodaj" href="dodaj.php" role="button">Dodaj Klienta</a>
+                <br />
+                
+                <br />
             <div id="tabela_uzytkownicy">
+                <thead>
                 <table>
                     <tr>
-                        <th>Adres E-Mail</th>
+                        <th>ID</th>
+                        <th>Login</th>
+                        <th>Adres e-mail</th>
+                        <th>Hasło</th>
                         <th>Uprawnienia</th>
                         <th>Operacje</th>
                     </tr>
-                    <tr>
-                        <td>Dane 1</td>
-                        <td>Dane 2</td>
-                        <td>Dane 3</td>
-                    </tr>
-                    <tr>
-                        <td>Dane 4</td>
-                        <td>Dane 5</td>
-                        <td>Dane 6</td>
-                    </tr>
+                </thead>
+                <tbody>
+                <?php
+                    $host = "localhost";
+                    $db_user = "root";
+                    $db_password = "";
+                    $db_name = "biblioteka";
+
+                    $connection = new mysqli($host, $db_user, $db_password, $db_name);
+                    if ($connection->connect_error){
+                        die("Connection failed: " . $connection->connect_error);
+                    }
+
+                    $sql = "SELECT * FROM klienci";
+                    $result = $connection->query($sql);
+
+                    if (!$result){
+                        die("Invalid query: " . $connection->error);
+                    }
+
+                    while($row = $result->fetch_assoc()){
+                        echo "
+                        <tr>
+                        <td>$row[ID]</td>
+                        <td>$row[login]</td>
+                        <td>$row[email]</td>
+                        <td>$row[haslo2]</td>
+                        <td>$row[uprawnienia]</td>
+
+                    <td>
+                        <a class='edycja' href='/klienci/edycja.php?id=$row[ID]'>Edytuj</a>
+                        <a class='usun' href='/klienci/usun.php?id=$row[ID]'>Usuń</a> 
+                    </td>
+                </tr>";
+                    }    
+                ?>
+                </tbody>
                 </table>
             </div>
         </div>
