@@ -202,7 +202,7 @@
                     echo "checked";
                     unset($_SESSION['fr_regulamin']);
                 }
-                    ?>/> Oświadczam, iż zapoznałem/-am się z treścią <a href="regulamin.html" target="_blank">Regulaminu Biblioteka VaDinci</a> i akceptuję jego treść. <br />
+                    ?>/> Oświadczam, iż zapoznałem/-am się z treścią <a href="regulamin_modal.html" target="_blank">Regulaminu Biblioteki VaDinci</a> i akceptuję jego treść. <br />
             </label>
             
             <?php
