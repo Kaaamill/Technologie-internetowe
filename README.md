@@ -1,47 +1,59 @@
 # Biblioteka VaDinci
+
+Projekt zaliczeniowy w ramch przedmiotu Technologie Internetowe na Collegium Da Vinci w Poznaniu.
+
+Projekt przedstawia system zarządzania biblioteką. Pozwala na rezerwację pozycji z biblioteki i późniejsze ich wypożyczenie oraz zwrot. 
+Szczegółowy opis funkcjonalności znajduje się w sekcji "Przykłady użycia".
+
+5. Informacje o testach:
+
+Ze względu na niską złożoność projektu i ograniczenia czasowe, autorzy nie zdecydowali się na zastosowanie testów automatycznych.
+
+6. Autorzy i wkład:
+
+Marta Banasiak @mxvoa
+- baza danych
+- logowanie i rejestracja
+- system wypożyczeń
+
+Dominik Dobski @DominikDobski
+- strona główna
+- widok książki
+- wyszukiwanie
+
+Kamil Ibron @Kaaamill
+- style
+- responsywność
+- cookies
+
+Anna-Maria 'Mania' Rogulska @peleda
+- skrypt .js
+- dokumentacja
+- koordynacja
+
+7. Status projektu i wsparcie:
+
+Po opublikowaniu wersji finalnej (~9.07.2023 r.) projekt zostanie uznany za zamknięty i nie będzie dłużej wspierany.
+
+Cieszymy się, że możecie oglądać ten kamień milowy w edukacji autorów :>
+
 --TO DO--
-1. Tytuł i opis projektu:
 
-Krótki, zwięzły tytuł projektu, który opisuje jego istotę.
-Krótki opis projektu, który wyjaśnia, czym się zajmuje, jakie są jego cele i dlaczego jest wartościowy.
-
-2. Instrukcje instalacji:
+1. Instrukcje instalacji:
 
 Wyjaśnienie krok po kroku, jak zainstalować i skonfigurować projekt.
 
-3. Wymagane zależności lub narzędzia.
+2. Wymagane zależności lub narzędzia.
 Przykłady komend lub poleceń potrzebnych do uruchomienia projektu.
 
-4. Przykłady użycia:
+3. Przykłady użycia:
 
 Praktyczne przykłady pokazujące, jak korzystać z projektu.
 Wskazówki dotyczące konfiguracji lub dostosowania projektu do specyficznych potrzeb.
 Przykładowy kod lub skrypty demonstrujące funkcjonalności projektu.
 
-5. Dokumentacja API lub interfejsu użytkownika:
-
-Jeśli twój projekt oferuje API lub interfejs użytkownika, dodaj dokumentację, która wyjaśnia dostępne endpointy, parametry, typy danych itp.
-Przykładowe zapytania i odpowiedzi, które pomagają zrozumieć, jak korzystać z API.
-
-6. Struktura projektu:
+4. Struktura projektu:
 
 Przegląd struktury katalogów i plików w projekcie.
 Wskazówki dotyczące ważnych plików lub modułów.
 
-7. Informacje o testach:
-
-Jeśli projekt zawiera testy jednostkowe lub testy automatyczne, opisz, jak je uruchomić i jakie są oczekiwane wyniki.
-
-8. Informacje o współautorach lub licencji:
-
-Jeśli tworzyłeś projekt z innymi osobami, wymień ich nazwy i wkład w projekcie.
-Informacje o licencji, na której jest udostępniany projekt.
-
-9. Status projektu i wsparcie:
-
-Wskazówki dotyczące aktualnego statusu projektu, takie jak wersje, branże lub inicjatywy rozwojowe.
-Informacje kontaktowe w przypadku pytań, problemów lub propozycji współpracy.
-
-10. Logo lub grafika:
-
-Opcjonalnie, dodaj logo lub grafikę związane z projektem, które pomogą w jego identyfikacji wśród innych projektów.
