@@ -2,9 +2,11 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
     min-height: min-content;
-    background-image: url("../../img/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: 
+        linear-gradient(to bottom, rgba(170, 207, 208, 0.6), rgba(246, 239, 195, 0.6)), 
+        url("../img/background.png");
+    background-repeat: repeat;
+    background-size: 500px;
 }
 
 .logo {

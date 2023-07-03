@@ -121,7 +121,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Rejestracja dla Klienta</title>
-    <link rel="stylesheet" href="rejestracja.css"> 
+    <link rel="stylesheet" href="../../css_styles/rejestracja.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 
     <style>
