@@ -52,7 +52,7 @@ body {
 
 #logowanie {
     width: 500px;
-    margin: 0 auto
+    margin: 0 auto;
     padding: 0;
     background: #696969;
     font: 16px calibri;
@@ -176,11 +176,6 @@ input[type="button"]:hover {
 
 /* STOPKA */
 
-<<<<<<< HEAD
-
-/*STOPKA*/
-=======
->>>>>>> bbfce8a (Dodanie responsywności)
 footer {
     width: auto;
     height: 325px;
