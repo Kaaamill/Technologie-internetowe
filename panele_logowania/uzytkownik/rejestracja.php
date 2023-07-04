@@ -135,6 +135,7 @@
 </head>
  
 <body>
+<div id="regulamin"></div>
     <a href="../../index.html"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
     <div id="box">
         <form method="post">
@@ -202,9 +203,8 @@
                     echo "checked";
                     unset($_SESSION['fr_regulamin']);
                 }
-                    ?>/> Oświadczam, iż zapoznałem/-am się z treścią <a href="#" class="regulamin_link" onclick="displayModal(); return false; ">Regulaminu Biblioteki VaDinci</a> i akceptuję jego treść. <br />
+                    ?>/> Oświadczam, iż zapoznałem/-am się z treścią <a href="#" class="regulamin_link" onclick="displayModal(); ">Regulaminu Biblioteki VaDinci</a> i akceptuję jego treść. <br />
             </label>
-            <div id="regulamin"></div>
             <?php
                 if (isset($_SESSION['e_regulamin']))
                 {

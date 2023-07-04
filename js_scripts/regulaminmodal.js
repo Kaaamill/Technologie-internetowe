@@ -6,10 +6,20 @@ function displayModal() {
         modal.classList.add('modal');
         
         modal.innerHTML = html;
+
+        const closeButton = document.createElement('button');
+        closeButton.id = 'zamknij';
+        closeButton.textContent = 'X';
+        modal.appendChild(closeButton);
   
         const modalContainer = document.getElementById('regulamin');
         modalContainer.appendChild(modal);
   
         modal.style.display = 'flex';
+        
+        closeButton.addEventListener('click', function() {
+          modal.style.display = 'none';
+        })
+
       });
   }
