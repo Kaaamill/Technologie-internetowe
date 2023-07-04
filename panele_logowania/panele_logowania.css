@@ -13,7 +13,8 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-/*Panel logowania*/
+
+/* Panel logowania */
 
 .panel {
     height: 15%;
@@ -83,9 +84,11 @@ form {
     margin: 0;
 }
 
-#username, #password {
+#username,
+#password {
     display: block;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     margin: 0 auto;
     font-size: 22px;
     color: white;
@@ -93,10 +96,12 @@ form {
     padding: 10px 5px;
 }
 
-#username input, #password input {
+#username input,
+#password input {
     border-radius: 10px;
     height: 30px;
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     padding-left: 4%;
 }
 
@@ -115,8 +120,6 @@ input[type="submit"] {
     color: white;
     font-size: 17px;
     background: #28292a;
-    position: relative;
-    left: 180px;
     margin-top: 10px;
     border-radius: 10px;
 }
@@ -126,9 +129,8 @@ input[type="submit"]:hover {
 
 }
 
-#panel, input[type="submit"] {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
+#panel,
+input[type="submit"] {
     border-radius: 10px;
 }
 
@@ -141,6 +143,7 @@ input[type="submit"]:hover {
     border-radius: 25px;
     padding-top: 2%;
 }
+
 input[type="button"] {
     height: 40px;
     width: 150px;
@@ -148,8 +151,6 @@ input[type="button"] {
     color: white;
     font-size: 17px;
     background: #28292a;
-    position: relative;
-    left: -25%;
     margin-top: 10px;
     border-radius: 10px;
 }
@@ -165,20 +166,21 @@ input[type="button"]:hover {
     color: white;
     font-size: 17px;
     background: #28292a;
-    position: relative;
-    left: 60%;
     margin-top: 10px;
     border-radius: 10px;
 }
-
 
 #button-rejestracja input[type="submit"]:hover {
     background-color: #131313;
 }
 
+/* STOPKA */
 
+<<<<<<< HEAD
 
 /*STOPKA*/
+=======
+>>>>>>> bbfce8a (Dodanie responsywności)
 footer {
     width: auto;
     height: 325px;
@@ -203,9 +205,9 @@ a {
     pointer-events: none;
 }
 
-    .nav:hover {
-        pointer-events: auto;
-    }
+.nav:hover {
+    pointer-events: auto;
+}
 
 .sm-header {
     color: #fff;
@@ -242,13 +244,13 @@ a {
     transition: transform 0.5s, opacity 0.5s;
 }
 
-    .nav-item:nth-child(odd) {
-        transform: translateY(5rem);
-    }
+.nav-item:nth-child(odd) {
+    transform: translateY(5rem);
+}
 
-    .nav-item:nth-child(even) {
-        transform: translateY(-5rem);
-    }
+.nav-item:nth-child(even) {
+    transform: translateY(-5rem);
+}
 
 .nav:hover .nav-item {
     opacity: 1;
@@ -259,22 +261,46 @@ a {
     font-size: 2rem;
 }
 
-    .nav-link i {
-        transition: color 0.5s;
+.nav-link i {
+    transition: color 0.5s;
+}
+
+.nav-link:hover i.fa-facebook-f {
+    color: #3b5998;
+}
+
+.nav-link:hover i.fa-twitter {
+    color: #1da1f2;
+}
+
+.nav-link:hover i.fa-instagram {
+    color: #dd4b39;
+}
+
+.nav-link:hover i.fa-google {
+    color: #ea4c89;
+}
+
+/* Responsywność */
+
+@media (max-width: 768px) {
+    #box_logowanie {
+        width: 90%;
     }
 
-    .nav-link:hover i.fa-facebook-f {
-        color: #3b5998;
+    #logowanie {
+        width: 90%;
     }
 
-    .nav-link:hover i.fa-twitter {
-        color: #1da1f2;
+    #username,
+    #password {
+        width: 100%;
+        max-width: none;
     }
 
-    .nav-link:hover i.fa-instagram {
-        color: #dd4b39;
+    #username input,
+    #password input {
+        width: 100%;
+        max-width: none;
     }
-
-    .nav-link:hover i.fa-google {
-        color: #ea4c89;
-    }
+}

@@ -1,6 +1,4 @@
-﻿
-
-body {
+﻿body {
     background: #fff;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
     color: #545454;
@@ -24,49 +22,49 @@ body {
     margin-top: 10px;
 }
 
-    .menu ul {
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        transform: skew(-25deg);
-    }
+.menu ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transform: skew(-25deg);
+}
 
-        .menu ul li {
-            background: #FFFFFF;
-            float: left;
-            border-right: 1px solid #EEEEEE;
-            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
-            text-transform: uppercase;
-            color: #545454;
-            font-size: 17px;
-            font-weight: bold;
-            transition: all 0.3s linear;
-        }
+.menu ul li {
+    background: #FFFFFF;
+    float: left;
+    border-right: 1px solid #EEEEEE;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    color: #545454;
+    font-size: 17px;
+    font-weight: bold;
+    transition: all 0.3s linear;
+}
 
-            .menu ul li:first-child {
-                border-radius: 7px 0 0 7px;
-            }
+.menu ul li:first-child {
+    border-radius: 7px 0 0 7px;
+}
 
-            .menu ul li:last-child {
-                border-right: none;
-                border-radius: 0 7px 7px 0;
-            }
+.menu ul li:last-child {
+    border-right: none;
+    border-radius: 0 7px 7px 0;
+}
 
-            .menu ul li:hover {
-                background: #EEEEEE;
-                color: #FF6B01;
-            }
+.menu ul li:hover {
+    background: #EEEEEE;
+    color: #FF6B01;
+}
 
-            .menu ul li a {
-                display: block;
-                padding: 15px 35px;
-                color: inherit;
-                text-decoration: none;
-                transform: skew(25deg);
-            }
+.menu ul li a {
+    display: block;
+    padding: 15px 35px;
+    color: inherit;
+    text-decoration: none;
+    transform: skew(25deg);
+}
 
-/*STOPKA*/
+/* STOPKA */
 footer {
     width: auto;
     height: 350px;
@@ -91,9 +89,9 @@ a {
     pointer-events: none;
 }
 
-    .nav:hover {
-        pointer-events: auto;
-    }
+.nav:hover {
+    pointer-events: auto;
+}
 
 .sm-header {
     color: #fff;
@@ -130,13 +128,13 @@ a {
     transition: transform 0.5s, opacity 0.5s;
 }
 
-    .nav-item:nth-child(odd) {
-        transform: translateY(5rem);
-    }
+.nav-item:nth-child(odd) {
+    transform: translateY(5rem);
+}
 
-    .nav-item:nth-child(even) {
-        transform: translateY(-5rem);
-    }
+.nav-item:nth-child(even) {
+    transform: translateY(-5rem);
+}
 
 .nav:hover .nav-item {
     opacity: 1;
@@ -147,28 +145,27 @@ a {
     font-size: 2rem;
 }
 
-    .nav-link i {
-        transition: color 0.5s;
-    }
+.nav-link i {
+    transition: color 0.5s;
+}
 
-    .nav-link:hover i.fa-facebook-f {
-        color: #3b5998;
-    }
+.nav-link:hover i.fa-facebook-f {
+    color: #3b5998;
+}
 
-    .nav-link:hover i.fa-twitter {
-        color: #1da1f2;
-    }
+.nav-link:hover i.fa-twitter {
+    color: #1da1f2;
+}
 
-    .nav-link:hover i.fa-instagram {
-        color: #dd4b39;
-    }
+.nav-link:hover i.fa-instagram {
+    color: #dd4b39;
+}
 
-    .nav-link:hover i.fa-google {
-        color: #ea4c89;
-    }
+.nav-link:hover i.fa-google {
+    color: #ea4c89;
+}
 
-
-/*Administrator */
+/* Administrator */
 
 #main_administrator {
     height: 140px;
@@ -190,14 +187,16 @@ a {
     font-size: 20px;
 }
 
-    #main_uzytkownicy h2 {
-        text-align: center;
-    }
+#main_uzytkownicy h2 {
+    text-align: center;
+}
 
-    #main_uzytkownicy th, td, tr {
-        width: 300px;
-        border: 1px solid #000;
-    }
+#main_uzytkownicy th,
+#main_uzytkownicy td,
+#main_uzytkownicy tr {
+    width: 300px;
+    border: 1px solid #000;
+}
 
 #main_historia {
     height: 100%;
@@ -209,7 +208,46 @@ a {
     font-size: 20px;
 }
 
-#tabela_historia th, td, tr {
+#tabela_historia th,
+#tabela_historia td,
+#tabela_historia tr {
     width: 500px;
     border: 1px solid #000;
+}
+
+/* Responsywność dla mniejszych ekranów */
+@media screen and (max-width: 768px) {
+    .menu ul li {
+        float: none;
+        display: inline-block;
+        transform: skew(0);
+        border-radius: 0;
+    }
+
+    .menu ul li:first-child {
+        border-radius: 0;
+    }
+
+    .menu ul li:last-child {
+        border-radius: 0;
+    }
+
+    .sm-header {
+        margin-left: 0;
+        font-size: 1.5rem;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+    }
+
+    .nav-item {
+        margin: 1rem;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+    }
 }
