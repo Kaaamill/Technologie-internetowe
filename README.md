@@ -27,7 +27,7 @@ Kamil Ibron @Kaaamill
 - cookies
 
 Anna-Maria 'Mania' Rogulska @peleda
-- skrypt .js
+- regulamin
 - dokumentacja
 - koordynacja
 
