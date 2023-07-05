@@ -9,6 +9,12 @@ body {
     background-size: 500px;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .logo {
     margin-top: 1%;
     display: block;
@@ -107,11 +113,9 @@ form {
     padding-left: 4%;
 }
 
-#button,
-#button-rejestracja {
+#button {
     height: 80px;
-    width: 100%;
-    max-width: none;
+    width: auto;
     background-color: #545454;
     border-radius: 25px;
     padding-top: 2%;
@@ -120,28 +124,58 @@ form {
     align-items: center;
 }
 
-input[type="submit"],
-input[type="button"] {
+input[type="submit"] {
     height: 40px;
-    width: 100%;
-    max-width: none;
+    width: 150px;
     padding: 5px 13px;
     color: white;
     font-size: 17px;
     background: #28292a;
-margin-top: 10px;
+    margin-top: 10px;
     border-radius: 10px;
 }
 
-input[type="submit"]:hover,
+input[type="submit"]:hover {
+    background-color: #131313;
+}
+
+#panel,
+input[type="submit"] {
+    border-radius: 10px;
+}
+
+#button-rejestracja {
+    position: relative;
+    height: 80px;
+    width: auto;
+    left: 0;
+    background-color: #545454;
+    border-radius: 25px;
+    padding-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="button"] {
+    height: 40px;
+    width: 150px;
+    padding: 5px 13px;
+    color: white;
+    font-size: 17px;
+    background: #28292a;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-bottom: 17%;
+}
+
 input[type="button"]:hover {
     background-color: #131313;
 }
 
 #button-rejestracja input[type="submit"] {
     height: 40px;
-    width: 100%;
-    max-width: none;
+    width: 150px;
     padding: 5px 13px;
     color: white;
     font-size: 17px;
@@ -161,8 +195,10 @@ footer {
     height: 325px;
     background-image: linear-gradient(45deg, #5d5d5d, #323130);
     text-align: center;
-    margin-top: 100px;
+    margin-top: auto;
     color: #fff;
+    display: flex;
+    flex-direction: column;
 }
 
 .main {
@@ -174,10 +210,11 @@ a {
 }
 
 .nav {
-    max-width: 80rem;
     display: flex;
     align-items: center;
     pointer-events: none;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .nav:hover {
@@ -186,35 +223,38 @@ a {
 
 .sm-header {
     color: #fff;
-    margin-left: 50%;
     font-size: 2rem;
     text-transform: uppercase;
     cursor: pointer;
     pointer-events: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .line {
-    width: 20rem;
-    height: 3px;
+    width: 0.5rem;
+    height: 1rem;
     background-color: #fff;
-    margin-left: 2rem;
-    margin-right: auto;
-    transform: scaleX(0.2);
+    margin-left: 2%;
+    transform: scaleY(0.2);
     transform-origin: left;
     transition: transform 0.5s;
+    display: flex;
+    justify-content: center;
 }
 
 .nav:hover .line {
-    transform: scaleX(1.25);
+    transform: scaleY(1.25);
 }
 
 .nav-list {
     display: flex;
+    justify-content: center;
     list-style: none;
 }
 
 .nav-item {
-    margin-inline: 2.5rem;
+    margin-inline: 2rem;
     opacity: 0;
     transition: transform 0.5s, opacity 0.5s;
 }
@@ -267,17 +307,5 @@ a {
     #logowanie {
         width: 90%;
         margin: 0 auto;
-    }
-
-    #username,
-    #password {
-        width: 100%;
-        max-width: none;
-    }
-
-    #username input,
-    #password input {
-        width: 100%;
-        max-width: none;
     }
 }

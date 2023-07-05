@@ -14,11 +14,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Książki</title>
     <meta name="description" content="Biblioteka VaDinci">
-    <link rel="stylesheet" href="uzytkownik.css">
+    <link rel="stylesheet" href="../../css_styles/uzytkownik.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 
 </head>
 <body>
+<div class="container">
     <div class="main">
         <a href="ksiazki_uzytkownik.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
@@ -145,5 +146,6 @@
         &copy; 2023 VaDinci
 
 </footer>
+</div>
 </body>
 </html>

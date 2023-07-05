@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 </head>
 <body>
+<div class="container">
     <a href="../../index.html"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
     <div id="box_logowanie">
         <h1>Panel Logowania</h1>
@@ -67,5 +68,6 @@
         &copy; 2023 VaDinci
 
 </footer>
+</div>
 </body>
 </html>
