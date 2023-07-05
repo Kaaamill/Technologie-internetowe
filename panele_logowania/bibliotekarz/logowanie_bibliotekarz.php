@@ -5,6 +5,24 @@
         header('Location: ../../widgety_uzytkownikow/bibliotekarz/strona_glowna_bibiliotekarz.php');
         exit();
     }
+    
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $login = $_POST['login'];
+        $haslo = $_POST['haslo'];
+
+        // Sprawdź poprawność loginu i hasła
+        if ($login === 'login' && $haslo === 'haslo') {
+            // Ustawienie pliku cookie
+            echo '<script>document.cookie = "zalogowany=true; expires=Thu, 1 Jan 2024 00:00:00 UTC; path=/";</script>';
+
+            header('Location: ../../widgety_uzytkownikow/bibliotekarz/strona_glowna_bibliotekarz.php');
+            exit();
+        } else {
+            $_SESSION['blad'] = 'Błędny login lub hasło.';
+            header('Location: logowaniebibliotekarz.php');
+            exit();
+        }
+    }
 ?>
 
 <!DOCTYPE html>
