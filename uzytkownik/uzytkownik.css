@@ -70,9 +70,15 @@ body {
 /*Ksi��ka miesi�ca*/
 h1 {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 70px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 46px;
+}
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 .book_of_the_month {
     position: relative;
@@ -379,7 +385,7 @@ color: #ea4c89;
 }
 .druga { /*  KSIAZKI */
     text-align: center;
-    width: calc(33.33% - 20px);
+    width: calc(20% - 20px);
     margin: 10px;
 }
 .container {     /*  KSIAZKI */

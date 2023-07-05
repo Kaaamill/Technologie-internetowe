@@ -174,7 +174,7 @@ footer {
 }
 .druga { /*  KSIAZKI */
     text-align: center;
-    width: calc(33.33% - 20px);
+    width: calc(20% - 20px);
     margin: 10px;
 }
 .container {     /*  KSIAZKI */
@@ -308,37 +308,9 @@ a:hover {
     z-index: 1;
 }
 
-.arrow-left {/*  index strona glown */
-    left: 0;
-}
 
-.arrow-right {/*  index strona glown */
-    right: 0;
-}
 
-.arrow-left i,/*  index strona glown */
-.arrow-right i {
-    font-size: 20px;
-    color: #545454;
-}
 
-.arrow-left:hover,/*  index strona glown */
-.arrow-right:hover {
-    background-color: #f0f0f0;
-}
-
-.scroll-container-arrows {/*  index strona glown */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow-x: auto;
-    margin-bottom: 20px; /* Dodano margines na dole dla lepszego wyświetlania tekstu */
-}
-
-.scroll-container {/*  index strona glown */
-    position: relative;
-    width: 100%;
-}
 .menu ul li.special {
     background-color: #7a7a7a;
     color: white;

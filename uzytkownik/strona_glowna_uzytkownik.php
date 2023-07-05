@@ -1,10 +1,18 @@
 <?php
-    session_start();
-    if (!isset($_SESSION['zalogowany']))
-    {
-        header('Location: ../../index.html');
-        exit();
-    }
+session_start();
+if (!isset($_SESSION['zalogowany'])) {
+    header('Location: ../../index.html');
+    exit();
+}
+
+// Obsługa formularza wyszukiwania
+if (isset($_GET['fraza'])) {
+    $fraza = $_GET['fraza'];
+
+    // Przekierowanie na stronę z wynikami wyszukiwania
+    header("Location: wyniki_wyszukiwania.php?fraza=$fraza");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,11 +26,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 </head>
 <body>
-
     <div class="main">
-
         <a href="strona_glowna_uzytkownik.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
-
         <nav class="menu">
             <ul>
                 <li class="special"><a href="strona_glowna_uzytkownik.php">Strona Główna</a></li>
@@ -31,9 +36,14 @@
                 <li><a href="wylogowanie.php">Wyloguj</a></li>
             </ul>
         </nav>
-
-        </div>
-        <h1>POLECAMY:</h1>
+    </div>
+<h1>
+        <form action="strona_glowna_uzytkownik.php" method="GET">
+            <input type="text" name="fraza" placeholder="Wyszukaj ksiazke...">
+            <button type="submit">Szukaj</button>
+        </form>
+    </h1>
+    <h1>POLECAMY:</h1>
 
 
      <div class="books-container" style="display: flex; justify-content: center;">
