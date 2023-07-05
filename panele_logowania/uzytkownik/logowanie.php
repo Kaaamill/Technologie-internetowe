@@ -19,7 +19,7 @@
         $login = htmlentities($login, ENT_QUOTES, "UTF-8");
         $haslo2 = htmlentities($haslo2, ENT_QUOTES, "UTF-8");
         if ($rezultat = @$polaczenie->query(
-        sprintf("SELECT * FROM klienci WHERE login_id='%s' AND haslo2='%s'",
+        sprintf("SELECT * FROM klienci WHERE login='%s' AND haslo2='%s'",
         mysqli_real_escape_string($polaczenie,$login),
         mysqli_real_escape_string($polaczenie,$haslo2))))
         {
