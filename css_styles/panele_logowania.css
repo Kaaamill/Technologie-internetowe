@@ -107,63 +107,41 @@ form {
     padding-left: 4%;
 }
 
-#button {
-    height: 80px;
-    width: auto;
-    background-color: #545454;
-    border-radius: 25px;
-    padding-top: 2%;
-}
-
-input[type="submit"] {
-    height: 40px;
-    width: 150px;
-    padding: 5px 13px;
-    color: white;
-    font-size: 17px;
-    background: #28292a;
-    margin-top: 10px;
-    border-radius: 10px;
-}
-
-input[type="submit"]:hover {
-    background-color: #131313;
-
-}
-
-#panel,
-input[type="submit"] {
-    border-radius: 10px;
-}
-
+#button,
 #button-rejestracja {
-    position: relative;
     height: 80px;
-    width: auto;
-    left: 0;
+    width: 100%;
+    max-width: none;
     background-color: #545454;
     border-radius: 25px;
     padding-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+input[type="submit"],
 input[type="button"] {
     height: 40px;
-    width: 150px;
+    width: 100%;
+    max-width: none;
     padding: 5px 13px;
     color: white;
     font-size: 17px;
     background: #28292a;
-    margin-top: 10px;
+margin-top: 10px;
     border-radius: 10px;
 }
 
+input[type="submit"]:hover,
 input[type="button"]:hover {
     background-color: #131313;
 }
 
 #button-rejestracja input[type="submit"] {
     height: 40px;
-    width: 150px;
+    width: 100%;
+    max-width: none;
     padding: 5px 13px;
     color: white;
     font-size: 17px;
@@ -283,10 +261,12 @@ a {
 @media (max-width: 768px) {
     #box_logowanie {
         width: 90%;
+        margin: 0 auto;
     }
 
     #logowanie {
         width: 90%;
+        margin: 0 auto;
     }
 
     #username,
