@@ -121,7 +121,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Rejestracja dla Klienta</title>
-    <link rel="stylesheet" href="rejestracja.css"> 
+    <link rel="stylesheet" href="../../css_styles/rejestracja.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 
     <style>
@@ -135,6 +135,7 @@
 </head>
  
 <body>
+<div id="regulamin"></div>
     <a href="../../index.html"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
     <div id="box">
         <form method="post">
@@ -202,9 +203,8 @@
                     echo "checked";
                     unset($_SESSION['fr_regulamin']);
                 }
-                    ?>/> Oświadczam, iż zapoznałem/-am się z treścią <a href="regulamin.html" target="_blank">Regulaminu Biblioteka VaDinci</a> i akceptuję jego treść. <br />
+                    ?>/> Oświadczam, iż zapoznałem/-am się z treścią <a href="#" class="regulamin_link" onclick="displayModal(); ">Regulaminu Biblioteki VaDinci</a> i akceptuję jego treść. <br />
             </label>
-            
             <?php
                 if (isset($_SESSION['e_regulamin']))
                 {
@@ -252,5 +252,6 @@
         &copy; 2023 VaDinci
 
     </footer>
+    <script src="../../js_scripts/regulaminmodal.js"></script>
 </body>
 </html>

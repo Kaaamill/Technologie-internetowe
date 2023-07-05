@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Zarządzanie książkami</title>
     <meta name="description" content="Biblioteka VaDinci">
-    <link rel="stylesheet" href="../adminstrator_bibliotekarz.css">
+    <link rel="stylesheet" href="../../css_styles/adminstrator_bibliotekarz.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 
 </head>
