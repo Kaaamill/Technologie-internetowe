@@ -64,13 +64,17 @@ Projekt zawiera 5 głównych katalogów podzielonych funkcjonalnie.
 
 **/css_styles:**
 - arkusze styli dla całego projektu
+
 **/img:**
 - grafiki dla całego projektu
+
 **/js_scripts:**
 - skrypty js
+
 **/panele_logowania:**
 - panele logowania dla każdej z ról
 - dostępne widoki w ramach panelów logowania z podziałem na podkatalogi dla każdej z ról
+
 **/widgety_uzytkowników**
 - wszelkie podwidoki dostępne po zalogowaniu z podziałem na podkatalogi dla każdej z ról
 
