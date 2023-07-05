@@ -1,5 +1,8 @@
 ﻿body {
     background: #fff;
+    background-image: 
+        linear-gradient(to bottom, rgba(170, 207, 208, 0.6), rgba(246, 239, 195, 0.6)), 
+        url("../img/background.png");
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
     color: #545454;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
