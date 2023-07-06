@@ -1,10 +1,18 @@
 <?php
-    session_start();
-    if (!isset($_SESSION['zalogowany']))
-    {
-        header('Location: ../../index.html');
-        exit();
-    }
+session_start();
+if (!isset($_SESSION['zalogowany'])) {
+    header('Location: ../../index.html');
+    exit();
+}
+
+// Obsługa formularza wyszukiwania
+if (isset($_GET['fraza'])) {
+    $fraza = $_GET['fraza'];
+
+    // Przekierowanie na stronę z wynikami wyszukiwania
+    header("Location: wyniki_wyszukiwania.php?fraza=$fraza");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,75 +32,81 @@
         <a href="strona_glowna_uzytkownik.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
             <ul>
-                <li><a href="strona_glowna_uzytkownik.php">Strona Główna</a></li>
+                <li class="special"><a href="strona_glowna_uzytkownik.php">Strona Główna</a></li>
                 <li><a href="ksiazki_uzytkownik.php">Książki</a></li>
                 <li><a href="historia_uzytkownik.php">Historia</a></li>
                 <li><a href="wylogowanie.php">Wyloguj</a></li>
             </ul>
         </nav>
-        <h1>POLECAMY:</h1>
-
-    <div class="scroll-container">
-    <div class="books-container">
-
-        <div class="pierwsza">
-            <a href="Wypozyczenie.html" target="_blank" title="Zobacz recenzje">
-                <div class="image-container">   <img src="img/wp.jpg" width="100"> <a href="Wypozyczenie.html" class="rent-button">Wypożycz</a> </div>
-            </a><br>
-            <a href="https://www.bryk.pl/wypracowania/jezyk-polski/recenzje/6904-recenzja-trylogii-wladca-pierscieni-autorstwa-john-ronald-reuel-tolkiena.html" target="_blank" title="Zobacz recenzje">Władca Pierścieni</a><br/><br/>
-        </div>
-
-        <div class="pierwsza">
-            <a href="Wypozyczenie.html" target="_blank" title="Zobacz recenzje">
-                <div class="image-container"> <img width="100" src="img/hpkf.jpg" /> <a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                </div>
-            </a><br/>
-            <a href="https://www.bryk.pl/wypracowania/jezyk-polski/recenzje/1001776-recenzja-ksiazki-j-k-rowling-harry-potter-i-kamien-filozoficzny.html" target="_blank" title="Zobacz recenzje">Harry Potter i Kamień Filozoficzny</a>
-        </div>
-
-        <div class="pierwsza">
-            <a href="Wypozyczenie.html" target="_blank" title="Oskar i pani Róża">
-                <div class="image-container">  <img width="100" src="img/5.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                </div>
-            </a><br/>
-            <a href="https://lubimyczytac.pl/ksiazka/4953463/oskar-i-pani-roza" target="_blank" title="Zobacz recenzje">Oskar i pani Róża</a>
-        </div>
-
-        <br/><br/>
-
-        <div class="pierwsza">
-            <a href="https://lubimyczytac.pl/ksiazka/4862898/igrzyska-smierci" target="_blank" title="Igrzyska śmierci">
-                <div class="image-container">   <img width="100" src="img/9.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                </div>
-            </a><br/>
-            <a href="https://lubimyczytac.pl/ksiazka/4862898/igrzyska-smierci" target="_blank" title="Zobacz recenzje">Igrzyska śmierci</a>
-        </div>
-
-        <div class="pierwsza">
-            <a href="https://lubimyczytac.pl/ksiazka/51794/zmierzch" target="_blank" title="Zmierzch">
-                <div class="image-container">   <img width="100" src="img/10.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                </div>
-            </a><br/>
-            <a href="https://lubimyczytac.pl/ksiazka/51794/zmierzch" target="_blank" title="Zobacz recenzje">Zmierzch</a>
-        </div>
-
     </div>
-</div>
-<div class="arrow-right"><i class="fas fa-chevron-right"></i></div>
+    <h1>
+        <form action="strona_glowna_uzytkownik.php" method="GET">
+            <input type="text" name="fraza" placeholdeimgr="Wyszukaj ksiazke...">
+            <button type="submit">Szukaj</button>
+        </form>
+    </h1>
+    <h1>POLECAMY:</h1>
 
-<script>
-    const booksContainer = document.querySelector(".books-container");
-    const arrowLeft = document.querySelector(".arrow-left");
-    const arrowRight = document.querySelector(".arrow-right");
 
-    arrowLeft.addEventListener("click", () => {
-        booksContainer.scrollBy({ left: -200, behavior: "smooth" });
-    });
+     <div class="books-container" style="display: flex; justify-content: center;">
 
-    arrowRight.addEventListener("click", () => {
-        booksContainer.scrollBy({ left: 200, behavior: "smooth" });
-    });
-</script>
+          <div class="pierwsza">
+              <a href="podstrony_ksiazki/k1.php" target="_blank" title="Zobacz recenzje">
+                  <div class="image-container">   <img src="../../img//wp.jpg" width="100"> <a href="Wypozyczenie.html" class="rent-button">Wypożycz</a> </div>
+              </a><br>
+              <a href="podstrony_ksiazki/k1.php" target="_blank" title="Zobacz recenzje">Władca Pierścieni</a><br/><br/> </div>
+
+          <div class="pierwsza">
+              <a href="podstrony_ksiazki/k2.php" target="_blank" title="Zobacz recenzje">
+                  <div class="image-container"> <img width="100" src="../../img/hpkf.jpg" /> <a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                  </div>
+              </a><br/>
+              <a href="podstrony_ksiazki/k2.php" target="_blank" title="Zobacz recenzje">Harry Potter i Kamień Filozoficzny</a>
+          </div>
+
+
+
+
+
+
+          <br/>
+
+
+
+
+
+          <div class="pierwsza">
+              <a href="podstrony_ksiazki/k9.php" target="_blank" title="Igrzyska śmierci">
+                  <div class="image-container">   <img width="100" src="../../img/9.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                  </div>
+              </a><br/>
+              <a href="podstrony_ksiazki/k9.php" target="_blank" title="Zobacz recenzje">Igrzyska śmierci</a>
+          </div>
+
+          <div class="pierwsza">
+              <a href="podstrony_ksiazki/k10.php" target="_blank" title="Zmierzch">
+                  <div class="image-container">   <img width="100" src="../../img/10.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                  </div>
+              </a><br/>
+              <a href="podstrony_ksiazki/k10.php" target="_blank" title="Zobacz recenzje">Zmierzch</a>
+          </div>
+          <div class="pierwsza">
+              <a href="podstrony_ksiazki/k11.php" target="_blank" title="Ostatnie życzenie">
+                  <div class="image-container">   <img width="100" src="../../img/11.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                  </div>
+              </a><br/>
+              <a href="podstrony_ksiazki/k11.php" target="_blank" title="Zobacz recenzje">Ostatnie życzenie</a>
+          </div>
+
+      </div>
+      </div>
+
+
+
+ <h1><a href="ksiazki_uzytkownik.php" target="_blank" class="button">Zobacz więcej pozycji</a></h1>
+
+
+
 <footer>
         <nav class="nav">
             <h4 class="sm-header">Śledź nas na</h4>
