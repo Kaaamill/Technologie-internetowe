@@ -381,3 +381,27 @@ a {
     font-weight: bold;
     margin-top: 10px;
 }
+#lower {
+    background: #ecf2f5;
+    width: 360px;
+    padding: 5px 20px;
+    margin-top: 20px;
+}
+#lower2 {
+    background: #ecf2f5;
+    width: 400px;
+    margin-top: 20px;
+
+}
+#logowanie {
+    width: 400px;
+    margin: 0 auto;
+    padding: 15px 0 0;
+    background: #fff;
+    border: 1px solid silver;
+    font: 16px calibri;
+    letter-spacing: -1px;
+    -webkit-box-shadow: 0 0 2px silver;
+    -moz-box-shadow: 0 0 2px silver;
+    box-shadow: 0 0 2px silver;
+}
