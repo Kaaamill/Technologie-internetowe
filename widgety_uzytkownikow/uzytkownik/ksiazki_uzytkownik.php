@@ -19,7 +19,6 @@
 
 </head>
 <body>
-<div class="container">
     <div class="main">
         <a href="ksiazki_uzytkownik.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
@@ -145,6 +144,5 @@
         &copy; 2023 VaDinci
 
 </footer>
-</div>
 </body>
 </html>

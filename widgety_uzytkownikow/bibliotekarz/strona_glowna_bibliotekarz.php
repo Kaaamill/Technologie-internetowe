@@ -19,7 +19,6 @@
 
 </head>
 <body>
-<div class="container">
     <div class="main">
         <a href="strona_glowna_bibliotekarz.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
@@ -28,7 +27,7 @@
                 <li><a href="ksiazki_bibliotekarz.php">Książki</a></li>
                 <li><a href="uzytkownicy_bibliotekarz.php">Użytkownicy</a></li>
                 <li><a href="historia_bibliotekarz.php">Historia</a></li>
-                <li><a href="wylogowanie.php">Wyloguj</a></li>
+                <li><a href="wylogowanie">Wyloguj</a></li>
             </ul>
         </nav>
 
@@ -66,6 +65,5 @@
     ul. Tadeusza Kutrzeby 1, 61-710 Poznań<br />
     &copy; 2023 VaDinci
 </footer>
-</div>
 </body>
 </html>
