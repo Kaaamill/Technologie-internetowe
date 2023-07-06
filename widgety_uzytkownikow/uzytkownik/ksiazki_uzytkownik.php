@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Książki</title>
     <meta name="description" content="Biblioteka VaDinci">
-    <link rel="stylesheet" href="uzytkownik.css">
+    <link rel="stylesheet" href="podstrona.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 
 </head>
@@ -28,97 +28,91 @@
                 <li><a href="historia_uzytkownik.php">Historia</a></li>
                 <li><a href="wylogowanie.php">Wyloguj</a></li>
             </ul>
-        </nav>
+        </nav><br>
         <div class="container">
 
             <br>
                     <div class="druga">
-                        <a href="k1.html" target="_blank" title="Zobacz recenzje">
-                            <div class="image-container">   <img src="img/wp.jpg" width="100"> <a href="Wypozyczenie.html" class="rent-button">Wypożycz</a> </div>
+                        <a href="k1.php" target="_blank" title="Zobacz recenzje">
+                            <div class="image-container">   <img src="img/wp.jpg" width="120"> <a href="Wypozyczenie.html" class="rent-button">Wypożycz</a> </div>
                         </a><br>
-                        <a href="k1.html" target="_blank" title="Zobacz recenzje">Władca Pierścieni</a><br/><br/>
+                        <a href="k1.php" target="_blank" title="Zobacz recenzje">Władca Pierścieni</a><br/><br/>
                     </div>
 
                     <div class="druga">
-                        <a href="k2.html" target="_blank" title="Zobacz recenzje">
-                            <div class="image-container"> <img width="100" src="img/hpkf.jpg" /> <a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                        <a href="k2.php" target="_blank" title="Zobacz recenzje">
+                            <div class="image-container"> <img width="120" src="img/hpkf.jpg" /> <a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
                             </div>
                         </a><br/>
-                        <a href="k2.html" target="_blank" title="Zobacz recenzje">Harry Potter i Kamień Filozoficzny</a>
+                        <a href="k2.php" target="_blank" title="Zobacz recenzje">Harry Potter i Kamień Filozoficzny</a>
                     </div>
 
                     <div class="druga">
-                        <a href="k3.html" target="_blank" title="Gra o tron (edycja ilustrowana)">
-                            <div class="image-container"> <img width="100" src="img/3.jpg"/><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                        <a href="k3.php" target="_blank" title="Gra o tron (edycja ilustrowana)">
+                            <div class="image-container"> <img width="120" src="img/3.jpg"/><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
                             </div>
                         </a><br/>
-                        <a href="k3.html" target="_blank" title="Zobacz recenzje">Gra o tron (edycja ilustrowana)</a>
+                        <a href="k3.php" target="_blank" title="Zobacz recenzje">Gra o tron (edycja ilustrowana)</a>
                     </div>
 
                     <div class="druga">
-                        <a href="k4.html" target="_blank" title="Miecz przeznaczenia">
-                            <div class="image-container">  <img width="100" src="img/4.jpg" /><<a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                        <a href="k4.php" target="_blank" title="Miecz przeznaczenia">
+                            <div class="image-container">  <img width="120" src="img/4.jpg" /> <a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
                             </div>
                         </a><br/>
-                        <a href="k4.html" target="_blank" title="Zobacz recenzje">Miecz przeznaczenia</a>
+                        <a href="k4.php" target="_blank" title="Zobacz recenzje">Miecz przeznaczenia</a>
                     </div>
 
                     <div class="druga">
-                        <a href="k5.html" target="_blank" title="Oskar i pani Róża">
-                            <div class="image-container">  <img width="100" src="img/5.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                        <a href="k5.php" target="_blank" title="Oskar i pani Róża">
+                            <div class="image-container">  <img width="120" src="img/5.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
                             </div>
                         </a><br/>
-                        <a href="k5.html" target="_blank" title="Zobacz recenzje">Oskar i pani Róża</a>
+                        <a href="k5.php" target="_blank" title="Zobacz recenzje">Oskar i pani Róża</a>
                     </div>
 
 
 
                     <div class="druga">
-                        <a href="k6.html" target="_blank" title="Zbrodnia i kara">
-                            <div class="image-container">     <img width="100" src="img/6.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                        <a href="k6.php" target="_blank" title="Zbrodnia i kara">
+                            <div class="image-container">     <img width="120" src="img/6.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
                             </div>
                         </a><br/>
-                        <a href="k6.html" target="_blank" title="Zobacz recenzje">Zbrodnia i kara</a>
+                        <a href="k6.php" target="_blank" title="Zobacz recenzje">Zbrodnia i kara</a>
                     </div>
 
                     <div class="druga">
-                        <a href="hk7.html" target="_blank" title="Krew elfów">
-                            <div class="image-container">    <img width="100" src="img/7.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                        <a href="hk7.php" target="_blank" title="Krew elfów">
+                            <div class="image-container">    <img width="120" src="img/7.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
                             </div>
                         </a><br/>
-                        <a href="k7.html" target="_blank" title="Zobacz recenzje">Krew elfów</a>
+                        <a href="k7.php" target="_blank" title="Zobacz recenzje">Krew elfów</a>
+                    </div>
+
+
+
+                    <div class="druga">
+                        <a href="k9.php" target="_blank" title="Igrzyska śmierci">
+                            <div class="image-container">   <img width="120" src="img/9.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                            </div>
+                        </a><br/>
+                        <a href="k9.php" target="_blank" title="Zobacz recenzje">Igrzyska śmierci</a>
                     </div>
 
                     <div class="druga">
-                        <a href="k8.html" target="_blank" title="Mężczyźni, którzy nienawidzą kobiet">
-                            <div class="image-container">  <img width="100" src="img/8.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                        <a href="k10.php" target="_blank" title="Zmierzch">
+                            <div class="image-container">   <img width="120" src="img/10.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
                             </div>
                         </a><br/>
-                        <a href="k8.html" target="_blank" title="Zobacz recenzje">Mężczyźni, którzy nienawidzą kobiet</a>
+                        <a href="k10.php" target="_blank" title="Zobacz recenzje">Zmierzch</a>
                     </div>
 
                     <div class="druga">
-                        <a href="k9.html" target="_blank" title="Igrzyska śmierci">
-                            <div class="image-container">   <img width="100" src="img/9.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                        <a href="k11.php" target="_blank" title="Ostatnie życzenie">
+                            <div class="image-container">   <img width="120" src="img/11.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
                             </div>
                         </a><br/>
-                        <a href="k9.html" target="_blank" title="Zobacz recenzje">Igrzyska śmierci</a>
-                    </div>
-
-                    <div class="druga">
-                        <a href="k10.html" target="_blank" title="Zmierzch">
-                            <div class="image-container">   <img width="100" src="img/10.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                            </div>
-                        </a><br/>
-                        <a href="k10.html" target="_blank" title="Zobacz recenzje">Zmierzch</a>
-                    </div>
-
-                    <div class="druga">
-                        <a href="k11.html" target="_blank" title="Ostatnie życzenie">
-                            <div class="image-container">   <img width="100" src="img/11.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                            </div>
-                        </a><br/>
-                        <a href="k11.html" target="_blank" title="Zobacz recenzje">Ostatnie życzenie</a>
+                        <a href="k11.php" target="_blank" title="Zobacz recenzje">Ostatnie życzenie</a>
                     </div>
             </div>
 

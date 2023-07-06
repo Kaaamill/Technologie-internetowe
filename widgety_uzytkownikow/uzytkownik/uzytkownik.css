@@ -15,8 +15,9 @@ body {
     width: auto;
     min-height: min-content;
     padding: 0;
+    overflow-x: hidden;
 }
-        
+
 .logo {
     display: block;
     margin-left: auto;
@@ -24,8 +25,11 @@ body {
 }
 
 .menu {
-  text-align: center;
-  margin-top: 10px;
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
 }
 .menu ul {
   display: inline-block;
@@ -66,9 +70,15 @@ body {
 /*Ksi��ka miesi�ca*/
 h1 {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 70px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 46px;
+}
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 .book_of_the_month {
     position: relative;
@@ -286,36 +296,24 @@ color: #ea4c89;
     align-items: center;
 }
 .pierwsza img {/*  index strona glown */
-    width: 100px;
+    width: 50px;
 }
 .pierwsza a { /*  index strona glown */
-    display: block;
+    display: flex;
     margin-top: 10px;
 }
-.scroll-container {/*  index strona glown */
-    margin: 0 auto;
-}
-.scroll-container-arrows {/*  index strona glown */
+
+.books-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Wyśrodkowanie poziome */
+    align-items: center; /* Wyśrodkowanie pionowe */
+    position: relative;
+    margin-bottom: 10px;
 }
 
-.scroll-container-arrows .arrow-left,/*  index strona glown */
-.scroll-container-arrows .arrow-right {
-    cursor: pointer;
-}
-.books-container {/*  index strona glown */
-    display: flex;
-    overflow-x: auto;
-    justify-content: flex-start;
-    position: relative;
-    white-space: nowrap;
-    margin-bottom: 20px; /* Dodano margines na dole dla lepszego wyświetlania tekstu */
-}
-.books-container .pierwsza {/*  index strona glown */
+.books-container .pierwsza {
     display: inline-block;
-    margin: 0 20px; /* Zwiększono margines poziomy */
+    margin: 0 20px;
     text-align: center;
     word-wrap: break-word;
     flex: 0 0 auto;
@@ -325,84 +323,34 @@ color: #ea4c89;
     overflow: hidden;
 }
 
-.books-container .pierwsza .book-description {/*  index strona glown */
+.books-container .pierwsza .book-description {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     padding: 5px;
     background-color: rgba(255, 255, 255, 0.8);
-    max-height: 100px; /* Zwiększono maksymalną wysokość opisu książki */
-    overflow-y: auto;
+    max-height: 100px;
+
     text-align: center;
     font-size: 14px;
     line-height: 1.2;
     font-weight: bold;
 }
 
-.books-container .pierwsza p {/*  index strona glown */
+.books-container .pierwsza p {
     margin-top: 10px;
     font-size: 14px;
     line-height: 1.2;
     font-weight: bold;
-    max-height: none; /* Usunięto maksymalną wysokość tytułu książki */
-    overflow: visible; /* Zmieniono na visible, aby pełny tekst był widoczny */
-    white-space: normal; /* Dodano normal, aby tekst nie był zawijany */
+    max-height: none;
+    overflow: visible;
+    white-space: normal;
 }
 
-.books-container .pierwsza img {/*  index strona glown */
-    width: 160px; /* Zwiększono szerokość obrazka */
-    height: 240px; /* Zwiększono wysokość obrazka */
-}
-
-/* Dodane style dla przycisków przewijania */
-.arrow-left,/*  index strona glown */
-.arrow-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-
-.arrow-left {/*  index strona glown */
-    left: 0;
-}
-
-.arrow-right {/*  index strona glown */
-    right: 0;
-}
-
-.arrow-left i,/*  index strona glown */
-.arrow-right i {
-    font-size: 20px;
-    color: #545454;
-}
-
-.arrow-left:hover,/*  index strona glown */
-.arrow-right:hover {
-    background-color: #f0f0f0;
-}
-
-.scroll-container-arrows {/*  index strona glown */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow-x: auto;
-    margin-bottom: 20px; /* Dodano margines na dole dla lepszego wyświetlania tekstu */
-}
-
-.scroll-container {/*  index strona glown */
-    position: relative;
-    width: 100%;
+.books-container .pierwsza img {
+    width: 160px;
+    height: 240px;
 }
 
 .rent-button {
@@ -437,7 +385,7 @@ color: #ea4c89;
 }
 .druga { /*  KSIAZKI */
     text-align: center;
-    width: calc(33.33% - 20px);
+    width: calc(20% - 20px);
     margin: 10px;
 }
 .container {     /*  KSIAZKI */
@@ -445,3 +393,49 @@ color: #ea4c89;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+.menu ul li.special {
+    background-color: #7a7a7a;
+    color: white;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.image-container_2 {
+    margin-left: 20px;
+    /* Pozostałe style */
+}
+
+.image-container_2 img {
+    margin-bottom: 10px;
+    flex: 0 0 auto;
+}
+
+.image-container_2 p {
+    margin-left: 20px;
+    text-align: justify;
+}
+
+.rent-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FF6B01;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    opacity: 0;
+}
+.rent-button:hover {
+    background-color: #758ac9;
+    color: white;
+    opacity: 100%;
+}
+
