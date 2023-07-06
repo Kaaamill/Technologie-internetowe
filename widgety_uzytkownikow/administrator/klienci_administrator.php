@@ -14,7 +14,7 @@ include "baza.php";
 
 </head>
 <body>
-
+<div class="container">
     <div class="main">
         <a href="klienci_administrator.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
@@ -94,5 +94,6 @@ include "baza.php";
         ul. Tadeusza Kutrzeby 1, 61-710 Poznań<br />
         &copy; 2023 VaDinci
     </footer>
+    </div>
 </body>
 </html>
