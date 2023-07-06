@@ -1,8 +1,8 @@
 <?php
     session_start();
-    if ((!isset($_POST['login'])) || (!isset($_POST['haslo'])))
+    if ((!isset($_POST['login'])) || (!isset($_POST['haslo2'])))
     {
-        header('Location: ../../widgety_uzytkownikow/bibliotekarz/strona_glowna_bibliotekarz.php');
+        header('Location: ../../index.html');
         exit();
     }
  
@@ -15,13 +15,13 @@
     else
     {
         $login = $_POST['login'];
-        $haslo = $_POST['haslo'];
+        $haslo2 = $_POST['haslo2'];
         $login = htmlentities($login, ENT_QUOTES, "UTF-8");
-        $haslo = htmlentities($haslo, ENT_QUOTES, "UTF-8");
+        $haslo2 = htmlentities($haslo2, ENT_QUOTES, "UTF-8");
         if ($rezultat = @$polaczenie->query(
-        sprintf("SELECT * FROM bibliotekarze WHERE login='%s' AND haslo='%s'",
+        sprintf("SELECT * FROM bibliotekarze WHERE login='%s' AND haslo2='%s'",
         mysqli_real_escape_string($polaczenie,$login),
-        mysqli_real_escape_string($polaczenie,$haslo))))
+        mysqli_real_escape_string($polaczenie,$haslo2))))
         {
             $ilu_userow = $rezultat->num_rows;
             if($ilu_userow>0)
@@ -32,7 +32,7 @@
                 $_SESSION['id'] = $wiersz['id'];
                 $_SESSION['login'] = $wiersz['login'];
                 $_SESSION['email'] = $wiersz['email'];
-                $_SESSION['haslo'] = $wiersz['haslo'];
+                $_SESSION['haslo2'] = $wiersz['haslo2'];
                  
                 unset($_SESSION['blad']);
                 $rezultat->free_result();

@@ -1,20 +1,21 @@
 # Biblioteka VaDinci
 
-Projekt zaliczeniowy w ramch przedmiotu Technologie Internetowe na Collegium Da Vinci w Poznaniu.
+Projekt zaliczeniowy w ramch przedmiotu **Technologie Internetowe** na **Collegium Da Vinci** w Poznaniu.
 
 Projekt przedstawia system zarządzania biblioteką. Pozwala na rezerwację pozycji z biblioteki i późniejsze ich wypożyczenie oraz zwrot. 
-Szczegółowy opis funkcjonalności znajduje się w sekcji "Przykłady użycia".
 
-1. Wymagane zależności i narzędzia
+*Szczegółowy opis funkcjonalności znajduje się w sekcji "Przykłady użycia".*
 
-TECHNOLOGIE:
+## 1. Wymagane zależności i narzędzia
+
+### TECHNOLOGIE:
 
 - PHP
 - HTML
 - CSS
 - JS (vanilla)
 
-NARZĘDZIA:
+### NARZĘDZIA:
 
 XAMPP 8.2.4, w tym:
 - XAMPP Control Panel 3.3.0
@@ -24,11 +25,11 @@ XAMPP 8.2.4, w tym:
 - phpMyAdmin 5.2.1
 - OpenSSL 1.1.1t
 
-2. Instrukcje instalacji:
+## 2. Instrukcje instalacji:
 
-W celu uruchomienia proojektu należy wykonać następujące kroki:
+W celu uruchomienia projektu należy wykonać następujące kroki:
 
-INSTALACJA I KONFIGURACJA:
+### INSTALACJA I KONFIGURACJA:
 - Zainstalować XAMPP 8.2.4
 - Pobrać i umieścić całość projektu w folderze instalacji XAMPP, w podfolderze htdocs
 - uruchomić XAMPP Control Panel
@@ -39,12 +40,12 @@ INSTALACJA I KONFIGURACJA:
 
 Początkowy plik .sql tworzy inicjalną wersję bazy z przykładowymi credentialami użytkowników oraz bazą tytułów i historią wypożyczeń.
 
-URUCHOMIENIE
+### URUCHOMIENIE
 - uruchomić XAMPP Control Panel (jeśli nieaktywny)
 - uruchomić serwer Apache oraz MySQL (jeśli nieaktywny)
 - w przeglądarce internetowej przejść do adresu: http://localhost/technologie-internetowe/index.html
 
-3. Funkcjonalności:
+## 3. Funkcjonalności:
 
 - Tworzenie nowych użytkowników
 - logowanie użytkowników
@@ -57,52 +58,56 @@ URUCHOMIENIE
 - podgląd historii wypożyczeń książki (admin, bibliotekarz)
 - podgląd własnej historii wypożyczeń (użytkownik)
 
-4. Struktura projektu:
+## 4. Struktura projektu:
 
 Projekt zawiera 5 głównych katalogów podzielonych funkcjonalnie. 
 
-/css_styles:
+**/css_styles:**
 - arkusze styli dla całego projektu
-/img:
+
+**/img:**
 - grafiki dla całego projektu
-/js_scripts:
+
+**/js_scripts:**
 - skrypty js
-/panele_logowania:
+
+**/panele_logowania:**
 - panele logowania dla każdej z ról
 - dostępne widoki w ramach panelów logowania z podziałem na podkatalogi dla każdej z ról
-/widgety_uzytkowników
+
+**/widgety_uzytkowników**
 - wszelkie podwidoki dostępne po zalogowaniu z podziałem na podkatalogi dla każdej z ról
 
 Dodatkowo katalog główny projektu zawiera stronę główną oraz tą dokumentację :>
 
-5. Informacje o testach:
+## 5. Informacje o testach:
 
 Ze względu na niską złożoność projektu i ograniczenia czasowe, autorzy nie zdecydowali się na zastosowanie testów automatycznych.
 
-6. Autorzy i wkład:
+## 6. Autorzy i wkład:
 
-Marta Banasiak @mxvoa
+Marta Banasiak **@mxvoa**
 - baza danych
 - logowanie i rejestracja
 - system wypożyczeń
 
-Dominik Dobski @DominikDobski
+Dominik Dobski **@DominikDobski**
 - strona główna
 - widok książki
 - wyszukiwanie
 
-Kamil Ibron @Kaaamill
+Kamil Ibron **@Kaaamill**
 - style
 - responsywność
 - cookies
 
-Anna-Maria 'Mania' Rogulska @peleda
+Anna-Maria 'Mania' Rogulska **@peleda**
 - regulamin
 - dokumentacja
 - koordynacja
 
-7. Status projektu i wsparcie:
+## 7. Status projektu i wsparcie:
 
-Po opublikowaniu wersji finalnej (~9.07.2023 r.) projekt zostanie uznany za zamknięty i nie będzie dłużej wspierany.
+Po opublikowaniu wersji finalnej (~9.07.2023 r.) projekt zostanie uznany za zamknięty i **nie będzie dłużej wspierany**.
 
 Cieszymy się, że możecie oglądać ten kamień milowy w edukacji autorów :>

@@ -29,7 +29,7 @@
         $haslo1 = $_POST['haslo1'];
         $haslo2 = $_POST['haslo2'];
          
-        if ((strlen($haslo1)<4) || (strlen($haslo1)>20))
+        if ((strlen($haslo1)<4) || (strlen($haslo1)>15))
         {
             $wszystko_OK=false;
             $_SESSION['e_haslo']="Hasło musi posiadać od 4 do 15 znaków.";
@@ -212,16 +212,7 @@
                     echo '<div class="error">'.$_SESSION['e_regulamin'].'</div>';
                     unset($_SESSION['e_regulamin']);
                 }
-            ?>   
-            
-            <?php
-                if (isset($_SESSION['e_bot']))
-                {
-                    echo '<div class="error">'.$_SESSION['e_bot'].'</div>';
-                    unset($_SESSION['e_bot']);
-                }
-            ?>   
-            
+            ?>               
             <br />
             
             <input type="submit" value="Zarejestruj się" />
