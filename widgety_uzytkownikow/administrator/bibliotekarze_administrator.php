@@ -1,10 +1,5 @@
-﻿<?php
-    session_start();
-    if (!isset($_SESSION['zalogowany']))
-    {
-        header('Location: ../../index.html');
-        exit();
-    } 
+<?php
+include "baza.php";
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Zarządzanie książkami</title>
+    <title>Zarządzanie Bibliotekarzami</title>
     <meta name="description" content="Biblioteka VaDinci">
     <link rel="stylesheet" href="../adminstrator_bibliotekarz.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
@@ -21,7 +16,7 @@
 <body>
 
     <div class="main">
-        <a href="ksiazki_administrator.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
+        <a href="bibliotekarze_administrator.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
             <ul>
                 <li><a href="strona_glowna_administrator.php">Strona Główna</a></li>
@@ -33,24 +28,45 @@
 </ul>
 </nav>
 
-        <div id="main_uzytkownicy">
-            <h1>ZARZĄDZANIE KSIĄŻKAMI</h1>
-            <div id="tabela_ksiazki">
+  <div id="main_uzytkownicy">
+            <h1>ZARZĄDZANIE BIBLIOTEKARZAMI</h1>
+            <div id="tabela_bibliotekarze">
                 <table>
                     <tr>
-                        <th style="width: 75%;">Tytuł książki</th>
-                        <th style="width: 25%;">Operacje</th>
+                        <th>ID</th>
+                        <th>LOGIN</th>
+                        <th>ADRES E-MAIL</th>
+                        <th>HASŁO</th>
+                        <th>UPRAWNIENIA</th>
+                        <th>OPERACJE</th>
                     </tr>
-                    <tr>
-                        <td>Dane 1</td>
-                        <td>Dane 3</td>
-                    </tr>
-                    <tr>
-                        <td>Dane 4</td>
-                        <td>Dane 6</td>
-                    </tr>
-                </table>
+        <?php
+        $sql = "SELECT * FROM `bibliotekarze`";
+        $result = mysqli_query($conn, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+        ?>
+          <tr>
+            <td><?php echo $row["ID"] ?></td>
+            <td><?php echo $row["login"] ?></td>
+            <td><?php echo $row["email"] ?></td>
+            <td><?php echo $row["haslo2"] ?></td>
+            <td><?php echo $row["uprawnienia"] ?></td>
+            
+            <td>
+            <a href="edycja_bibliotekarz.php?ID=<?php echo $row["ID"] ?>">Edytuj</i></a><br />
+              <a href="usun_bibliotekarz.php?ID=<?php echo $row["ID"] ?>">Usuń</i></a>
+            </td>
+          </tr>
 
+        <?php
+        }
+        ?>
+      </table>
+
+
+      <br /><a href="dodawanie_bibliotekarza.php"><input type="button" value="Dodaj Bibliotekarza"></a>
+
+    
             </div>
         </div>
     </div>

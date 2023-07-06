@@ -29,7 +29,7 @@
         $haslo1 = $_POST['haslo1'];
         $haslo2 = $_POST['haslo2'];
          
-        if ((strlen($haslo1)<4) || (strlen($haslo1)>20))
+        if ((strlen($haslo1)<4) || (strlen($haslo1)>15))
         {
             $wszystko_OK=false;
             $_SESSION['e_haslo']="Hasło musi posiadać od 4 do 15 znaków.";
@@ -121,9 +121,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Rejestracja dla Klienta</title>
-    <link rel="stylesheet" href="../../css_styles/rejestracja.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
-
+     
     <style>
         .error
         {
@@ -135,123 +133,86 @@
 </head>
  
 <body>
-<div id="regulamin"></div>
-    <a href="../../index.html"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
-    <div id="box">
-        <form method="post">
-        
-            Login: <br /> <input type="text" value="<?php 
-                if (isset($_SESSION['fr_login']))
-                {
-                    echo $_SESSION['fr_login'];
-                    unset($_SESSION['fr_login']);
-                }
-            ?>" name="login" /><br /><br />
-            
-            <?php
-                if (isset($_SESSION['e_login']))
-                {
-                    echo '<div class="error">'.$_SESSION['e_login'].'</div>';
-                    unset($_SESSION['e_login']);
-                }
-            ?>
-            
-            E-mail: <br /> <input type="text" value="<?php
-                if (isset($_SESSION['fr_email']))
-                {
-                    echo $_SESSION['fr_email'];
-                    unset($_SESSION['fr_email']);
-                }
-            ?>" name="email" /><br /><br />
-            
-            <?php
-                if (isset($_SESSION['e_email']))
-                {
-                    echo '<div class="error">'.$_SESSION['e_email'].'</div>';
-                    unset($_SESSION['e_email']);
-                }
-            ?>
-            
-            Twoje hasło: <br /> <input type="password"  value="<?php
-                if (isset($_SESSION['fr_haslo1']))
-                {
-                    echo $_SESSION['fr_haslo1'];
-                    unset($_SESSION['fr_haslo1']);
-                }
-            ?>" name="haslo1" /><br /><br />
-            
-            <?php
-                if (isset($_SESSION['e_haslo']))
-                {
-                    echo '<div class="error">'.$_SESSION['e_haslo'].'</div>';
-                    unset($_SESSION['e_haslo']);
-                }
-            ?>       
-            
-            Powtórz hasło: <br /> <input type="password" value="<?php
-                if (isset($_SESSION['fr_haslo2']))
-                {
-                    echo $_SESSION['fr_haslo2'];
-                    unset($_SESSION['fr_haslo2']);
-                }
-            ?>" name="haslo2" /><br /><br />
-            
-            <label>
-                <input type="checkbox" name="regulamin" <?php
-                if (isset($_SESSION['fr_regulamin']))
-                {
-                    echo "checked";
-                    unset($_SESSION['fr_regulamin']);
-                }
-                    ?>/> Oświadczam, iż zapoznałem/-am się z treścią <a href="#" class="regulamin_link" onclick="displayModal(); ">Regulaminu Biblioteki VaDinci</a> i akceptuję jego treść. <br />
-            </label>
-            <?php
-                if (isset($_SESSION['e_regulamin']))
-                {
-                    echo '<div class="error">'.$_SESSION['e_regulamin'].'</div>';
-                    unset($_SESSION['e_regulamin']);
-                }
-            ?>   
-            
-            <?php
-                if (isset($_SESSION['e_bot']))
-                {
-                    echo '<div class="error">'.$_SESSION['e_bot'].'</div>';
-                    unset($_SESSION['e_bot']);
-                }
-            ?>   
-            
-            <br />
-            
-            <input type="submit" value="Zarejestruj się" />
-            
-        </form>
-    </div>
-    <footer>
-        <nav class="nav">
-            <h4 class="sm-header">Śledź nas na</h4>
-            <div class="line"></div>
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="https://www.facebook.com/collegiumdavinci" target ="_blank" class="nav-link"><i class="fab fa-facebook-f"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://twitter.com/CDV_Poznan" target ="_blank" class="nav-link"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://www.instagram.com/collegium_da_vinci/" target ="_blank" class="nav-link"><i class="fab fa-instagram"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://cdv.pl" target ="_blank" class="nav-link"><i class="fab fa-google"></i></a>
-                </li>
-            </ul>
-        </nav>
-        Bilbioteka Publiczna VaDinci<br />
-        VaDinci@gmail.com<br />
-        ul. Tadeusza Kutrzeby 1, 61-710 Poznań<br />
-        &copy; 2023 VaDinci
-
-    </footer>
-    <script src="../../js_scripts/regulaminmodal.js"></script>
+     
+    <form method="post">
+     
+        Login: <br /> <input type="text" value="<?php 
+            if (isset($_SESSION['fr_login']))
+            {
+                echo $_SESSION['fr_login'];
+                unset($_SESSION['fr_login']);
+            }
+        ?>" name="login" /><br /><br />
+         
+        <?php
+            if (isset($_SESSION['e_login']))
+            {
+                echo '<div class="error">'.$_SESSION['e_login'].'</div>';
+                unset($_SESSION['e_login']);
+            }
+        ?>
+         
+        E-mail: <br /> <input type="text" value="<?php
+            if (isset($_SESSION['fr_email']))
+            {
+                echo $_SESSION['fr_email'];
+                unset($_SESSION['fr_email']);
+            }
+        ?>" name="email" /><br /><br />
+         
+        <?php
+            if (isset($_SESSION['e_email']))
+            {
+                echo '<div class="error">'.$_SESSION['e_email'].'</div>';
+                unset($_SESSION['e_email']);
+            }
+        ?>
+         
+        Twoje hasło: <br /> <input type="password"  value="<?php
+            if (isset($_SESSION['fr_haslo1']))
+            {
+                echo $_SESSION['fr_haslo1'];
+                unset($_SESSION['fr_haslo1']);
+            }
+        ?>" name="haslo1" /><br /><br />
+         
+        <?php
+            if (isset($_SESSION['e_haslo']))
+            {
+                echo '<div class="error">'.$_SESSION['e_haslo'].'</div>';
+                unset($_SESSION['e_haslo']);
+            }
+        ?>       
+         
+        Powtórz hasło: <br /> <input type="password" value="<?php
+            if (isset($_SESSION['fr_haslo2']))
+            {
+                echo $_SESSION['fr_haslo2'];
+                unset($_SESSION['fr_haslo2']);
+            }
+        ?>" name="haslo2" /><br /><br />
+         
+        <label>
+            <input type="checkbox" name="regulamin" <?php
+            if (isset($_SESSION['fr_regulamin']))
+            {
+                echo "checked";
+                unset($_SESSION['fr_regulamin']);
+            }
+                ?>/> Oświadczam, iż zapoznałem/-am się z treścią <a href="regulamin.html" target="_blank">Regulaminu Biblioteka VaDinci</a> i akceptuję jego treść. <br />
+        </label>
+         
+        <?php
+            if (isset($_SESSION['e_regulamin']))
+            {
+                echo '<div class="error">'.$_SESSION['e_regulamin'].'</div>';
+                unset($_SESSION['e_regulamin']);
+            }
+        ?>   
+        <br />
+         
+        <input type="submit" value="Zarejestruj się" />
+         
+    </form>
 </body>
 </html>

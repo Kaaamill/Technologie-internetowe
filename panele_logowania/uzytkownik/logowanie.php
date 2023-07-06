@@ -2,7 +2,7 @@
     session_start();
     if ((!isset($_POST['login'])) || (!isset($_POST['haslo2'])))
     {
-        header('Location: ../../widgety_uzytkownikow/uzytkownik/strona_glowna_uzytkownik.php');
+        header('Location: ../../index.html');
         exit();
     }
  

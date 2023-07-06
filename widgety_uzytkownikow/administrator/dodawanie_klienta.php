@@ -1,10 +1,23 @@
-﻿<?php
-    session_start();
-    if (!isset($_SESSION['zalogowany']))
-    {
-        header('Location: ../../index.html');
-        exit();
-    } 
+<?php
+include "baza.php";
+
+if (isset($_POST["submit"])) {
+   $login = $_POST['login'];
+   $email = $_POST['email'];
+   $haslo2 = $_POST['haslo2'];
+   $uprawnienia = $_POST['uprawnienia'];
+
+   $sql = "INSERT INTO `klienci`(`ID`, `login`, `email`, `haslo2`, `uprawnienia`) VALUES (NULL,'$login','$email','$haslo2','klient')";
+
+   $result = mysqli_query($conn, $sql);
+
+   if ($result) {
+      header("Location: klienci_administrator.php?msg=Udało się dodać nowego Klienta!");
+   } else {
+      echo "Failed: " . mysqli_error($conn);
+   }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -12,16 +25,17 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Zarządzanie książkami</title>
+    <title>Dodawanie Klienta</title>
     <meta name="description" content="Biblioteka VaDinci">
     <link rel="stylesheet" href="../adminstrator_bibliotekarz.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 
 </head>
+
 <body>
 
     <div class="main">
-        <a href="ksiazki_administrator.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
+        <a href="dodawanie_klienta.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
             <ul>
                 <li><a href="strona_glowna_administrator.php">Strona Główna</a></li>
@@ -33,28 +47,37 @@
 </ul>
 </nav>
 
-        <div id="main_uzytkownicy">
-            <h1>ZARZĄDZANIE KSIĄŻKAMI</h1>
-            <div id="tabela_ksiazki">
-                <table>
-                    <tr>
-                        <th style="width: 75%;">Tytuł książki</th>
-                        <th style="width: 25%;">Operacje</th>
-                    </tr>
-                    <tr>
-                        <td>Dane 1</td>
-                        <td>Dane 3</td>
-                    </tr>
-                    <tr>
-                        <td>Dane 4</td>
-                        <td>Dane 6</td>
-                    </tr>
-                </table>
+    <div id="dodawanie_klienta">
+        <h1>DODAWANIE NOWEGO KLIENTA</h1>
+      </div>
 
+      <div class="dodawanie_klienta">
+         <form action="" method="post" style="width:50vw; min-width:300px;">
+                  <label class="form-label">Login dla nowego Klienta: </label><br />
+                  <input type="text" class="form-control" name="login" placeholder="Login">
+               </div>
+
+               <div class="col">
+               <br /><label class="form-label">Adres e-mail dla nowego Klienta</label><br />
+                  <input type="email" class="form-control" name="email" placeholder="email@example.com">
+               </div>
             </div>
-        </div>
-    </div>
-    <footer>
+
+            <div class="mb-3">
+            <br /><label class="form-label">Hasło dla nowego Klienta</label><br />
+               <input type="password" class="form-control" name="haslo2" placeholder="Hasło">
+            </div>
+
+            <div>
+            <br /><button type="submit" name="submit">Zapisz</button>
+               <a href="klienci_administrator.php"><input type="button" value="Anuluj"></a>
+            </div>
+         </form>
+      </div>
+   </div>
+
+</div>
+<footer>
         <nav class="nav">
             <h4 class="sm-header">Śledź nas na</h4>
             <div class="line"></div>
@@ -77,6 +100,7 @@
         VaDinci@gmail.com<br />
         ul. Tadeusza Kutrzeby 1, 61-710 Poznań<br />
         &copy; 2023 VaDinci
-    </footer>
+    
+</footer>
 </body>
 </html>

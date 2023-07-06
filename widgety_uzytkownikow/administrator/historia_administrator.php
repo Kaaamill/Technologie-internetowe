@@ -14,22 +14,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Historia wypożyczeń</title>
     <meta name="description" content="Biblioteka VaDinci">
-    <link rel="stylesheet" href="../../css_styles/adminstrator_bibliotekarz.css">
+    <link rel="stylesheet" href="../adminstrator_bibliotekarz.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 
 </head>
 <body>
+
     <div class="main">
         <a href="historia_administrator.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
             <ul>
                 <li><a href="strona_glowna_administrator.php">Strona Główna</a></li>
+                <li><a href="klienci_administrator.php">Zarządzanie Klientami</a></li>
+                <li><a href="bibliotekarze_administrator.php">Zarządzanie Bibliotekarzami</a></li>
                 <li><a href="ksiazki_administrator.php">Książki</a></li>
-                <li><a href="uzytkownicy_administrator.php">Użytkownicy</a></li>
                 <li><a href="historia_administrator.php">Historia</a></li>
-                <li><a href="wylogowanie.php">Wyloguj</a></li>
-            </ul>
-        </nav>
+                <li><a href="wylogowanie.php">Wyloguj się</a></li>
+</ul>
+</nav>
+
         <div id="main_historia">
             <h1>HISTORIA</h1>
             <div id="tabela_historia">
