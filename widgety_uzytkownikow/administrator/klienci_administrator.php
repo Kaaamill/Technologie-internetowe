@@ -7,9 +7,9 @@ include "baza.php";
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Zarządzanie Klientami</title>
+    <title>Zarządzanie użytkownikami</title>
     <meta name="description" content="Biblioteka VaDinci">
-    <link rel="stylesheet" href="../adminstrator_bibliotekarz.css">
+    <link rel="stylesheet" href="../../css_styles/adminstrator_bibliotekarz.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 
 </head>
@@ -93,7 +93,9 @@ include "baza.php";
         VaDinci@gmail.com<br />
         ul. Tadeusza Kutrzeby 1, 61-710 Poznań<br />
         &copy; 2023 VaDinci
-    </footer>
-    </div>
+    
+</footer>
+</div>
 </body>
 </html>
+

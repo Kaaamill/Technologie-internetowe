@@ -86,6 +86,6 @@
         &copy; 2023 VaDinci
 
     </footer>
-    </div>
+</div>
 </body>
 </html>
