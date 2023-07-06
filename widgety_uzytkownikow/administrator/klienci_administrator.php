@@ -63,7 +63,7 @@ include "baza.php";
       </table>
 
 
-      <br /><a href="dodawanie_klienta.php"><input type="button" value="Dodaj Klienta"></a>
+     <a href="dodawanie_klienta.php"><input type="button" value="Dodaj Klienta"></a>
 
     
             </div>

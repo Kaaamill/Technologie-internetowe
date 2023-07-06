@@ -30,16 +30,15 @@
     text-align: center;
     margin-top: 10px;
 }
-
 .menu ul {
     display: inline-block;
     margin: 0;
     padding: 0;
     list-style: none;
-    transform: skew(-25deg);
-}
 
+}
 .menu ul li {
+    transform: skew(-25deg);
     background: #FFFFFF;
     float: left;
     border-right: 1px solid #EEEEEE;
@@ -50,21 +49,17 @@
     font-weight: bold;
     transition: all 0.3s linear;
 }
-
 .menu ul li:first-child {
     border-radius: 7px 0 0 7px;
 }
-
 .menu ul li:last-child {
     border-right: none;
     border-radius: 0 7px 7px 0;
 }
-
 .menu ul li:hover {
     background: #EEEEEE;
     color: #FF6B01;
 }
-
 .menu ul li a {
     display: block;
     padding: 15px 35px;
@@ -203,6 +198,26 @@ a {
     font-size: 20px;
 }
 
+table {
+    background-color: white;
+    padding: 3vh;
+    border-radius: 25px;
+}
+
+input[type="button"] {
+    background-color: #545454;
+    color: white;
+    font-size: 16px;
+    width: 20%;
+    height: 40px;
+    border-radius: 25px;
+    margin: 5%;
+}
+
+input[type="button"]:hover {
+    background-color: #323130;
+}
+
 #main_uzytkownicy h2 {
     text-align: center;
 }
@@ -211,6 +226,23 @@ a {
 #tabela_uzytkownicy td,
 #tabela_uzytkownicy tr{
     width: 400vh;
+    font-size: 16px;
+
+}
+
+#tabela_bibliotekarze th,
+#tabela_bibliotekarze td,
+#tabela_bibliotekarze tr{
+    width: 400vh;
+    font-size: 16px;
+
+}
+
+#tabela_ksiazki th,
+#tabela_ksiazki td,
+#tabela_ksiazki tr{
+    width: 400vh;
+    font-size: 16px;
 
 }
 
@@ -227,8 +259,8 @@ a {
 #tabela_historia th,
 #tabela_historia td,
 #tabela_historia tr {
-    width: 500px;
-    border: 1px solid #000;
+    width: 500vh;
+    font-size: 16px;
 }
 
 /* Responsywność dla mniejszych ekranów */
