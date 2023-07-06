@@ -9,6 +9,12 @@ body {
     background-size: 500px;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .logo {
     margin-top: 1%;
     display: block;
@@ -153,13 +159,16 @@ form input[type="submit"]:hover {
 }
 
 /* STOPKA */
+
 footer {
     width: auto;
     height: 325px;
     background-image: linear-gradient(45deg, #5d5d5d, #323130);
     text-align: center;
-    margin-top: 100px;
+    margin-top: auto;
     color: #fff;
+    display: flex;
+    flex-direction: column;
 }
 
 .main {
@@ -171,10 +180,11 @@ a {
 }
 
 .nav {
-    max-width: 80rem;
     display: flex;
     align-items: center;
     pointer-events: none;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .nav:hover {
@@ -183,35 +193,38 @@ a {
 
 .sm-header {
     color: #fff;
-    margin-left: 50%;
     font-size: 2rem;
     text-transform: uppercase;
     cursor: pointer;
     pointer-events: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .line {
-    width: 20rem;
-    height: 3px;
+    width: 0.5rem;
+    height: 1rem;
     background-color: #fff;
-    margin-left: 2rem;
-    margin-right: auto;
-    transform: scaleX(0.2);
+    margin-left: 2%;
+    transform: scaleY(0.2);
     transform-origin: left;
     transition: transform 0.5s;
+    display: flex;
+    justify-content: center;
 }
 
 .nav:hover .line {
-    transform: scaleX(1.25);
+    transform: scaleY(1.25);
 }
 
 .nav-list {
     display: flex;
+    justify-content: center;
     list-style: none;
 }
 
 .nav-item {
-    margin-inline: 2.5rem;
+    margin-inline: 2rem;
     opacity: 0;
     transition: transform 0.5s, opacity 0.5s;
 }

@@ -135,6 +135,7 @@
 </head>
  
 <body>
+<div class="container">
 <div id="regulamin"></div>
     <a href="../../index.html"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
     <div id="box">
@@ -252,6 +253,7 @@
         &copy; 2023 VaDinci
 
     </footer>
+    </div>
     <script src="../../js_scripts/regulaminmodal.js"></script>
 </body>
 </html>

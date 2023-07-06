@@ -35,6 +35,7 @@
     <title>Udana rejestracja!</title>
 </head>
 <body>
+<div class="container">
     <a href="../../index.html"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
     <div id="rejestracja-box">
         Dziękujemy za rejestrację w naszym serwisie!<br /><br />
@@ -68,5 +69,6 @@
         &copy; 2023 VaDinci
 
     </footer>
+</div>
 </body>
 </html>

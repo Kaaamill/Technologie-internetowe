@@ -5,6 +5,24 @@
         header('Location: ../../widgety_uzytkownikow/uzytkownik/strona_glowna_uzytkownik.php');
         exit();
     }
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $login = $_POST['login'];
+        $haslo2 = $_POST['haslo2'];
+
+        // Sprawdź poprawność loginu i hasła
+        if ($login === 'login' && $haslo2 === 'haslo2') {
+            // Ustawienie pliku cookie
+            echo '<script>document.cookie = "zalogowany=true; expires=Thu, 1 Jan 2024 00:00:00 UTC; path=/";</script>';
+
+            header('Location: ../../widgety_uzytkownikow/uzytkownik/strona_glowna_uzytkownik.php');
+            exit();
+        } else {
+            $_SESSION['blad'] = 'Błędny login lub hasło.';
+            header('Location: logowanieuzytkownik.php');
+            exit();
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +36,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 </head>
 <body>
+<div class="container">
     <a href="../../index.html"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
     <div id="box_logowanie">
         <h1>Panel Logowania</h1>
@@ -67,5 +86,6 @@
         &copy; 2023 VaDinci
 
 </footer>
+</div>
 </body>
 </html>
