@@ -32,7 +32,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Logowanie dla Bibliotekarza</title>
     <meta name="description" content="Biblioteka VaDinci">
-    <link rel="stylesheet" href="../../css_styles/panele_logowania.css">
+    <link rel="stylesheet" href="../panele_logowania.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 </head>
 <body>
@@ -42,21 +42,16 @@
         <h1>Panel Logowania</h1>
         <h2>Bibliotekarz</h2>
         <div id="logowanie">
-            <form action="logowaniebibliotekarz.php" method="post">
-                <div id="username">
-                    Login: <br /> <input type="text" name="login" /> <br /><br />
-                </div>
-                <div id="password">
-                    Hasło: <br /> <input type="password" name="haslo" /> <br /><br />
-                </div>
-                <div id="button">
-                    <input type="submit" value="Zaloguj" />
-                </div>
+        <form action="logowaniebibliotekarz.php" method="post">
+        Login: <br /> <input type="text" name="login" /> <br /><br />
+        Hasło: <br /> <input type="password" name="haslo2" /> <br /><br />
+        <input type="submit" value="Zaloguj" />
+    </form>
 
-            <?php
-            if(isset($_SESSION['blad']))    echo $_SESSION['blad'];
-            ?>
-        </div>
+    <?php
+    if(isset($_SESSION['blad']))    echo $_SESSION['blad'];
+    ?>
+    </div>
     </form>
     </div>
     </div>

@@ -32,7 +32,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Logowanie dla Klienta</title>
     <meta name="description" content="Biblioteka VaDinci">
-    <link rel="stylesheet" href="../../css_styles/panele_logowania.css">
+    <link rel="stylesheet" href="../panele_logowania.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 </head>
 <body>
@@ -43,21 +43,15 @@
         <h2>Klient</h2>
         <div id="logowanie">
         <form action="logowanie.php" method="post">
-        <div id="username">
-                    Login: <br /> <input type="text" name="login" /> <br /><br />
-                </div>
-                <div id="password">
-                    Hasło: <br /> <input type="password" name="haslo2" /> <br /><br />
-                </div>
-                <div id="button-rejestracja">
-                    <input type="submit" value="Zaloguj" />
-                    <a href="rejestracja.php"><input type="button" value="Załóż konto"></a>
-                </div>
-        </form>
+        Login: <br /> <input type="text" name="login" /> <br /><br />
+        Hasło: <br /> <input type="password" name="haslo2" /> <br /><br />
+        <input type="submit" value="Zaloguj" /> <br /><br />
+        <a href="rejestracja.php"><input type="button" value="Załóż konto"></a>
+    </form>
 
-        <?php
-        if(isset($_SESSION['blad']))    echo $_SESSION['blad'];
-        ?>
+    <?php
+    if(isset($_SESSION['blad']))    echo $_SESSION['blad'];
+?>
         </div>
     </div>
     
