@@ -52,13 +52,13 @@ if (isset($_GET['fraza'])) {
 
           <div class="pierwsza">
               <a href="podstrony_ksiazki/k1.php" target="_blank" title="Zobacz recenzje">
-                  <div class="image-container">   <img src="../../img//wp.jpg" width="100"> <a href="Wypozyczenie.html" class="rent-button">Wypożycz</a> </div>
+                  <div class="image-container">   <img src="../../img//wp.jpg" width="100"> <a href="Wypozyczenie.php" class="rent-button">Wypożycz</a> </div>
               </a><br>
               <a href="podstrony_ksiazki/k1.php" target="_blank" title="Zobacz recenzje">Władca Pierścieni</a><br/><br/> </div>
 
           <div class="pierwsza">
               <a href="podstrony_ksiazki/k2.php" target="_blank" title="Zobacz recenzje">
-                  <div class="image-container"> <img width="100" src="../../img/hpkf.jpg" /> <a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                  <div class="image-container"> <img width="100" src="../../img/hpkf.jpg" /> <a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
                   </div>
               </a><br/>
               <a href="podstrony_ksiazki/k2.php" target="_blank" title="Zobacz recenzje">Harry Potter i Kamień Filozoficzny</a>
@@ -66,7 +66,7 @@ if (isset($_GET['fraza'])) {
           <br/>
           <div class="pierwsza">
               <a href="podstrony_ksiazki/k9.php" target="_blank" title="Igrzyska śmierci">
-                  <div class="image-container">   <img width="100" src="../../img/9.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                  <div class="image-container">   <img width="100" src="../../img/9.jpg" /><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
                   </div>
               </a><br/>
               <a href="podstrony_ksiazki/k9.php" target="_blank" title="Zobacz recenzje">Igrzyska śmierci</a>
@@ -74,14 +74,14 @@ if (isset($_GET['fraza'])) {
 
           <div class="pierwsza">
               <a href="podstrony_ksiazki/k10.php" target="_blank" title="Zmierzch">
-                  <div class="image-container">   <img width="100" src="../../img/10.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                  <div class="image-container">   <img width="100" src="../../img/10.jpg" /><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
                   </div>
               </a><br/>
               <a href="podstrony_ksiazki/k10.php" target="_blank" title="Zobacz recenzje">Zmierzch</a>
           </div>
           <div class="pierwsza">
               <a href="podstrony_ksiazki/k11.php" target="_blank" title="Ostatnie życzenie">
-                  <div class="image-container">   <img width="100" src="../../img/11.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                  <div class="image-container">   <img width="100" src="../../img/11.jpg" /><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
                   </div>
               </a><br/>
               <a href="podstrony_ksiazki/k11.php" target="_blank" title="Zobacz recenzje">Ostatnie życzenie</a>
