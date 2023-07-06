@@ -2,10 +2,10 @@
     session_start();
     if ((!isset($_POST['login'])) || (!isset($_POST['haslo'])))
     {
-        header('Location: ../../widgety_uzytkownikow/administrator/strona_glowna_administrator.php');
+        header('Location: Location: ../../index.html');
         exit();
     }
- 
+    
     require_once "bazaadmin.php";
     $polaczenie = @new mysqli($host, $db_user, $db_password, $db_name);
     if ($polaczenie->connect_errno!=0)
