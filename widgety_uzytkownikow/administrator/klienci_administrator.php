@@ -1,10 +1,5 @@
 ﻿<?php
-    session_start();
-    if (!isset($_SESSION['zalogowany']))
-    {
-        header('Location: ../../index.html');
-        exit();
-    }
+include "baza.php";
 ?>
 
 <!DOCTYPE html>
@@ -12,19 +7,19 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Strona główna</title>
+    <title>Zarządzanie Klientami</title>
     <meta name="description" content="Biblioteka VaDinci">
     <link rel="stylesheet" href="../../css_styles/adminstrator_bibliotekarz.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
-</head>
 
+</head>
 <body>
 <div class="container">
     <div class="main">
-        <a href="strona_glowna_administrator.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
+        <a href="klienci_administrator.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
             <ul>
-                <li><a href="strona_glowna_administrator.php">Strona Główna</a></li>
+            <li><a href="strona_glowna_administrator.php">Strona Główna</a></li>
                 <li><a href="klienci_administrator.php">Zarządzanie Klientami</a></li>
                 <li><a href="bibliotekarze_administrator.php">Zarządzanie Bibliotekarzami</a></li>
                 <li><a href="ksiazki_administrator.php">Książki</a></li>
@@ -32,15 +27,47 @@
                 <li><a href="wylogowanie.php">Wyloguj się</a></li>
             </ul>
         </nav>
+        <div id="main_uzytkownicy">
+        <h1>ZARZĄDZANIE KLIENTAMI</h1>
+            <div id="tabela_uzytkownicy">
+            <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>LOGIN</th>
+                        <th>ADRES E-MAIL</th>
+                        <th>HASŁO</th>
+                        <th>UPRAWNIENIA</th>
+                        <th>OPERACJE</th>
+                    </tr>
+        <?php
+        $sql = "SELECT * FROM `klienci`";
+        $result = mysqli_query($conn, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+        ?>
+          <tr>
+            <td><?php echo $row["ID"] ?></td>
+            <td><?php echo $row["login"] ?></td>
+            <td><?php echo $row["email"] ?></td>
+            <td><?php echo $row["haslo2"] ?></td>
+            <td><?php echo $row["uprawnienia"] ?></td>
+            
+            <td>
+            <a href="edycja_klient.php?ID=<?php echo $row["ID"] ?>">Edytuj</i></a><br />
+              <a href="usun_klient.php?ID=<?php echo $row["ID"] ?>">Usuń</i></a>
+            </td>
+          </tr>
 
-    <div id="main_administrator">
-    <?php
- 
-        echo "<h1>Witaj Administratorze ".$_SESSION['login'].'!</h1>';
-        echo "<h2>Życzymy miłego dnia :)</h2>";
-        echo "<p><b>E-mail</b>: ".$_SESSION['email'];
+        <?php
+        }
+        ?>
+      </table>
 
-    ?>
+
+      <br /><a href="dodawanie_klienta.php"><input type="button" value="Dodaj Klienta"></a>
+
+    
+            </div>
+        </div>
     </div>
     <footer>
         <nav class="nav">
@@ -65,7 +92,8 @@
         VaDinci@gmail.com<br />
         ul. Tadeusza Kutrzeby 1, 61-710 Poznań<br />
         &copy; 2023 VaDinci
-    </footer>
+    
+</footer>
 </div>
 </body>
 </html>

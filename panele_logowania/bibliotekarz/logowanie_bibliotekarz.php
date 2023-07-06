@@ -47,7 +47,7 @@
                     Login: <br /> <input type="text" name="login" /> <br /><br />
                 </div>
                 <div id="password">
-                    Hasło: <br /> <input type="password" name="haslo" /> <br /><br />
+                    Hasło: <br /> <input type="password" name="haslo2" /> <br /><br />
                 </div>
                 <div id="button">
                     <input type="submit" value="Zaloguj" />

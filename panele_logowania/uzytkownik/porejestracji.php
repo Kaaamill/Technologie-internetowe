@@ -3,7 +3,7 @@
      
     if (!isset($_SESSION['udanarejestracja']))
     {
-        header('Location: index.php');
+        header('Location: ../../index.html');
         exit();
     }
     else
@@ -21,7 +21,6 @@
     if (isset($_SESSION['e_email'])) unset($_SESSION['e_email']);
     if (isset($_SESSION['e_haslo2'])) unset($_SESSION['e_haslo2']);
     if (isset($_SESSION['e_regulamin'])) unset($_SESSION['e_regulamin']);
-    if (isset($_SESSION['e_bot'])) unset($_SESSION['e_bot']);
      
 ?>
 

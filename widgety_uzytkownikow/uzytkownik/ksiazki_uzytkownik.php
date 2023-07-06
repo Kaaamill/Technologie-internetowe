@@ -1,6 +1,6 @@
 ﻿<?php
     session_start();
-    if ((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true))
+    if ((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==false))
     {
         header('Location: strona_glowna_uzytkownik.php');
         exit();
@@ -25,101 +25,99 @@
         <nav class="menu">
             <ul>
                 <li><a href="strona_glowna_uzytkownik.php">Strona Główna</a></li>
-                <li><a href="ksiazki_uzytkownik.php">Książki</a></li>
+                <li class="special"><a href="ksiazki_uzytkownik.php">Książki</a></li>
                 <li><a href="historia_uzytkownik.php">Historia</a></li>
                 <li><a href="wylogowanie.php">Wyloguj</a></li>
             </ul>
         </nav>
-        <div class="menuKsiazki">
-            <div class="container">
         <br>
-        <div class="druga">
-            <a href="Wypozyczenie.html" target="_blank" title="Zobacz recenzje">
-                <div class="image-container">   <img src="img/wp.jpg" width="100"> <a href="Wypozyczenie.html" class="rent-button">Wypożycz</a> </div>
-            </a><br>
-            <a href="https://www.bryk.pl/wypracowania/jezyk-polski/recenzje/6904-recenzja-trylogii-wladca-pierscieni-autorstwa-john-ronald-reuel-tolkiena.html" target="_blank" title="Zobacz recenzje">Władca Pierścieni</a><br/><br/>
-        </div>
+        <div class="container_2">
 
-        <div class="druga">
-            <a href="Wypozyczenie.html" target="_blank" title="Zobacz recenzje">
-                <div class="image-container"> <img width="100" src="img/hpkf.jpg" /> <a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                </div>
-            </a><br/>
-            <a href="https://www.bryk.pl/wypracowania/jezyk-polski/recenzje/1001776-recenzja-ksiazki-j-k-rowling-harry-potter-i-kamien-filozoficzny.html" target="_blank" title="Zobacz recenzje">Harry Potter i Kamień Filozoficzny</a>
-        </div>
+                    <br>
+                    <div class="druga">
+                        <a href="podstrony_ksiazki/k1.php" target="_blank" title="Zobacz recenzje">
+                            <div class="image-container">   <img src="../../img/wp.jpg" width="120"> <a href="Wypozyczenie.php" class="rent-button">Wypożycz</a> </div>
+                        </a><br>
+                        <a href="podstrony_ksiazki/k1.php" target="_blank" title="Zobacz recenzje">Władca Pierścieni</a><br/><br/>
+                    </div>
 
-        <div class="druga">
-            <a href="Wypozyczenie.html" target="_blank" title="Gra o tron (edycja ilustrowana)">
-                <div class="image-container"> <img width="100" src="img/3.jpg"/><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                </div>
-            </a><br/>
-            <a href="https://lubimyczytac.pl/ksiazka/3937616/gra-o-tron-edycja-ilustrowana" target="_blank" title="Zobacz recenzje">Gra o tron (edycja ilustrowana)</a>
-        </div>
+                    <div class="druga">
 
-        <div class="druga">
-            <a href="Wypozyczenie.html" target="_blank" title="Miecz przeznaczenia">
-                <div class="image-container">  <img width="100" src="img/4.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                </div>
-            </a><br/>
-            <a href="https://lubimyczytac.pl/ksiazka/240312/miecz-przeznaczenia" target="_blank" title="Zobacz recenzje">Miecz przeznaczenia</a>
-        </div>
+                        <a href="podstrony_ksiazki/k2.php" target="_blank" title="Zobacz recenzje">
+                            <div class="image-container"> <img width="120" src="../../img/hpkf.jpg" /> <a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
+                            </div>
+                        </a><br/>
+                        <a href="podstrony_ksiazki/k2.php" target="_blank" title="Zobacz recenzje">Harry Potter i Kamień Filozoficzny</a>
 
-        <div class="druga">
-            <a href="Wypozyczenie.html" target="_blank" title="Oskar i pani Róża">
-                <div class="image-container">  <img width="100" src="img/5.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                </div>
-            </a><br/>
-            <a href="https://lubimyczytac.pl/ksiazka/4953463/oskar-i-pani-roza" target="_blank" title="Zobacz recenzje">Oskar i pani Róża</a>
-        </div>
+                    </div>
 
-        <div class="druga">
-            <a href="https://lubimyczytac.pl/ksiazka/5053602/zbrodnia-i-kara" target="_blank" title="Zbrodnia i kara">
-                <div class="image-container">     <img width="100" src="img/6.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                </div>
-            </a><br/>
-            <a href="https://lubimyczytac.pl/ksiazka/5053602/zbrodnia-i-kara" target="_blank" title="Zobacz recenzje">Zbrodnia i kara</a>
-        </div>
 
-        <div class="druga">
-            <a href="https://lubimyczytac.pl/ksiazka/240512/krew-elfow" target="_blank" title="Krew elfów">
-                <div class="image-container">    <img width="100" src="img/7.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                </div>
-            </a><br/>
-            <a href="https://lubimyczytac.pl/ksiazka/240512/krew-elfow" target="_blank" title="Zobacz recenzje">Krew elfów</a>
-        </div>
+                          <div class="druga">
+                                      <a href="podstrony_ksiazki/k3.php" target="_blank" title="Gra o tron (edycja ilustrowana)">
+                                              <div class="image-container"> <img width="120" src="../../img/3.jpg"/><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
+                                              </div>
+                                          </a><br/>
+                                          <a href="podstrony_ksiazki/k3.php" target="_blank" title="Zobacz recenzje">Gra o tron (edycja ilustrowana)</a>
+                                      </div>
 
-        <div class="druga">
-            <a href="https://lubimyczytac.pl/ksiazka/27644/mezczyzni-ktorzy-nienawidza-kobiet" target="_blank" title="Mężczyźni, którzy nienawidzą kobiet">
-                <div class="image-container">  <img width="100" src="img/8.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                </div>
-            </a><br/>
-            <a href="https://lubimyczytac.pl/ksiazka/27644/mezczyzni-ktorzy-nienawidza-kobiet" target="_blank" title="Zobacz recenzje">Mężczyźni, którzy nienawidzą kobiet</a>
-        </div>
+                                      <div class="druga">
+                                          <a href="podstrony_ksiazki/k4.php" target="_blank" title="Miecz przeznaczenia">
+                                              <div class="image-container">  <img width="120" src="../../img/4.jpg" /> <a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
+                                              </div>
+                                          </a><br/>
+                                          <a href="podstrony_ksiazki/k4.php" target="_blank" title="Zobacz recenzje">Miecz przeznaczenia</a>
+                                      </div>
 
-        <div class="druga">
-            <a href="https://lubimyczytac.pl/ksiazka/4862898/igrzyska-smierci" target="_blank" title="Igrzyska śmierci">
-                <div class="image-container">   <img width="100" src="img/9.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                </div>
-            </a><br/>
-            <a href="https://lubimyczytac.pl/ksiazka/4862898/igrzyska-smierci" target="_blank" title="Zobacz recenzje">Igrzyska śmierci</a>
-        </div>
+                                      <div class="druga">
+                                          <a href="podstrony_ksiazki/k5.php" target="_blank" title="Oskar i pani Róża">
+                                              <div class="image-container">  <img width="120" src="../../img/5.jpg" /><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
+                                              </div>
+                                          </a><br/>
+                                          <a href="podstrony_ksiazki/k5.php" target="_blank" title="Zobacz recenzje">Oskar i pani Róża</a>
+                                      </div>
 
-        <div class="druga">
-            <a href="https://lubimyczytac.pl/ksiazka/51794/zmierzch" target="_blank" title="Zmierzch">
-                <div class="image-container">   <img width="100" src="img/10.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                </div>
-            </a><br/>
-            <a href="https://lubimyczytac.pl/ksiazka/51794/zmierzch" target="_blank" title="Zobacz recenzje">Zmierzch</a>
-        </div>
+                                      <div class="druga">
+                                          <a href="podstrony_ksiazki/k6.php" target="_blank" title="Zbrodnia i kara">
+                                              <div class="image-container">     <img width="120" src="../../img/6.jpg" /><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
+                                              </div>
+                                          </a><br/>
+                                          <a href="podstrony_ksiazki/k6.php" target="_blank" title="Zobacz recenzje">Zbrodnia i kara</a>
+                                      </div>
 
-        <div class="druga">
-            <a href="https://lubimyczytac.pl/ksiazka/240310/ostatnie-zyczenie" target="_blank" title="Ostatnie życzenie">
-                <div class="image-container">   <img width="100" src="img/11.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                </div>
-            </a><br/>
-            <a href="https://lubimyczytac.pl/ksiazka/240310/ostatnie-zyczenie" target="_blank" title="Zobacz recenzje">Ostatnie życzenie</a>
-        </div>
-</div>
+                                      <div class="druga">
+                                          <a href="podstrony_ksiazki/k7.php" target="_blank" title="Krew elfów">
+                                              <div class="image-container">    <img width="120" src="../../img/7.jpg" /><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
+                                              </div>
+                                          </a><br/>
+                                          <a href="podstrony_ksiazki/k7.php" target="_blank" title="Zobacz recenzje">Krew elfów</a>
+                                      </div>
+
+                                      <div class="druga">
+                                          <a href="podstrony_ksiazki/k9.php" target="_blank" title="Igrzyska śmierci">
+                                              <div class="image-container">   <img width="120" src="../../img/9.jpg" /><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
+                                              </div>
+                                          </a><br/>
+                                          <a href="podstrony_ksiazki/k9.php" target="_blank" title="Zobacz recenzje">Igrzyska śmierci</a>
+                                      </div>
+
+                                      <div class="druga">
+                                          <a href="podstrony_ksiazki/k10.php" target="_blank" title="Zmierzch">
+                                              <div class="image-container">   <img width="120" src="../../img/10.jpg" /><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
+                                              </div>
+                                          </a><br/>
+                                          <a href="podstrony_ksiazki/k10.php" target="_blank" title="Zobacz recenzje">Zmierzch</a>
+                                      </div>
+
+                                      <div class="druga">
+                                          <a href="podstrony_ksiazki/k11.php" target="_blank" title="Ostatnie życzenie">
+                                              <div class="image-container">   <img width="120" src="../../img/11.jpg" /><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
+                                              </div>
+                                          </a><br/>
+                                          <a href="podstrony_ksiazki/k11.php" target="_blank" title="Zobacz recenzje">Ostatnie życzenie</a>
+                                      </div>
+                                  </div>
+                              </div>
+
 
 <footer>
         <nav class="nav">
