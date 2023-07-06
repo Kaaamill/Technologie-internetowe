@@ -1,17 +1,16 @@
 ﻿body {
-    background: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    min-height: min-content;
     background-image: 
         linear-gradient(to bottom, rgba(170, 207, 208, 0.6), rgba(246, 239, 195, 0.6)), 
         url("../img/background.png");
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    background-repeat: repeat;
+    background-size: 500px;
     color: #545454;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    margin: 0;
-    width: auto;
-    min-height: min-content;
-    padding: 0;
 }
 
 .container {
@@ -21,6 +20,7 @@
 }
 
 .logo {
+    margin-top: 1%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -207,11 +207,11 @@ a {
     text-align: center;
 }
 
-#main_uzytkownicy th,
-#main_uzytkownicy td,
-#main_uzytkownicy tr {
-    width: 300px;
-    border: 1px solid #000;
+#tabela_uzytkownicy th,
+#tabela_uzytkownicy td,
+#tabela_uzytkownicy tr{
+    width: 400vh;
+
 }
 
 #main_historia {

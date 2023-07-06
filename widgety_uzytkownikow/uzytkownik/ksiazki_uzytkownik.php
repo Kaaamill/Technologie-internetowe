@@ -42,16 +42,18 @@
                     </div>
 
                     <div class="druga">
+
                         <a href="podstrony_ksiazki/k2.php" target="_blank" title="Zobacz recenzje">
                             <div class="image-container"> <img width="120" src="../../img/hpkf.jpg" /> <a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
                             </div>
                         </a><br/>
                         <a href="podstrony_ksiazki/k2.php" target="_blank" title="Zobacz recenzje">Harry Potter i Kamień Filozoficzny</a>
+
                     </div>
 
 
                           <div class="druga">
-                                          <a href="podstrony_ksiazki/k3.php" target="_blank" title="Gra o tron (edycja ilustrowana)">
+                                      <a href="podstrony_ksiazki/k3.php" target="_blank" title="Gra o tron (edycja ilustrowana)">
                                               <div class="image-container"> <img width="120" src="../../img/3.jpg"/><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
                                               </div>
                                           </a><br/>
