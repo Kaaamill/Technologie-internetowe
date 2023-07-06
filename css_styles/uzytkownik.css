@@ -5,19 +5,18 @@ html {
 }
 
 body {
-    background: #fff;
-    background-image: 
-        linear-gradient(to bottom, rgba(170, 207, 208, 0.6), rgba(246, 239, 195, 0.6)), 
-        url("../img/background.png");
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    min-height: min-content;
+    background-image:
+            linear-gradient(to bottom, rgba(170, 207, 208, 0.6), rgba(246, 239, 195, 0.6)),
+            url("../img/background.png");
+    background-repeat: repeat;
+    background-size: 500px;
     color: #545454;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    margin: 0;
-    width: auto;
-    min-height: min-content;
-    padding: 0;
 }
 
 .container {
@@ -25,148 +24,62 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-        
+
 .logo {
+    margin-top: 1%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
 .menu {
-  text-align: center;
-  margin-top: 10px;
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 .menu ul {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  transform: skew(-25deg);
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transform: skew(-25deg);
 }
 .menu ul li {
-  background: #FFFFFF;
-  float: left;
-  border-right: 1px solid #EEEEEE;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
-  text-transform: uppercase;
-  color: #545454;
-  font-size: 17px;
-  font-weight: bold;
-  transition: all 0.3s linear;
+    background: #FFFFFF;
+    float: left;
+    border-right: 1px solid #EEEEEE;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    color: #545454;
+    font-size: 17px;
+    font-weight: bold;
+    transition: all 0.3s linear;
 }
 .menu ul li:first-child {
-  border-radius: 7px 0 0 7px;
+    border-radius: 7px 0 0 7px;
 }
 .menu ul li:last-child {
-  border-right: none;
-  border-radius: 0 7px 7px 0;
+    border-right: none;
+    border-radius: 0 7px 7px 0;
 }
 .menu ul li:hover {
-  background: #EEEEEE;
-  color: #FF6B01;
+    background: #EEEEEE;
+    color: #FF6B01;
 }
 .menu ul li a {
-  display: block;
-  padding: 15px 35px;
-  color: inherit;
-  text-decoration: none;
-  transform: skew(25deg);
+    display: block;
+    padding: 15px 35px;
+    color: inherit;
+    text-decoration: none;
+    transform: skew(25deg);
 }
-/*Ksi��ka miesi�ca*/
+
 h1 {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 70px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 46px;
-}
-.book_of_the_month {
-    position: relative;
-    top: 50px;
-    left: 38%;
-    margin-bottom: 300px;
-    z-index: 1;
-    display: grid;
-    place-content: center;
-    width: 450px;
-    height: 600px;
-    color: #a18a96;
-    text-align: center;
-    background: url('../../img/biblia.jpg') center no-repeat;
-    background-size: cover;
-    padding: 10px;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.book_of_the_month::before,
-.book_of_the_month::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: calc(60% + 35px);
-    background-color: #fff;
-    transition: transform 0.5s 0.25s;
-}
-
-.book_of_the_month::before {
-    top: 0;
-    clip-path: polygon(0 0, 100% 0, 100% 45%, 0% 100%);
-    transform: translateY(-100%);
-}
-
-.book_of_the_month::after {
-    bottom: 0;
-    clip-path: polygon(0 55%, 100% 0, 100% 100%, 0% 100%);
-    transform: translateY(100%);
-}
-
-.book__body {
-    opacity: 0;
-    transition: opacity 0.25s;
-}
-
-.book__title {
-    color: #6a515e;
-    margin-bottom: 15px;
-}
-
-.book_of_the_month:hover::before,
-.book_of_the_month:hover::after {
-    transform: translateY(0);
-}
-
-.book_of_the_month:hover .book__body {
-    opacity: 1;
-    transition-delay: 0.75s;
-}
-
-#carousel1 {
-    width: auto;
-    height: 400px;
-    margin-top: 2%;
-    margin-right: 5%;
-    margin-left: 5%;
-    background-color: #FE7F00;
-}
-
-#carousel2 {
-    width: auto;
-    height: 400px;
-    margin-top: 2%;
-    margin-right: 5%;
-    margin-left: 5%;
-    background-color: #FE7F00;
-}
-
-#carousel3 {
-    width: auto;
-    height: 400px;
-    margin-top: 2%;
-    margin-right: 5%;
-    margin-left: 5%;
-    background-color: #FE7F00;
 }
 
 /*Historia*/
@@ -180,17 +93,15 @@ h1 {
     font-size: 20px;
 }
 
-    #main_historia h2 {
-        text-align: center;
-    }
+#main_historia h2 {
+    text-align: center;
+}
 
-    #main_historia th, td, tr {
-        width: 300px;
-        border: 1px solid #000;
-    }
-
-/* STOPKA */
-
+#main_historia th, td, tr {
+    width: 300px;
+    border: 1px solid #000;
+}
+/*stopka*/
 footer {
     width: auto;
     height: 325px;
@@ -208,6 +119,7 @@ footer {
 
 a {
     color: inherit;
+    text-decoration: none;
 }
 
 .nav {
@@ -295,4 +207,201 @@ a {
 
 .nav-link:hover i.fa-google {
     color: #ea4c89;
+}
+.pierwsza {/*  index strona glown */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pierwsza img {/*  index strona glown */
+    width: 50px;
+}
+.pierwsza a { /*  index strona glown */
+    display: flex;
+    margin-top: 10px;
+}
+
+.books-container {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie poziome */
+    align-items: center; /* Wyśrodkowanie pionowe */
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.books-container a {
+    text-decoration: none;
+}
+.books-container .pierwsza {
+    display: inline-block;
+    margin: 0 20px;
+    text-align: center;
+    word-wrap: break-word;
+    flex: 0 0 auto;
+    width: 200px;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.books-container .pierwsza .book-description {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    max-height: 100px;
+
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.books-container .pierwsza p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: bold;
+    max-height: none;
+    overflow: visible;
+    white-space: normal;
+}
+
+.books-container .pierwsza img {
+    width: 160px;
+    height: 240px;
+}
+
+.rent-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FF6B01;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    opacity: 0;
+}
+.rent-button:hover {
+    background-color: #758ac9;
+    color: white;
+    opacity: 100%;
+}
+.menu ul li.special {
+    background-color: #7a7a7a;
+    color: white;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.druga { /*  KSIAZKI */
+    text-align: center;
+    width: calc(20% - 20px);
+    margin: 10px;
+}
+
+.menu ul li.special {
+    background-color: #7a7a7a;
+    color: white;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.image-container_2 {
+    margin-left: 20px;
+    /* Pozostałe style */
+}
+
+.image-container_2 img {
+    margin-bottom: 10px;
+    flex: 0 0 auto;
+}
+
+.image-container_2 p {
+    margin-left: 20px;
+    text-align: justify;
+}
+
+.rent-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FF6B01;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    opacity: 0;
+}
+.rent-button:hover {
+    background-color: #758ac9;
+    color: white;
+    opacity: 100%;
+}
+
+.container_2 {     /*  KSIAZKI */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.trzecia {
+    display: flex;
+    align-items: flex-start;
+}
+.description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    flex: 1;
+}
+.button {
+    display: block;
+    padding: 10px 20px;
+    background-color: antiquewhite;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#lower {
+    background: #ecf2f5;
+    width: 360px;
+    padding: 5px 20px;
+    margin-top: 20px;
+}
+#lower2 {
+    background: #ecf2f5;
+    width: 400px;
+    margin-top: 20px;
+
+}
+#logowanie {
+    width: 400px;
+    margin: 0 auto;
+    padding: 15px 0 0;
+    background: #fff;
+    border: 1px solid silver;
+    font: 16px calibri;
+    letter-spacing: -1px;
+    -webkit-box-shadow: 0 0 2px silver;
+    -moz-box-shadow: 0 0 2px silver;
+    box-shadow: 0 0 2px silver;
 }

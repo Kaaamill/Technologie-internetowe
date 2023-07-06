@@ -31,56 +31,92 @@
             </ul>
         </nav>
         <br>
-        <div class="container">
-            <br>
+        <div class="container_2">
+
+                    <br>
                     <div class="druga">
                         <a href="podstrony_ksiazki/k1.php" target="_blank" title="Zobacz recenzje">
-                            <div class="image-container">   <img src="../../img/wp.jpg" width="120"> <a href="Wypozyczenie.html" class="rent-button">Wypożycz</a> </div>
+                            <div class="image-container">   <img src="../../img/wp.jpg" width="120"> <a href="Wypozyczenie.php" class="rent-button">Wypożycz</a> </div>
                         </a><br>
                         <a href="podstrony_ksiazki/k1.php" target="_blank" title="Zobacz recenzje">Władca Pierścieni</a><br/><br/>
                     </div>
+
                     <div class="druga">
                         <a href="podstrony_ksiazki/k2.php" target="_blank" title="Zobacz recenzje">
-                            <div class="image-container"> <img width="120" src="../../img/hpkf.jpg" /> <a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
+                            <div class="image-container"> <img width="120" src="../../img/hpkf.jpg" /> <a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
                             </div>
                         </a><br/>
                         <a href="podstrony_ksiazki/k2.php" target="_blank" title="Zobacz recenzje">Harry Potter i Kamień Filozoficzny</a>
                     </div>
-                    <div class="druga">
-                        <a href="podstrony_ksiazki/k3.php" target="_blank" title="Gra o tron (edycja ilustrowana)">
-                            <div class="image-container"> <img width="120" src="../../img/3.jpg"/><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                            </div>
-                        </a><br/>
-                        <a href="podstrony_ksiazki/k3.php" target="_blank" title="Zobacz recenzje">Gra o tron (edycja ilustrowana)</a>
-                    </div>
-                    <div class="druga">
-                        <a href="podstrony_ksiazki/k4.php" target="_blank" title="Miecz przeznaczenia">
-                            <div class="image-container">  <img width="120" src="../../img/4.jpg" /> <a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                            </div>
-                        </a><br/>
-                        <a href="podstrony_ksiazki/k4.php" target="_blank" title="Zobacz recenzje">Miecz przeznaczenia</a>
-                    </div>
-                    <div class="druga">
-                        <a href="podstrony_ksiazki/k5.php" target="_blank" title="Oskar i pani Róża">
-                            <div class="image-container">  <img width="120" src="../../img/5.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                            </div>
-                        </a><br/>
-                        <a href="podstrony_ksiazki/k5.php" target="_blank" title="Zobacz recenzje">Oskar i pani Róża</a>
-                    </div>
-                    <div class="druga">
-                        <a href="podstrony_ksiazki/k6.php" target="_blank" title="Zbrodnia i kara">
-                            <div class="image-container">     <img width="120" src="../../img/6.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                            </div>
-                        </a><br/>
-                        <a href="podstrony_ksiazki/k6.php" target="_blank" title="Zobacz recenzje">Zbrodnia i kara</a>
-                    </div>
-                    <div class="druga">
-                        <a href="podstrony_ksiazki/k7.php" target="_blank" title="Krew elfów">
-                            <div class="image-container">    <img width="120" src="../../img/7.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
-                            </div>
-                        </a><br/>
-                        <a href="podstrony_ksiazki/k7.php" target="_blank" title="Zobacz recenzje">Krew elfów</a>
-                    </div>
+
+
+                          <div class="druga">
+                                          <a href="podstrony_ksiazki/k3.php" target="_blank" title="Gra o tron (edycja ilustrowana)">
+                                              <div class="image-container"> <img width="120" src="../../img/3.jpg"/><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
+                                              </div>
+                                          </a><br/>
+                                          <a href="podstrony_ksiazki/k3.php" target="_blank" title="Zobacz recenzje">Gra o tron (edycja ilustrowana)</a>
+                                      </div>
+
+                                      <div class="druga">
+                                          <a href="podstrony_ksiazki/k4.php" target="_blank" title="Miecz przeznaczenia">
+                                              <div class="image-container">  <img width="120" src="../../img/4.jpg" /> <a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
+                                              </div>
+                                          </a><br/>
+                                          <a href="podstrony_ksiazki/k4.php" target="_blank" title="Zobacz recenzje">Miecz przeznaczenia</a>
+                                      </div>
+
+                                      <div class="druga">
+                                          <a href="podstrony_ksiazki/k5.php" target="_blank" title="Oskar i pani Róża">
+                                              <div class="image-container">  <img width="120" src="../../img/5.jpg" /><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
+                                              </div>
+                                          </a><br/>
+                                          <a href="podstrony_ksiazki/k5.php" target="_blank" title="Zobacz recenzje">Oskar i pani Róża</a>
+                                      </div>
+
+                                      <div class="druga">
+                                          <a href="podstrony_ksiazki/k6.php" target="_blank" title="Zbrodnia i kara">
+                                              <div class="image-container">     <img width="120" src="../../img/6.jpg" /><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
+                                              </div>
+                                          </a><br/>
+                                          <a href="podstrony_ksiazki/k6.php" target="_blank" title="Zobacz recenzje">Zbrodnia i kara</a>
+                                      </div>
+
+                                      <div class="druga">
+                                          <a href="podstrony_ksiazki/k7.php" target="_blank" title="Krew elfów">
+                                              <div class="image-container">    <img width="120" src="../../img/7.jpg" /><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
+                                              </div>
+                                          </a><br/>
+                                          <a href="podstrony_ksiazki/k7.php" target="_blank" title="Zobacz recenzje">Krew elfów</a>
+                                      </div>
+
+                                      <div class="druga">
+                                          <a href="podstrony_ksiazki/k9.php" target="_blank" title="Igrzyska śmierci">
+                                              <div class="image-container">   <img width="120" src="../../img/9.jpg" /><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
+                                              </div>
+                                          </a><br/>
+                                          <a href="podstrony_ksiazki/k9.php" target="_blank" title="Zobacz recenzje">Igrzyska śmierci</a>
+                                      </div>
+
+                                      <div class="druga">
+                                          <a href="podstrony_ksiazki/k10.php" target="_blank" title="Zmierzch">
+                                              <div class="image-container">   <img width="120" src="../../img/10.jpg" /><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
+                                              </div>
+                                          </a><br/>
+                                          <a href="podstrony_ksiazki/k10.php" target="_blank" title="Zobacz recenzje">Zmierzch</a>
+                                      </div>
+
+                                      <div class="druga">
+                                          <a href="podstrony_ksiazki/k11.php" target="_blank" title="Ostatnie życzenie">
+                                              <div class="image-container">   <img width="120" src="../../img/11.jpg" /><a href="Wypozyczenie.php" class="rent-button">Wypożycz</a>
+                                              </div>
+                                          </a><br/>
+                                          <a href="podstrony_ksiazki/k11.php" target="_blank" title="Zobacz recenzje">Ostatnie życzenie</a>
+                                      </div>
+                                  </div>
+                              </div>
+
+
 <footer>
         <nav class="nav">
             <h4 class="sm-header">Śledź nas na</h4>
