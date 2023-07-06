@@ -32,7 +32,7 @@
                 <li><a href="wylogowanie.php">Wyloguj się</a></li>
             </ul>
         </nav>
-
+    </div>
     <div id="main_administrator">
     <?php
  
