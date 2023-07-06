@@ -63,18 +63,7 @@ if (isset($_GET['fraza'])) {
               </a><br/>
               <a href="podstrony_ksiazki/k2.php" target="_blank" title="Zobacz recenzje">Harry Potter i Kamień Filozoficzny</a>
           </div>
-
-
-
-
-
-
           <br/>
-
-
-
-
-
           <div class="pierwsza">
               <a href="podstrony_ksiazki/k9.php" target="_blank" title="Igrzyska śmierci">
                   <div class="image-container">   <img width="100" src="../../img/9.jpg" /><a href="Wypozyczenie.html" class="rent-button">Wypożycz</a>
@@ -100,12 +89,7 @@ if (isset($_GET['fraza'])) {
 
       </div>
       </div>
-
-
-
  <h1><a href="ksiazki_uzytkownik.php" target="_blank" class="button">Zobacz więcej pozycji</a></h1>
-
-
 
 <footer>
         <nav class="nav">
