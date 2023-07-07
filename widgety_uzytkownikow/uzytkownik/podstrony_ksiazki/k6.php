@@ -40,19 +40,20 @@
 
                 </div>
                   <div class="description-container">
-                                            <h1>Tytuł: Oskar i pani Róża</h1>
-                                            <h3>Autor: Éric-Emmanuel Schmitt</h3>
+                                            <h1>Tytuł: Zbrodnia i kara</h1>
+                                            <h3>Autor: Fiodor Dostojewski</h3>
 
                                             <strong>Opis:</strong>
-                                            <p>"Oskar i pani Róża" to wzruszająca i pełna nadziei powieść autorstwa Érica-Emmanuela Schmitta. Ta opowieść porusza trudne tematy życia, śmierci i nadziei, skupiając się na losach małego chłopca, który zmaga się z nieuleczalną chorobą.</p>
+                                            <p>"Zbrodnia i kara" to klasyczna powieść autorstwa Fiodora Dostojewskiego. Ta literacka arcydzieło porusza głębokie tematy moralności, winy i odkupienia.</p>
 
-                                            <p>Główny bohater, Oskar, jest dziesięcioletnim chłopcem, który spędza swoje ostatnie dni w szpitalu. Jednak jego życie zmienia się, gdy poznaje tajemniczą postać - panią Różę, wolontariuszkę, która odwiedza ciężko chorych dzieci. Pani Róża proponuje Oskarowi grę, w której każdy dzień ma znaczenie tygodnia. Dzięki tej grze Oskar odkrywa siłę wyobraźni, odwagę i prawdziwą wartość życia.</p>
+                                            <p>Główny bohater, Rodion Raskolnikow, to młody student, który wpada w spiralę zbrodni i kłamstw. Dręczony wewnętrznym konfliktem, postanawia zamordować starą lichwiarkę, wierząc, że ma prawo do jej bogactwa. Jednak zbrodnia ta pociąga za sobą konsekwencje, zarówno moralne, jak i psychologiczne, które zmuszają Raskolnikowa do zmierzenia się z własnym sumieniem.</p>
 
-                                            <p>Powieść "Oskar i pani Róża" porusza ważne pytania o sens życia, śmierci, cierpienia i nadziei. Schmitt z głębią i wrażliwością opowiada historię, która skłania do refleksji nad wartościami, które naprawdę się liczą. Książka ukazuje, jak ważne jest wspieranie się nawzajem w trudnych chwilach i odnajdywanie radości w małych rzeczach.</p>
+                                            <p>Powieść "Zbrodnia i kara" to głębokie studium ludzkiej psychiki i moralności. Dostojewski przedstawia nam skomplikowany świat moralny bohaterów, ukazując ich wewnętrzne rozterki i dążenie do pojednania z samym sobą. Książka porusza pytania o granicach moralności, wartości człowieka i możliwość wybaczania.</p>
 
-                                            <p>Éric-Emmanuel Schmitt doskonale oddaje emocje bohaterów, a jego piękne słowa i przemyślane obrazy pobudzają wyobraźnię czytelnika. "Oskar i pani Róża" to książka, która porusza serca i przypomina nam o wartościach, które czasem zapominamy doceniać w codziennym życiu.</p>
+                                            <p>Styl pisania Dostojewskiego jest pełen bogactwa emocjonalnego, a jego charakterystyczna narracja przyciąga czytelnika. "Zbrodnia i kara" to nie tylko opowieść o zbrodni i jej konsekwencjach, ale również o nadziei, odkupieniu i moralnej przemianie.</p>
 
-                                            <p>Jeśli szukasz inspirującej powieści, która pobudzi Twoje myśli i otworzy Twoje serce, "Oskar i pani Róża" to lektura, którą z pewnością docenisz.</p>
+                                            <p>Jeśli szukasz głębokiej i wpływowej literatury, "Zbrodnia i kara" jest pozycją, której nie możesz przegapić.</p>
+
 
                       </div> </div>
             <footer>
