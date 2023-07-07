@@ -5,50 +5,49 @@ if (!isset($_SESSION['zalogowany'])) {
     exit();
 }
 
-// Obsługa formularza wyszukiwania
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $searchText = $_POST['searchText'];
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    if(isset($_GET['fraza'])) {
+        $searchText = $_GET['fraza'];
 
-    // Przetwarzanie wyszukiwania
-    if (mb_stripos($searchText, 'Wlad', 0, 'UTF-8') !== false) {
-        header("Location: podstrony_ksiazki/k1.php");
-        exit;
-    } elseif (mb_stripos($searchText, 'Harry', 0, 'UTF-8') !== false) {
-        header("Location: podstrony_ksiazki/k2.php");
-        exit;
+        if (mb_stripos($searchText, 'Wlad', 0, 'UTF-8') !== false) {
+            header("Location: podstrony_ksiazki/k1.php");
+            exit;
+        } elseif (mb_stripos($searchText, 'Harry', 0, 'UTF-8') !== false) {
+            header("Location: podstrony_ksiazki/k2.php");
+            exit;
         } elseif (mb_stripos($searchText, 'gra', 0, 'UTF-8') !== false) {
-                header("Location: podstrony_ksiazki/k3.php");
-                exit;
-                } elseif (mb_stripos($searchText, 'miecz', 0, 'UTF-8') !== false) {
-                        header("Location: podstrony_ksiazki/k4.php");
-                        exit;
-                        } elseif (mb_stripos($searchText, 'oskar', 0, 'UTF-8') !== false) {
-                                header("Location: podstrony_ksiazki/k5.php");
-                                exit;
-                                } elseif (mb_stripos($searchText, 'zbrodnia') !== false) {
-                                        header("Location: podstrony_ksiazki/k6.php");
-                                        exit;
-                                        } elseif (mb_stripos($searchText, 'krew', 0, 'UTF-8') !== false) {
-                                                header("Location: podstrony_ksiazki/k7.php");
-                                                exit;} elseif (mb_stripos($searchText, 'igrzys', 0, 'UTF-8') !== false) {
-                                                             header("Location: podstrony_ksiazki/k9.php");
-                                                             exit;
-                                                             } elseif (mb_stripos($searchText, 'zmie', 0, 'UTF-8') !== false) {
-                                                                     header("Location: podstrony_ksiazki/k10.php");
-                                                                     exit;
-                                                                     } elseif (mb_stripos($searchText, 'ostatn', 0, 'UTF-8') !== false) {
-                                                                             header("Location: podstrony_ksiazki/k11.php");
-                                                                             exit;
-
-
-    } else {
-        // Obsługa innych przypadków
-        echo "Brak wyników dla wyszukiwania: $searchText";
-        exit;
+            header("Location: podstrony_ksiazki/k3.php");
+            exit;
+        } elseif (mb_stripos($searchText, 'miecz', 0, 'UTF-8') !== false) {
+            header("Location: podstrony_ksiazki/k4.php");
+            exit;
+        } elseif (mb_stripos($searchText, 'oskar', 0, 'UTF-8') !== false) {
+            header("Location: podstrony_ksiazki/k5.php");
+            exit;
+        } elseif (mb_stripos($searchText, 'zbrodnia', 0, 'UTF-8') !== false) {
+            header("Location: podstrony_ksiazki/k6.php");
+            exit;
+        } elseif (mb_stripos($searchText, 'krew', 0, 'UTF-8') !== false) {
+            header("Location: podstrony_ksiazki/k7.php");
+            exit;
+        } elseif (mb_stripos($searchText, 'igrzys', 0, 'UTF-8') !== false) {
+            header("Location: podstrony_ksiazki/k9.php");
+            exit;
+        } elseif (mb_stripos($searchText, 'zmie', 0, 'UTF-8') !== false) {
+            header("Location: podstrony_ksiazki/k10.php");
+            exit;
+        } elseif (mb_stripos($searchText, 'ostatn', 0, 'UTF-8') !== false) {
+            header("Location: podstrony_ksiazki/k11.php");
+            exit;
+        } else {
+            echo "Brak wyników dla wyszukiwania: " . htmlspecialchars($searchText);
+            exit;
+        }
     }
 }
 
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -91,8 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <br>
             <div class="druga">
                 <a href="podstrony_ksiazki/k1.php" target="_blank" title="Zobacz recenzje">
-                    <div class="image-container"> <img src="../../img/wp.jpg" width="120"> <a href="Wypozyczenie.php"
-                            class="rent-button">Wypożycz</a> </div>
+                    <div class="image-container"> <img src="../../img/wp.jpg" width="120">   </div>
                 </a><br>
                 <a href="podstrony_ksiazki/k1.php" target="_blank" title="Zobacz recenzje">Władca
                     Pierścieni</a><br /><br />
@@ -113,8 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="druga">
                 <a href="podstrony_ksiazki/k3.php" target="_blank" title="Gra o tron (edycja ilustrowana)">
-                    <div class="image-container"> <img width="120" src="../../img/3.jpg" /><a href="Wypozyczenie.php"
-                            class="rent-button">Wypożycz</a>
+                    <div class="image-container"> <img width="120" src="../../img/3.jpg" /> 
                     </div>
                 </a><br />
                 <a href="podstrony_ksiazki/k3.php" target="_blank" title="Zobacz recenzje">Gra o tron (edycja
@@ -123,8 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="druga">
                 <a href="podstrony_ksiazki/k4.php" target="_blank" title="Miecz przeznaczenia">
-                    <div class="image-container"> <img width="120" src="../../img/4.jpg" /> <a href="Wypozyczenie.php"
-                            class="rent-button">Wypożycz</a>
+                    <div class="image-container"> <img width="120" src="../../img/4.jpg" />  
                     </div>
                 </a><br />
                 <a href="podstrony_ksiazki/k4.php" target="_blank" title="Zobacz recenzje">Miecz przeznaczenia</a>
@@ -132,8 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="druga">
                 <a href="podstrony_ksiazki/k5.php" target="_blank" title="Oskar i pani Róża">
-                    <div class="image-container"> <img width="120" src="../../img/5.jpg" /><a href="Wypozyczenie.php"
-                            class="rent-button">Wypożycz</a>
+                    <div class="image-container"> <img width="120" src="../../img/5.jpg" /> 
                     </div>
                 </a><br />
                 <a href="podstrony_ksiazki/k5.php" target="_blank" title="Zobacz recenzje">Oskar i pani Róża</a>
@@ -141,8 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="druga">
                 <a href="podstrony_ksiazki/k6.php" target="_blank" title="Zbrodnia i kara">
-                    <div class="image-container"> <img width="120" src="../../img/6.jpg" /><a href="Wypozyczenie.php"
-                            class="rent-button">Wypożycz</a>
+                    <div class="image-container"> <img width="120" src="../../img/6.jpg" /> 
                     </div>
                 </a><br />
                 <a href="podstrony_ksiazki/k6.php" target="_blank" title="Zobacz recenzje">Zbrodnia i kara</a>
@@ -150,8 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="druga">
                 <a href="podstrony_ksiazki/k7.php" target="_blank" title="Krew elfów">
-                    <div class="image-container"> <img width="120" src="../../img/7.jpg" /><a href="Wypozyczenie.php"
-                            class="rent-button">Wypożycz</a>
+                    <div class="image-container"> <img width="120" src="../../img/7.jpg" /> 
                     </div>
                 </a><br />
                 <a href="podstrony_ksiazki/k7.php" target="_blank" title="Zobacz recenzje">Krew elfów</a>
@@ -159,8 +152,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="druga">
                 <a href="podstrony_ksiazki/k9.php" target="_blank" title="Igrzyska śmierci">
-                    <div class="image-container"> <img width="120" src="../../img/9.jpg" /><a href="Wypozyczenie.php"
-                            class="rent-button">Wypożycz</a>
+                    <div class="image-container"> <img width="120" src="../../img/9.jpg" /> 
                     </div>
                 </a><br />
                 <a href="podstrony_ksiazki/k9.php" target="_blank" title="Zobacz recenzje">Igrzyska śmierci</a>
@@ -168,8 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="druga">
                 <a href="podstrony_ksiazki/k10.php" target="_blank" title="Zmierzch">
-                    <div class="image-container"> <img width="120" src="../../img/10.jpg" /><a href="Wypozyczenie.php"
-                            class="rent-button">Wypożycz</a>
+                    <div class="image-container"> <img width="120" src="../../img/10.jpg" /> 
                     </div>
                 </a><br />
                 <a href="podstrony_ksiazki/k10.php" target="_blank" title="Zobacz recenzje">Zmierzch</a>
@@ -177,8 +168,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="druga">
                 <a href="podstrony_ksiazki/k11.php" target="_blank" title="Ostatnie życzenie">
-                    <div class="image-container"> <img width="120" src="../../img/11.jpg" /><a href="Wypozyczenie.php"
-                            class="rent-button">Wypożycz</a>
+                    <div class="image-container"> <img width="120" src="../../img/11.jpg" />
                     </div>
                 </a><br />
                 <a href="podstrony_ksiazki/k11.php" target="_blank" title="Zobacz recenzje">Ostatnie życzenie</a>
