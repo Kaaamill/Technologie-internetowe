@@ -40,48 +40,48 @@ include "baza.php";
             <div id="main_historia">
                 <h1>HISTORIA WYPOŻYCZEŃ</h1>
                 <div id="tabela_historia">
-                    table>
-                    <tr>
-                        <th>TYTUŁ KSIĄŻKI</th>
-                        <th>REZERWACJA</th>
-                        <th>CZY WYPOŻYCZONA</th>
-                        <th>DATA WYPOŻYCZENIA</th>
-                        <th>ZWRÓCONA</th>
-                        <th>DATA ZWROTU</th>
-                        <th>LOGIN OSOBY WYPOŻYCZAJĄCEJ</th>
-                    </tr>
-                    <?php
-                    $sql = "SELECT * FROM `id_ksiazki`";
-                    $result = mysqli_query($conn, $sql);
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        ?>
+                    <table>
                         <tr>
-                            <td>
-                                <?php echo $row["tytul_ksiazki"] ?>
-                            </td>
-                            <td>
-                                <?php echo $row["rezerwacja"] ?>
-                            </td>
-                            <td>
-                                <?php echo $row["czy_wypozyczona"] ?>
-                            </td>
-                            <td>
-                                <?php echo $row["data_wypozyczenia"] ?>
-                            </td>
-                            <td>
-                                <?php echo $row["czy_zwrocona"] ?>
-                            </td>
-                            <td>
-                                <?php echo $row["data_zwrotu"] ?>
-                            </td>
-                            <td>
-                                <?php echo $row["login"] ?>
-                            </td>
+                            <th>TYTUŁ KSIĄŻKI</th>
+                            <th>REZERWACJA</th>
+                            <th>CZY WYPOŻYCZONA</th>
+                            <th>DATA WYPOŻYCZENIA</th>
+                            <th>ZWRÓCONA</th>
+                            <th>DATA ZWROTU</th>
+                            <th>LOGIN OSOBY WYPOŻYCZAJĄCEJ</th>
                         </tr>
-
                         <?php
-                    }
-                    ?>
+                        $sql = "SELECT * FROM `id_ksiazki`";
+                        $result = mysqli_query($conn, $sql);
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            ?>
+                            <tr>
+                                <td>
+                                    <?php echo $row["tytul_ksiazki"] ?>
+                                </td>
+                                <td>
+                                    <?php echo $row["rezerwacja"] ?>
+                                </td>
+                                <td>
+                                    <?php echo $row["czy_wypozyczona"] ?>
+                                </td>
+                                <td>
+                                    <?php echo $row["data_wypozyczenia"] ?>
+                                </td>
+                                <td>
+                                    <?php echo $row["czy_zwrocona"] ?>
+                                </td>
+                                <td>
+                                    <?php echo $row["data_zwrotu"] ?>
+                                </td>
+                                <td>
+                                    <?php echo $row["login"] ?>
+                                </td>
+                            </tr>
+
+                            <?php
+                        }
+                        ?>
                     </table>
 
                 </div>

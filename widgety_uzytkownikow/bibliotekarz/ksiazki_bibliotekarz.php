@@ -69,7 +69,7 @@ include "baza.php";
                         }
                         ?>
                         </table>
-
+                        <a href="dodawanie_ksiazki.php"><input type="button" value="Dodaj książkę"></a>
                 </div>
             </div>
         </div>
