@@ -35,7 +35,8 @@ W celu uruchomienia projektu należy wykonać następujące kroki:
 - uruchomić XAMPP Control Panel
 - uruchomić serwer Apache oraz MySQL
 - w przeglądarce internetowej przejść do adresu: http://localhost/phpmyadmin/index.php
-- z menu górnego wybrać "Import"
+- w lewym menu bocznym utworzyć nową bazę o nazwie "biblioteka" o kodowaniu UTF8-polish
+- zaznaczyć bazę "biblioteka" i z menu górnego wybrać "Import"
 - zaimportować plik "biblioteka.sql" znajdujący się w głównym katalogu projektu
 
 Początkowy plik .sql tworzy inicjalną wersję bazy z przykładowymi credentialami użytkowników oraz bazą tytułów i historią wypożyczeń.
