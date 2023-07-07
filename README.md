@@ -104,7 +104,7 @@ Kamil Ibron **@Kaaamill**
 Anna-Maria 'Mania' Rogulska **@peleda**
 - regulamin
 - dokumentacja
-- koordynacja
+- merge master
 
 ## 7. Status projektu i wsparcie:
 
