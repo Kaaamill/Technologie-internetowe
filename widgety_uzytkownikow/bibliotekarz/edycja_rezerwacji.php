@@ -12,16 +12,17 @@ include "baza.php";
 $ID = $_GET["ID"];
 
 if (isset($_POST["submit"])) {
-  $login = $_POST['login'];
-  $email = $_POST['email'];
-  $haslo2 = $_POST['haslo2'];
+  $czy_wypozyczona = $_POST['czy_wypozyczona'];
+  $data_wypozyczenia = $_POST['data_wypozyczenia'];
+  $czy_zwrocona = $_POST['czy_zwrocona'];
+  $data_zwrotu = $_POST['data_zwrotu'];
 
-  $sql = "UPDATE `bibliotekarze` SET `login`='$login',`email`='$email',`haslo2`='$haslo2' WHERE ID = $ID";
+  $sql = "UPDATE `id_ksiazki` SET `czy_wypozyczona`='$czy_wypozyczona', `data_wypozyczenia`='$data_wypozyczenia', `czy_zwrocona`='$czy_zwrocona', `data_zwrotu`='$data_zwrotu' WHERE ID = $ID";
 
   $result = mysqli_query($conn, $sql);
 
   if ($result) {
-    header("Location: bibliotekarze_administrator.php?msg=Dane zostały zmienione!");
+    header("Location: rezerwacje_bibliotekarz.php?msg=Informacje zostały zmienione.");
   } else {
     echo "Failed: " . mysqli_error($conn);
   }
@@ -34,61 +35,63 @@ if (isset($_POST["submit"])) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Edycja Bibliotekarza</title>
+    <title>Edycja rezerwacji</title>
     <meta name="description" content="Biblioteka VaDinci">
     <link rel="stylesheet" href="../../css_styles/adminstrator_bibliotekarz.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 </head>
 
 <body>
-<div class="container">
     <div class="main">
-        <a href="strona_glowna_administrator.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
+        <a href="strona_glowna_bibliotekarz.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
             <ul>
-                <li><a href="strona_glowna_administrator.php">Strona Główna</a></li>
-                <li><a href="klienci_administrator.php">Zarządzanie Klientami</a></li>
-                <li><a href="bibliotekarze_administrator.php">Zarządzanie Bibliotekarzami</a></li>
-                <li><a href="ksiazki_administrator.php">Książki</a></li>
-                <li><a href="historia_administrator.php">Historia</a></li>
-                <li><a href="wylogowanie.php">Wyloguj się</a></li>
-</ul>
-</nav>
+                <li><a href="strona_glowna_bibliotekarz.php">Strona Główna</a></li>
+                <li><a href="ksiazki_bibliotekarz.php">Książki</a></li>
+                <li><a href="rezerwacje_bibliotekarz.php">Rezerwacje</a></li>
+                <li><a href="historia_bibliotekarz.php">Historia</a></li>
+                <li><a href="wylogowanie.php">Wyloguj</a></li>
+            </ul>
+        </nav>
 
     <?php
-    $sql = "SELECT * FROM `bibliotekarze` WHERE ID = $ID LIMIT 1";
+    $sql = "SELECT czy_wypozyczona, data_wypozyczenia, czy_zwrocona, data_zwrotu FROM `id_ksiazki` WHERE ID = $ID LIMIT 1";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     ?>
-<div id="dodawanie_klienta">
-    <div class="dodawanie_klienta"><h1>Edycja danych bibliotekarza</h1>
+
+    <div class="container d-flex justify-content-center">
       <form action="" method="post" style="width:50vw; min-width:300px;">
         <div class="row mb-3">
           <div class="col">
-          <br /><label class="form-label">Nowy Login: </label><br />
-            <input type="text" class="form-control" name="login" value="<?php echo $row['login'] ?>">
+          <br /><label class="form-label">Czy wypożyczona: </label><br />
+          <input type="text" class="form-control" name="czy_wypozyczona" placeholder="Tak/Nie">
           </div>
 
           <div class="col">
-          <br /><label class="form-label">Nowy adres e-mail: </label><br />
-            <input type="text" class="form-control" name="email" value="<?php echo $row['email'] ?>">
+          <br /><label class="form-label">Data wypożyczenia: </label><br />
+          <input type="date" class="form-control" name="data_wypozyczenia" placeholder="Wpisz dzisiejszą datę">
           </div>
-        </div>
 
-        <div class="mb-3">
-        <br /><label class="form-label">Nowe hasło: </label><br />
-          <input type="haslo2" class="form-control" name="haslo2" value="<?php echo $row['haslo2'] ?>">
-        </div>
+          <div class="col">
+          <br /><label class="form-label">Czy Klient zwrócił książkę?: </label><br />
+          <input type="text" class="form-control" name="czy_zwrocona" placeholder="Tak/Nie">
+          </div>
+
+          <div class="col">
+          <br /><label class="form-label">Data zwrotu: </label><br />
+          <input type="date" class="form-control" name="data_zwrotu" placeholder="Wpisz dzisiejszą datę">
+          </div>
 
 
         <div>
-            <br /><button type="submit" name="submit">Zaktualizuj dane</button>
-               <a href="bibliotekarze_administrator.php"><input type="button" value="Anuluj"></a>
+            <br /><button type="submit" name="submit">Zaktualizuj informacje</button>
+               <a href="rezerwacje_bibliotekarz.php"><input type="button" value="Anuluj"></a>
             </div>
          </form>
       </div>
    </div>
-</div>
+
 </div>
 <footer>
   <footer>
@@ -116,6 +119,5 @@ if (isset($_POST["submit"])) {
         &copy; 2023 VaDinci
     
 </footer>
-</div>
 </body>
 </html>

@@ -16,62 +16,63 @@ include "baza.php";
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Zarządzanie Bibliotekarzami</title>
+    <title>Rezerwacje i zwroty</title>
     <meta name="description" content="Biblioteka VaDinci">
     <link rel="stylesheet" href="../../css_styles/adminstrator_bibliotekarz.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 
 </head>
 <body>
-<div class="container">
     <div class="main">
-        <a href="strona_glowna_administrator.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
+        <a href="strona_glowna_bibliotekarz.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
             <ul>
-                <li><a href="strona_glowna_administrator.php">Strona Główna</a></li>
-                <li><a href="klienci_administrator.php">Zarządzanie Klientami</a></li>
-                <li><a href="bibliotekarze_administrator.php">Zarządzanie Bibliotekarzami</a></li>
-                <li><a href="ksiazki_administrator.php">Książki</a></li>
-                <li><a href="historia_administrator.php">Historia</a></li>
-                <li><a href="wylogowanie.php">Wyloguj się</a></li>
-</ul>
-</nav>
+                <li><a href="strona_glowna_bibliotekarz.php">Strona Główna</a></li>
+                <li><a href="ksiazki_bibliotekarz.php">Książki</a></li>
+                <li><a href="rezerwacje_bibliotekarz.php">Rezerwacje</a></li>
+                <li><a href="historia_bibliotekarz.php">Historia</a></li>
+                <li><a href="wylogowanie.php">Wyloguj</a></li>
+            </ul>
+        </nav>
 
-  <div id="main_uzytkownicy">
-            <h1>ZARZĄDZANIE BIBLIOTEKARZAMI</h1>
-            <div id="tabela_bibliotekarze">
+  <div id="main_ksiazki">
+            <h1>REZERWACJE I ZWROTY</h1>
+            <div id="tabela_ksiazki">
                 <table>
                     <tr>
-                        <th>LOGIN</th>
-                        <th>ADRES E-MAIL</th>
-                        <th>HASŁO</th>
-                        <th>UPRAWNIENIA</th>
+                        <th>TYTUŁ KSIĄŻKI</th>
+                        <th>REZERWACJA</th>
+                        <th>CZY WYPOŻYCZONA</th>
+                        <th>DATA WYPOŻYCZENIA</th>
+                        <th>ZWRÓCONA</th>
+                        <th>DATA ZWROTU</th>
+                        <th>LOGIN OSOBY WYPOŻYCZAJĄCEJ</th>
                         <th>OPERACJE</th>
                     </tr>
         <?php
-        $sql = "SELECT * FROM `bibliotekarze`";
+        $sql = "SELECT * FROM `id_ksiazki`";
         $result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result)) {
         ?>
           <tr>
+            <td><?php echo $row["tytul_ksiazki"] ?></td>
+            <td><?php echo $row["rezerwacja"] ?></td>
+            <td><?php echo $row["czy_wypozyczona"] ?></td>
+            <td><?php echo $row["data_wypozyczenia"] ?></td>
+            <td><?php echo $row["czy_zwrocona"] ?></td>
+            <td><?php echo $row["data_zwrotu"] ?></td>
             <td><?php echo $row["login"] ?></td>
-            <td><?php echo $row["email"] ?></td>
-            <td><?php echo $row["haslo2"] ?></td>
-            <td><?php echo $row["uprawnienia"] ?></td>
-            
+          
             <td>
-            <a href="edycja_bibliotekarz.php?ID=<?php echo $row["ID"] ?>">Edytuj</i></a><br />
-              <a href="usun_bibliotekarz.php?ID=<?php echo $row["ID"] ?>">Usuń</i></a>
+            <a href="edycja_rezerwacji.php?ID=<?php echo $row["ID"] ?>">Edytuj</i></a><br />
+
             </td>
-          </tr>
+          </tr> 
 
         <?php
         }
         ?>
       </table>
-
-
-      <br /><a href="dodawanie_bibliotekarza.php"><input type="button" value="Dodaj Bibliotekarza"></a>
 
     
             </div>
@@ -101,6 +102,5 @@ include "baza.php";
         ul. Tadeusza Kutrzeby 1, 61-710 Poznań<br />
         &copy; 2023 VaDinci
     </footer>
-    </div>
 </body>
 </html>

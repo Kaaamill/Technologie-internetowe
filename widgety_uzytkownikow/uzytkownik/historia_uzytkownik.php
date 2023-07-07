@@ -22,7 +22,7 @@
 <body>
 <div class="container">
     <div class="main">
-        <a href="historia_uzytkownik.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
+        <a href="strona_glowna_uzytkownik.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
             <ul>
                 <li><a href="strona_glowna_uzytkownik.php">Strona Główna</a></li>

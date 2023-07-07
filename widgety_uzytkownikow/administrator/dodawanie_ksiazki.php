@@ -7,8 +7,26 @@
     }
 ?>
 
+
 <?php
 include "baza.php";
+
+if (isset($_POST["submit"])) {
+   $tytul_ksiazki = $_POST['tytul_ksiazki'];
+   $gatunek = $_POST['gatunek'];
+
+
+   $sql = "INSERT INTO `ksiazki`(`ID`, `tytul_ksiazki`, `gatunek`) VALUES (NULL,'$tytul_ksiazki', '$gatunek')";
+
+   $result = mysqli_query($conn, $sql);
+
+   if ($result) {
+      header("Location: ksiazki_administrator.php?msg=Udało się dodać nową książkę.");
+   } else {
+      echo "Failed: " . mysqli_error($conn);
+   }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -16,12 +34,13 @@ include "baza.php";
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Zarządzanie Bibliotekarzami</title>
+    <title>Dodawanie książki</title>
     <meta name="description" content="Biblioteka VaDinci">
     <link rel="stylesheet" href="../../css_styles/adminstrator_bibliotekarz.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 
 </head>
+
 <body>
 <div class="container">
     <div class="main">
@@ -37,47 +56,28 @@ include "baza.php";
 </ul>
 </nav>
 
-  <div id="main_uzytkownicy">
-            <h1>ZARZĄDZANIE BIBLIOTEKARZAMI</h1>
-            <div id="tabela_bibliotekarze">
-                <table>
-                    <tr>
-                        <th>LOGIN</th>
-                        <th>ADRES E-MAIL</th>
-                        <th>HASŁO</th>
-                        <th>UPRAWNIENIA</th>
-                        <th>OPERACJE</th>
-                    </tr>
-        <?php
-        $sql = "SELECT * FROM `bibliotekarze`";
-        $result = mysqli_query($conn, $sql);
-        while ($row = mysqli_fetch_assoc($result)) {
-        ?>
-          <tr>
-            <td><?php echo $row["login"] ?></td>
-            <td><?php echo $row["email"] ?></td>
-            <td><?php echo $row["haslo2"] ?></td>
-            <td><?php echo $row["uprawnienia"] ?></td>
-            
-            <td>
-            <a href="edycja_bibliotekarz.php?ID=<?php echo $row["ID"] ?>">Edytuj</i></a><br />
-              <a href="usun_bibliotekarz.php?ID=<?php echo $row["ID"] ?>">Usuń</i></a>
-            </td>
-          </tr>
-
-        <?php
-        }
-        ?>
-      </table>
+    <div id="dodawanie_klienta">
+        <h1>DODAWANIE NOWEJ KSIĄŻKI</h1>
 
 
-      <br /><a href="dodawanie_bibliotekarza.php"><input type="button" value="Dodaj Bibliotekarza"></a>
+      <div class="dodawanie_klienta">
+         <form action="" method="post" style="width:50vw; min-width:300px;">
+                  <label class="form-label">Tytuł nowej książki: </label><br />
+                  <input type="text" class="form-control" name="tytul_ksiazki" placeholder="Tytuł">
 
-    
-            </div>
-        </div>
-    </div>
-    <footer>
+                    <br /><label class="form-label">Gatunek nowej książki: </label><br />
+                    <input type="text" class="form-control" name="gatunek" placeholder="Gatunek">
+
+
+            <br /><button type="submit" name="submit">Zapisz</button>
+               <a href="ksiazki_administrator.php"><input type="button" value="Anuluj"></a>
+
+         </form>
+      </div>
+   </div>
+
+</div>
+<footer>
         <nav class="nav">
             <h4 class="sm-header">Śledź nas na</h4>
             <div class="line"></div>
@@ -100,7 +100,8 @@ include "baza.php";
         VaDinci@gmail.com<br />
         ul. Tadeusza Kutrzeby 1, 61-710 Poznań<br />
         &copy; 2023 VaDinci
-    </footer>
-    </div>
+    
+</footer>
+</div>
 </body>
 </html>
