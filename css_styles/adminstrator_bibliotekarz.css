@@ -115,7 +115,6 @@ a {
     width: 0.5rem;
     height: 1rem;
     background-color: #fff;
-    margin-left: 2%;
     transform: scaleY(0.2);
     transform-origin: left;
     transition: transform 0.5s;
@@ -248,12 +247,13 @@ input[type="button"]:hover {
 
 #main_historia {
     height: 100%;
-    width: 80%;
     text-align: center;
     position: relative;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
-    font-size: 20px;
+    font-size: 16px;
+    margin-bottom: 5%;
 }
 
 #tabela_historia th,
