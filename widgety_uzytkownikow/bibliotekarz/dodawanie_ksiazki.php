@@ -52,11 +52,9 @@ if (isset($_POST["submit"])) {
                 <li><a href="wylogowanie.php">Wyloguj</a></li>
             </ul>
         </nav>
-</head>
 
     <div id="dodawanie_ksiazki">
         <h1>DODAWANIE NOWEJ KSIĄŻKI</h1>
-      </div>
 
       <div class="dodawanie_ksiazki">
          <form action="" method="post" style="width:50vw; min-width:300px;">
