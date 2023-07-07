@@ -1,4 +1,4 @@
-﻿<?php
+<?php
     session_start();
     if (!isset($_SESSION['zalogowany']))
     {
@@ -7,20 +7,37 @@
     }
 ?>
 
+<?php
+include "baza.php";
+
+if (isset($_POST["submit"])) {
+
+   $sql = "INSERT INTO `id_ksiazki`(`ID`,`tytul_ksiazki`, `rezerwacja`, `czy_wypozyczona`, `data_wypozyczenia`, `czy_zwrocona`, `data_zwrotu`, `login`) VALUES (NULL,'test','tak', NULL, NULL, NULL, NULL, 'test')";
+
+   $result = mysqli_query($conn, $sql);
+
+   if ($result) {
+      header("Location: ksiazki_uzytkownik.php?msg=Udało się zarezerwować książkę.");
+   } else {
+      echo "Failed: " . mysqli_error($conn);
+   }
+}
+
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Historia wypożyczeń</title>
+    <title>Wypożyczenie książi</title>
     <meta name="description" content="Biblioteka VaDinci">
-    <link rel="stylesheet" href="../../css_styles/uzytkownik.css">
+    <link rel="stylesheet" href="../../css_styles/adminstrator_bibliotekarz.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 
 </head>
+
 <body>
-<div class="container">
     <div class="main">
         <a href="strona_glowna_uzytkownik.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
@@ -31,31 +48,15 @@
                 <li><a href="wylogowanie.php">Wyloguj</a></li>
             </ul>
         </nav>
-        <div id="main_historia">
-            <h1>HISTORIA</h1>
-            <h4>WYPOŻYCZONYCH KSIĄŻEK</h4>
-            <div id="tabela_historia">
-                <table>
-                    <tr>
-                        <th>Tytuł Książki</th>
-                        <th>Data Wypożyczenia</th>
-                        <th>Data Zwrotu</th>
-                    </tr>
-                    <tr>
-                        <td>Dane 1</td>
-                        <td>Dane 2</td>
-                        <td>Dane 3</td>
-                    </tr>
-                    <tr>
-                        <td>Dane 4</td>
-                        <td>Dane 5</td>
-                        <td>Dane 6</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-    <footer>
+
+    <div id="dodawanie_klienta">
+    <h1>Dziękujemy za wypożyczenie książki :)</h1>
+      </div>
+      </div>
+   </div>
+
+</div>
+<footer>
         <nav class="nav">
             <h4 class="sm-header">Śledź nas na</h4>
             <div class="line"></div>
@@ -78,8 +79,7 @@
         VaDinci@gmail.com<br />
         ul. Tadeusza Kutrzeby 1, 61-710 Poznań<br />
         &copy; 2023 VaDinci
-
+    
 </footer>
-</div>
 </body>
 </html>
