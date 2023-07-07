@@ -12,16 +12,15 @@ include "baza.php";
 $ID = $_GET["ID"];
 
 if (isset($_POST["submit"])) {
-  $login = $_POST['login'];
-  $email = $_POST['email'];
-  $haslo2 = $_POST['haslo2'];
+  $tytul_ksiazki = $_POST['tytul_ksiazki'];
+  $gatunek = $_POST['gatunek'];
 
-  $sql = "UPDATE `klienci` SET `login`='$login',`email`='$email',`haslo2`='$haslo2' WHERE ID = $ID";
+  $sql = "UPDATE `ksiazki` SET `tytul_ksiazki`='$tytul_ksiazki', `gatunek`='$gatunek' WHERE ID = $ID";
 
   $result = mysqli_query($conn, $sql);
 
   if ($result) {
-    header("Location: klienci_administrator.php?msg=Dane zostały zmienione!");
+    header("Location: ksiazki_administrator.php?msg=Informacje zostały zmienione.");
   } else {
     echo "Failed: " . mysqli_error($conn);
   }
@@ -34,7 +33,7 @@ if (isset($_POST["submit"])) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Edycja Klienta</title>
+    <title>Edycja książki</title>
     <meta name="description" content="Biblioteka VaDinci">
     <link rel="stylesheet" href="../../css_styles/adminstrator_bibliotekarz.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
@@ -43,7 +42,7 @@ if (isset($_POST["submit"])) {
 <body>
 
     <div class="main">
-        <a href="strona_glowna_administrator.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
+        <a href="strona_glowna_administrator.php"><img class="logo" src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
             <ul>
                 <li><a href="strona_glowna_administrator.php">Strona Główna</a></li>
@@ -56,7 +55,7 @@ if (isset($_POST["submit"])) {
 </nav>
 
     <?php
-    $sql = "SELECT * FROM `klienci` WHERE ID = $ID LIMIT 1";
+    $sql = "SELECT * FROM `ksiazki` WHERE ID = $ID LIMIT 1";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     ?>
@@ -65,25 +64,19 @@ if (isset($_POST["submit"])) {
       <form action="" method="post" style="width:50vw; min-width:300px;">
         <div class="row mb-3">
           <div class="col">
-          <br /><label class="form-label">Nowy Login: </label><br />
-            <input type="text" class="form-control" name="login" value="<?php echo $row['login'] ?>">
+          <br /><label class="form-label">Nowy tytuł: </label><br />
+            <input type="text" class="form-control" name="tytul_ksiazki" value="<?php echo $row['tytul_ksiazki'] ?>">
           </div>
 
           <div class="col">
-          <br /><label class="form-label">Nowy adres e-mail: </label><br />
-            <input type="text" class="form-control" name="email" value="<?php echo $row['email'] ?>">
+          <br /><label class="form-label">Edytuj gatunek: </label><br />
+            <input type="text" class="form-control" name="gatunek" value="<?php echo $row['gatunek'] ?>">
           </div>
-        </div>
-
-        <div class="mb-3">
-        <br /><label class="form-label">Nowe hasło: </label><br />
-          <input type="haslo2" class="form-control" name="haslo2" value="<?php echo $row['haslo2'] ?>">
-        </div>
 
 
         <div>
             <br /><button type="submit" name="submit">Zaktualizuj dane</button>
-               <a href="klienci_administrator.php"><input type="button" value="Anuluj"></a>
+               <a href="ksiazki_administrator.php"><input type="button" value="Anuluj"></a>
             </div>
          </form>
       </div>
