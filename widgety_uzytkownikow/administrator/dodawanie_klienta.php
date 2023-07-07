@@ -38,7 +38,7 @@ if (isset($_POST["submit"])) {
         <a href="dodawanie_klienta.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
             <ul>
-                <li><a href="strona_glowna_administrator.php">Strona Główna</a></li>
+                <li class="special"><a href="strona_glowna_administrator.php">Strona Główna</a></li>
                 <li><a href="klienci_administrator.php">Zarządzanie Klientami</a></li>
                 <li><a href="bibliotekarze_administrator.php">Zarządzanie Bibliotekarzami</a></li>
                 <li><a href="ksiazki_administrator.php">Książki</a></li>

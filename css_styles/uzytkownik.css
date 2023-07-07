@@ -314,10 +314,7 @@ a {
     margin: 10px;
 }
 
-.menu ul li.special {
-    background-color: #7a7a7a;
-    color: white;
-}
+
 .image-container {
     position: relative;
     display: inline-block;

@@ -21,7 +21,7 @@ include "baza.php";
             <ul>
                 <li><a href="strona_glowna_administrator.php">Strona Główna</a></li>
                 <li><a href="klienci_administrator.php">Zarządzanie Klientami</a></li>
-                <li><a href="bibliotekarze_administrator.php">Zarządzanie Bibliotekarzami</a></li>
+                <li class="special"><a href="bibliotekarze_administrator.php">Zarządzanie Bibliotekarzami</a></li>
                 <li><a href="ksiazki_administrator.php">Książki</a></li>
                 <li><a href="historia_administrator.php">Historia</a></li>
                 <li><a href="wylogowanie.php">Wyloguj się</a></li>

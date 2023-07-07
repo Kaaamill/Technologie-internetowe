@@ -27,7 +27,7 @@
             <ul>
                 <li><a href="strona_glowna_uzytkownik.php">Strona Główna</a></li>
                 <li><a href="ksiazki_uzytkownik.php">Książki</a></li>
-                <li><a href="historia_uzytkownik.php">Historia</a></li>
+                <li class="special"><a href="historia_uzytkownik.php">Historia</a></li>
                 <li><a href="wylogowanie.php">Wyloguj</a></li>
             </ul>
         </nav>

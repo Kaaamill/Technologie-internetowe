@@ -28,7 +28,7 @@
                 <li><a href="strona_glowna_bibliotekarz.php">Strona Główna</a></li>
                 <li><a href="ksiazki_bibliotekarz.php">Książki</a></li>
                 <li><a href="uzytkownicy_bibliotekarz.php">Użytkownicy</a></li>
-                <li><a href="historia_bibliotekarz.php">Historia</a></li>
+                <li  class="special"><a href="historia_bibliotekarz.php">Historia</a></li>
                 <li><a href="wylogowanie.php">Wyloguj</a></li>
             </ul>
         </nav>
