@@ -37,7 +37,7 @@ include "baza.php";
             </ul>
         </nav>
         <div id="main_historia">
-            <h1>HISTORIA</h1>
+            <h1>HISTORIA WYPOŻYCZEŃ</h1>
             <div id="tabela_historia">
             <table>
                     <tr>

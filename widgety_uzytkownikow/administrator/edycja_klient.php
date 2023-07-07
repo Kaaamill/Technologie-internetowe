@@ -43,7 +43,7 @@ if (isset($_POST["submit"])) {
 <body>
 <div class="container">
     <div class="main">
-        <a href="strona_glowna_administrator.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
+        <a href="strona_glowna_administrator.php"><img class="logo" src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
             <ul>
                 <li><a href="strona_glowna_administrator.php">Strona Główna</a></li>
