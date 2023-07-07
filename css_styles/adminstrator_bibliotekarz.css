@@ -263,6 +263,37 @@ input[type="button"]:hover {
     font-size: 16px;
 }
 
+#dodawanie_klienta {
+    padding-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    width: 30%;
+    height: 400px;
+    border-radius: 25px;
+    background-color: #6e6e6e;
+    color: #fff;
+}
+
+#dodawanie_klienta h1 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.dodawanie_klienta {
+    margin-left: 5%;
+}
+
+button[type="submit"] {
+    background-color: #545454;
+    color: white;
+    font-size: 16px;
+    width: 20%;
+    height: 40px;
+    border-radius: 25px;
+    margin-left: 3%;
+}
 /* Responsywność dla mniejszych ekranów */
 @media screen and (max-width: 768px) {
     .menu ul li {

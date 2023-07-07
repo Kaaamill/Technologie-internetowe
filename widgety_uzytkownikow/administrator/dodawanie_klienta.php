@@ -42,7 +42,7 @@ if (isset($_POST["submit"])) {
 </head>
 
 <body>
-
+<div class="container">
     <div class="main">
         <a href="strona_glowna_administrator.php"><img class="logo " src="../../img/logo.png"
                 style="border-radius: 25px; opacity: 95%;" /></a>
@@ -59,31 +59,31 @@ if (isset($_POST["submit"])) {
 
         <div id="dodawanie_klienta">
             <h1>DODAWANIE NOWEGO KLIENTA</h1>
+        
+
+            <div class="dodawanie_klienta">
+                <form action="" method="post" style="width:50vw; min-width:300px;">
+                    <label class="form-label">Login dla nowego Klienta: </label><br />
+                    <input type="text" class="form-control" name="login" placeholder="Login">
+                        
+
+                        <div class="col">
+                            <br /><label class="form-label">Adres e-mail dla nowego Klienta: </label><br />
+                            <input type="email" class="form-control" name="email" placeholder="email@example.com">
+                        </div>
+
+                        <div class="mb-3">
+                            <br /><label class="form-label">Hasło dla nowego Klienta</label><br />
+                            <input type="password" class="form-control" name="haslo2" placeholder="Hasło">
+                        </div>
+
+                        <div>
+                            <br /><button type="submit" name="submit">Zapisz</button>
+                            <a href="klienci_administrator.php"><input type="button" value="Anuluj"></a>
+                        </div>
+                </form>
+            </div>
         </div>
-
-        <div class="dodawanie_klienta">
-            <form action="" method="post" style="width:50vw; min-width:300px;">
-                <label class="form-label">Login dla nowego Klienta: </label><br />
-                <input type="text" class="form-control" name="login" placeholder="Login">
-        </div>
-
-        <div class="col">
-            <br /><label class="form-label">Adres e-mail dla nowego Klienta: </label><br />
-            <input type="email" class="form-control" name="email" placeholder="email@example.com">
-        </div>
-    </div>
-
-    <div class="mb-3">
-        <br /><label class="form-label">Hasło dla nowego Klienta</label><br />
-        <input type="password" class="form-control" name="haslo2" placeholder="Hasło">
-    </div>
-
-    <div>
-        <br /><button type="submit" name="submit">Zapisz</button>
-        <a href="klienci_administrator.php"><input type="button" value="Anuluj"></a>
-    </div>
-    </form>
-    </div>
     </div>
 
     </div>
@@ -115,6 +115,7 @@ if (isset($_POST["submit"])) {
         &copy; 2023 VaDinci
 
     </footer>
+</div>
 </body>
 
 </html>
