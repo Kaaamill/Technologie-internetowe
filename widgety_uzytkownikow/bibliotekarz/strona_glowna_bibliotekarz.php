@@ -26,7 +26,7 @@ if (!isset($_SESSION['zalogowany'])) {
                     style="border-radius: 25px; opacity: 95%;" /></a>
             <nav class="menu">
                 <ul>
-                    <li><a href="strona_glowna_bibliotekarz.php">Strona Główna</a></li>
+                    <li class="special"><a href="strona_glowna_bibliotekarz.php">Strona Główna</a></li>
                     <li><a href="ksiazki_bibliotekarz.php">Książki</a></li>
                     <li><a href="rezerwacje_bibliotekarz.php">Rezerwacje</a></li>
                     <li><a href="historia_bibliotekarz.php">Historia</a></li>
@@ -43,7 +43,7 @@ if (!isset($_SESSION['zalogowany'])) {
 
                 ?>
             </div>
-
+        </div>
             <footer>
                 <nav class="nav">
                     <h4 class="sm-header">Śledź nas na</h4>
@@ -71,7 +71,7 @@ if (!isset($_SESSION['zalogowany'])) {
                 ul. Tadeusza Kutrzeby 1, 61-710 Poznań<br />
                 &copy; 2023 VaDinci
             </footer>
-        </div>
+</div>
 </body>
 
 </html>

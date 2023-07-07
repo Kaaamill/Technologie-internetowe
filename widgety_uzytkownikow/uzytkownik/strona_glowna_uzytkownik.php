@@ -184,6 +184,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <a href="podstrony_ksiazki/k11.php" target="_blank" title="Zobacz recenzje">Ostatnie życzenie</a>
             </div>
         </div>
+
         <footer>
             <nav class="nav">
                 <h4 class="sm-header">Śledź nas na</h4>

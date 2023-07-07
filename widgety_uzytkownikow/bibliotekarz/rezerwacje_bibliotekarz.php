@@ -23,6 +23,7 @@ include "baza.php";
 
 </head>
 <body>
+<div class="container">
     <div class="main">
         <a href="strona_glowna_bibliotekarz.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
@@ -38,6 +39,7 @@ include "baza.php";
   <div id="main_ksiazki">
             <h1>REZERWACJE I ZWROTY</h1>
             <div id="tabela_ksiazki">
+                <div class="table-wrapper">
                 <table>
                     <tr>
                         <th>TYTUŁ KSIĄŻKI</th>
@@ -72,8 +74,8 @@ include "baza.php";
         <?php
         }
         ?>
-      </table>
-
+        </table>
+    </div>
     
             </div>
         </div>
@@ -102,5 +104,6 @@ include "baza.php";
         ul. Tadeusza Kutrzeby 1, 61-710 Poznań<br />
         &copy; 2023 VaDinci
     </footer>
+</div>
 </body>
 </html>

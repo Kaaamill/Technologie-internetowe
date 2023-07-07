@@ -52,13 +52,13 @@ if (isset($_POST["submit"])) {
             </ul>
         </nav>
 
-    <?php
+        <?php
     $sql = "SELECT * FROM `ksiazki` WHERE ID = $ID LIMIT 1";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     ?>
-
-    <div class="container d-flex justify-content-center">
+  <div id="dodawanie_klienta"><h1>Dodawanie książki</h1>
+    <div class="dodawanie_klienta">
       <form action="" method="post" style="width:50vw; min-width:300px;">
         <div class="row mb-3">
           <div class="col">
@@ -72,13 +72,13 @@ if (isset($_POST["submit"])) {
           </div>
 
 
-        <div>
+          <div>
             <br /><button type="submit" name="submit">Zaktualizuj dane</button>
-               <a href="ksiazki_bibliotekarz.php"><input type="button" value="Anuluj"></a>
-            </div>
+               <a href="ksiazki_administrator.php"><input type="button" value="Anuluj"></a>
+          </div>
          </form>
       </div>
-   </div>
+    </div>
 
 </div>
 <footer>
@@ -107,5 +107,6 @@ if (isset($_POST["submit"])) {
         &copy; 2023 VaDinci
     
 </footer>
+</div>
 </body>
 </html>

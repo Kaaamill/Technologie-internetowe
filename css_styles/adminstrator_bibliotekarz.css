@@ -245,6 +245,22 @@ input[type="button"]:hover {
 
 }
 
+.table-wrapper {
+    width: auto;
+    overflow-x: auto;
+}
+
+#main_ksiazki {
+    height: auto;
+    text-align: center;
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    margin-bottom: 5%;
+}
+
 #main_historia {
     height: 100%;
     text-align: center;
@@ -294,6 +310,11 @@ button[type="submit"] {
     border-radius: 25px;
     margin-left: 3%;
 }
+
+button[type="submit"]:hover {
+    background-color: #323130;
+}
+
 /* Responsywność dla mniejszych ekranów */
 @media screen and (max-width: 768px) {
     .menu ul li {

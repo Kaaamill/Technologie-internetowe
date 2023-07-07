@@ -101,6 +101,8 @@ include "baza.php";
                         </table>
                     </div>
                 </div>
+                </div>
+                </div>
                 <footer>
                     <nav class="nav">
                         <h4 class="sm-header">Śledź nas na</h4>
@@ -129,8 +131,8 @@ include "baza.php";
                     ul. Tadeusza Kutrzeby 1, 61-710 Poznań<br />
                     &copy; 2023 VaDinci
 
-                </footer>
-            </div>
+        </footer>
+    </div>
 </body>
 
 </html>

@@ -39,6 +39,7 @@ include "baza.php";
         <div id="main_historia">
             <h1>HISTORIA WYPOŻYCZEŃ</h1>
             <div id="tabela_historia">
+            <div class="table-wrapper">
             <table>
                     <tr>
                         <th>TYTUŁ KSIĄŻKI</th>
@@ -67,8 +68,8 @@ include "baza.php";
         <?php
         }
         ?>
-      </table>
-
+        </table>
+        </div>
 
             </div>
         </div>

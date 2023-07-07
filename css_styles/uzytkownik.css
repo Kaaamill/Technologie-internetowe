@@ -376,14 +376,7 @@ a {
     margin-left: 20px;
     flex: 1;
 }
-.button {
-    display: block;
-    padding: 10px 20px;
-    background-color: antiquewhite;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px;
-}
+
 #lower {
     background: #ecf2f5;
     width: 360px;
@@ -408,6 +401,31 @@ a {
     -moz-box-shadow: 0 0 2px silver;
     box-shadow: 0 0 2px silver;
 
+}
+
+#tabela_historia th,
+#tabela_historia td,
+#tabela_historia tr {
+    width: 500vh;
+    font-size: 16px;
+    border: none;
+}
+
+#main_historia {
+    height: 100%;
+    text-align: center;
+    position: relative;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    margin-bottom: 5%;
+}
+
+table {
+    background-color: white;
+    padding: 3vh;
+    border-radius: 25px;
 }
 
 

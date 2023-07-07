@@ -36,9 +36,9 @@ body {
 
 #regulamin div{
     align-content: center;
-    margin: 10%;
+    margin: auto;
     z-index: 9998;
-    height: max-content;
+    height: auto;
     width: 66.67%;
     background-color: rgb(255, 255, 255, 1);
     opacity: 100%;

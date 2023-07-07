@@ -41,6 +41,7 @@ if (isset($_POST["submit"])) {
 
 </head>
 <body>
+<div class="container">
     <div class="main">
         <a href="strona_glowna_bibliotekarz.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
@@ -52,22 +53,23 @@ if (isset($_POST["submit"])) {
                 <li><a href="wylogowanie.php">Wyloguj</a></li>
             </ul>
         </nav>
-
-    <div id="dodawanie_ksiazki">
+        
+        <div id="dodawanie_klienta">
         <h1>DODAWANIE NOWEJ KSIĄŻKI</h1>
 
-      <div class="dodawanie_ksiazki">
+
+      <div class="dodawanie_klienta">
          <form action="" method="post" style="width:50vw; min-width:300px;">
                   <label class="form-label">Tytuł nowej książki: </label><br />
                   <input type="text" class="form-control" name="tytul_ksiazki" placeholder="Tytuł">
-               </div>
+
                     <br /><label class="form-label">Gatunek nowej książki: </label><br />
                     <input type="text" class="form-control" name="gatunek" placeholder="Gatunek">
-               </div>
-            <div>
+
+
             <br /><button type="submit" name="submit">Zapisz</button>
-               <a href="ksiazki_bibliotekarz.php"><input type="button" value="Anuluj"></a>
-            </div>
+               <a href="ksiazki_administrator.php"><input type="button" value="Anuluj"></a>
+
          </form>
       </div>
    </div>
@@ -98,5 +100,6 @@ if (isset($_POST["submit"])) {
         &copy; 2023 VaDinci
     
 </footer>
+</div>
 </body>
 </html>

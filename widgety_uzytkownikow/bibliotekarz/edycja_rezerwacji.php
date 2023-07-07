@@ -42,6 +42,7 @@ if (isset($_POST["submit"])) {
 </head>
 
 <body>
+<div class="container">
     <div class="main">
         <a href="strona_glowna_bibliotekarz.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
@@ -59,8 +60,8 @@ if (isset($_POST["submit"])) {
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     ?>
-
-    <div class="container d-flex justify-content-center">
+<div id="dodawanie_klienta">
+    <div class="dodawanie_klienta">
       <form action="" method="post" style="width:50vw; min-width:300px;">
         <div class="row mb-3">
           <div class="col">
@@ -87,14 +88,12 @@ if (isset($_POST["submit"])) {
         <div>
             <br /><button type="submit" name="submit">Zaktualizuj informacje</button>
                <a href="rezerwacje_bibliotekarz.php"><input type="button" value="Anuluj"></a>
-            </div>
-         </form>
-      </div>
-   </div>
-
+        </div>
+        </div>
+        </form>
+    </div>
 </div>
 <footer>
-  <footer>
         <nav class="nav">
             <h4 class="sm-header">Śledź nas na</h4>
             <div class="line"></div>
@@ -119,5 +118,6 @@ if (isset($_POST["submit"])) {
         &copy; 2023 VaDinci
     
 </footer>
+</div>
 </body>
 </html>

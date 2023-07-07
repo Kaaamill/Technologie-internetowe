@@ -25,6 +25,7 @@
                 </ul>
             </nav>
             <div id="main_historia">
+                <div id="tabela_historia">
                 <?php
                 session_start();
                 $host = 'localhost';
@@ -43,13 +44,13 @@
                     echo "<h1>HISTORIA WYPOŻYCZEŃ</h1>";
                     echo "<table>";
                     echo "<tr>
-    <th>Tytuł książki</th>
-    <th>Rezerwacja</th>
-    <th>Czy książka została wypożyczona</th>
-    <th>Data wypożyczenia</th>
-    <th>Czy książka została zwrócona</th>
-    <th>Data zwrotu</th>
-    </tr>";
+                            <th>Tytuł książki</th>
+                            <th>Rezerwacja</th>
+                            <th>Czy książka została wypożyczona</th>
+                            <th>Data wypożyczenia</th>
+                            <th>Czy książka została zwrócona</th>
+                            <th>Data zwrotu</th>
+                            </tr>";
                     while ($row = mysqli_fetch_assoc($result)) {
                         $tytul_ksiazki = $row['tytul_ksiazki'];
                         $rezerwacja = $row['rezerwacja'];
@@ -58,14 +59,14 @@
                         $czy_zwrocona = $row['czy_zwrocona'];
                         $data_zwrotu = $row['data_zwrotu'];
                         echo "<tr>
-        <td>$tytul_ksiazki</td>
-        <td>$rezerwacja</td>
-        <td>$czy_wypozyczona</td>
-        <td>$data_wypozyczenia</td>
-        <td>$czy_zwrocona</td>
-        <td>$data_zwrotu</td>
-        </tr>";
-                    }
+                            <td>$tytul_ksiazki</td>
+                            <td>$rezerwacja</td>
+                            <td>$czy_wypozyczona</td>
+                            <td>$data_wypozyczenia</td>
+                            <td>$czy_zwrocona</td>
+                            <td>$data_zwrotu</td>
+                            </tr>";
+                                        }
                     echo "</table>";
                 } else {
                     echo "<h1>HISTORIA WYPOŻYCZEŃ</h1>";
@@ -73,7 +74,10 @@
                 }
                 mysqli_close($connection);
                 ?>
-                <footer>
+                </div>
+            </div>
+        </div>
+            <footer>
                     <nav class="nav">
                         <h4 class="sm-header">Śledź nas na</h4>
                         <div class="line"></div>
@@ -101,8 +105,8 @@
                     ul. Tadeusza Kutrzeby 1, 61-710 Poznań<br />
                     &copy; 2023 VaDinci
 
-                </footer>
-            </div>
+        </footer>
+    </div>
 </body>
 
 </html>

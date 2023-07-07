@@ -31,8 +31,8 @@ include "baza.php";
             <nav class="menu">
                 <ul>
                     <li><a href="strona_glowna_bibliotekarz.php">Strona Główna</a></li>
-                    <li><a href="ksiazki_bibliotekarz.php">Książki</a></li>
-                    <li><a href="uzytkownicy_bibliotekarz.php">Użytkownicy</a></li>
+                    <li class="special"><a href="ksiazki_bibliotekarz.php">Książki</a></li>
+                    <li><a href="rezerwacje_bibliotekarz.php">Rezerwacje</a></li>
                     <li><a href="historia_bibliotekarz.php">Historia</a></li>
                     <li><a href="wylogowanie.php">Wyloguj</a></li>
                 </ul>
@@ -40,7 +40,7 @@ include "baza.php";
             <div id="main_uzytkownicy">
                 <h1>ZARZĄDZANIE KSIĄŻKAMI</h1>
                 <div id="tabela_uzytkownicy">
-                    <<table>
+                    <table>
                         <tr>
                             <th>TYTUŁ KSIĄŻKI</th>
                             <th>GATUNEK</th>
