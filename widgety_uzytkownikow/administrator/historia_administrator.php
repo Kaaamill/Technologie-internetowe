@@ -7,12 +7,16 @@
     }
 ?>
 
+<?php
+include "baza.php";
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Historia wypożyczeń</title>
+    <title>Historia</title>
     <meta name="description" content="Biblioteka VaDinci">
     <link rel="stylesheet" href="../../css_styles/adminstrator_bibliotekarz.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
@@ -21,7 +25,7 @@
 <body>
 <div class="container">
     <div class="main">
-        <a href="historia_administrator.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
+        <a href="strona_glowna_administrator.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
             <ul>
                     <li><a href="strona_glowna_administrator.php">Strona Główna</a></li>
@@ -35,26 +39,36 @@
         <div id="main_historia">
             <h1>HISTORIA</h1>
             <div id="tabela_historia">
-                <table>
+            <table>
                     <tr>
-                        <th>Tytuł książki</th>
-                        <th>Kto wypożyczył</th>
-                        <th>Data wypożyczenia</th>
-                        <th>Data zwrotu</th>
+                        <th>TYTUŁ KSIĄŻKI</th>
+                        <th>REZERWACJA</th>
+                        <th>CZY WYPOŻYCZONA</th>
+                        <th>DATA WYPOŻYCZENIA</th>
+                        <th>ZWRÓCONA</th>
+                        <th>DATA ZWROTU</th>
+                        <th>LOGIN OSOBY WYPOŻYCZAJĄCEJ</th>
                     </tr>
-                    <tr>
-                        <td>Dane 1</td>
-                        <td>Dane 2</td>
-                        <td>Dane 3</td>
-                        <td>Dane 3</td>
-                    </tr>
-                    <tr>
-                        <td>Dane 4</td>
-                        <td>Dane 5</td>
-                        <td>Dane 6</td>
-                        <td>Dane 3</td>
-                    </tr>
-                </table>
+        <?php
+        $sql = "SELECT * FROM `id_ksiazki`";
+        $result = mysqli_query($conn, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+        ?>
+          <tr>
+            <td><?php echo $row["tytul_ksiazki"] ?></td>
+            <td><?php echo $row["rezerwacja"] ?></td>
+            <td><?php echo $row["czy_wypozyczona"] ?></td>
+            <td><?php echo $row["data_wypozyczenia"] ?></td>
+            <td><?php echo $row["czy_zwrocona"] ?></td>
+            <td><?php echo $row["data_zwrotu"] ?></td>
+            <td><?php echo $row["login"] ?></td>
+          </tr> 
+
+        <?php
+        }
+        ?>
+      </table>
+
 
             </div>
         </div>

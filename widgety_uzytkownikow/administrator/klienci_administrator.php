@@ -1,4 +1,14 @@
 ﻿<?php
+    session_start();
+    if (!isset($_SESSION['zalogowany']))
+    {
+        header('Location: ../../index.html');
+        exit();
+    }
+?>
+
+
+<?php
 include "baza.php";
 ?>
 
@@ -16,7 +26,7 @@ include "baza.php";
 <body>
 <div class="container">
     <div class="main">
-        <a href="klienci_administrator.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
+        <a href="strona_glowna_administrator.php"><img class="logo " src="../../img/logo.png" style="border-radius: 25px; opacity: 95%;" /></a>
         <nav class="menu">
             <ul>
             <li><a href="strona_glowna_administrator.php">Strona Główna</a></li>
@@ -32,7 +42,6 @@ include "baza.php";
             <div id="tabela_uzytkownicy">
             <table>
                     <tr>
-                        <th>ID</th>
                         <th>LOGIN</th>
                         <th>ADRES E-MAIL</th>
                         <th>HASŁO</th>
@@ -45,7 +54,6 @@ include "baza.php";
         while ($row = mysqli_fetch_assoc($result)) {
         ?>
           <tr>
-            <td><?php echo $row["ID"] ?></td>
             <td><?php echo $row["login"] ?></td>
             <td><?php echo $row["email"] ?></td>
             <td><?php echo $row["haslo2"] ?></td>
