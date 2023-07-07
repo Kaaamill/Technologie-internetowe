@@ -6,13 +6,48 @@ if (!isset($_SESSION['zalogowany'])) {
 }
 
 // Obsługa formularza wyszukiwania
-if (isset($_GET['fraza'])) {
-    $fraza = $_GET['fraza'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $searchText = $_POST['searchText'];
 
-    // Przekierowanie na stronę z wynikami wyszukiwania
-    header("Location: wyniki_wyszukiwania.php?fraza=$fraza");
-    exit();
+    // Przetwarzanie wyszukiwania
+    if (mb_stripos($searchText, 'Wlad', 0, 'UTF-8') !== false) {
+        header("Location: podstrony_ksiazki/k1.php");
+        exit;
+    } elseif (mb_stripos($searchText, 'Harry', 0, 'UTF-8') !== false) {
+        header("Location: podstrony_ksiazki/k2.php");
+        exit;
+        } elseif (mb_stripos($searchText, 'gra', 0, 'UTF-8') !== false) {
+                header("Location: podstrony_ksiazki/k3.php");
+                exit;
+                } elseif (mb_stripos($searchText, 'miecz', 0, 'UTF-8') !== false) {
+                        header("Location: podstrony_ksiazki/k4.php");
+                        exit;
+                        } elseif (mb_stripos($searchText, 'oskar', 0, 'UTF-8') !== false) {
+                                header("Location: podstrony_ksiazki/k5.php");
+                                exit;
+                                } elseif (mb_stripos($searchText, 'zbrodnia') !== false) {
+                                        header("Location: podstrony_ksiazki/k6.php");
+                                        exit;
+                                        } elseif (mb_stripos($searchText, 'krew', 0, 'UTF-8') !== false) {
+                                                header("Location: podstrony_ksiazki/k7.php");
+                                                exit;} elseif (mb_stripos($searchText, 'igrzys', 0, 'UTF-8') !== false) {
+                                                             header("Location: podstrony_ksiazki/k9.php");
+                                                             exit;
+                                                             } elseif (mb_stripos($searchText, 'zmie', 0, 'UTF-8') !== false) {
+                                                                     header("Location: podstrony_ksiazki/k10.php");
+                                                                     exit;
+                                                                     } elseif (mb_stripos($searchText, 'ostatn', 0, 'UTF-8') !== false) {
+                                                                             header("Location: podstrony_ksiazki/k11.php");
+                                                                             exit;
+
+
+    } else {
+        // Obsługa innych przypadków
+        echo "Brak wyników dla wyszukiwania: $searchText";
+        exit;
+    }
 }
+
 ?>
 
 <!DOCTYPE html>
